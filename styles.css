@@ -3,6 +3,7 @@
    MAIN STYLESHEET
 ========================================================= */
 
+
 /* =========================================================
    1. CSS VARIABLES
 ========================================================= */
@@ -493,11 +494,6 @@ ul {
     background: var(--accent-blue);
     border-radius: 3px 8px 8px 8px;
     transform: skew(-10deg);
-}
-
-.brand-mark-left::first-letter,
-.brand-mark-right::first-letter {
-    transform: skew(10deg);
 }
 
 .brand-text {
@@ -1009,12 +1005,11 @@ ul {
 .mock-image-shape {
     width: 155px;
     height: 155px;
-    background:
-        linear-gradient(
-            145deg,
-            rgba(57, 175, 244, 0.96),
-            rgba(21, 85, 232, 0.96)
-        );
+    background: linear-gradient(
+        145deg,
+        rgba(57, 175, 244, 0.96),
+        rgba(21, 85, 232, 0.96)
+    );
     border-radius: 50% 38% 48% 40%;
     transform: rotate(-8deg);
 }
@@ -1263,12 +1258,11 @@ ul {
 ========================================================= */
 
 .services {
-    background:
-        linear-gradient(
-            180deg,
-            var(--white) 0%,
-            var(--off-white) 100%
-        );
+    background: linear-gradient(
+        180deg,
+        var(--white) 0%,
+        var(--off-white) 100%
+    );
 }
 
 .services-grid {
@@ -1599,13 +1593,12 @@ ul {
 
 .coaching-screen {
     color: var(--navy);
-    background:
-        linear-gradient(
-            90deg,
-            rgba(255, 255, 255, 0.97) 0%,
-            rgba(250, 246, 240, 0.95) 58%,
-            rgba(228, 206, 182, 0.94) 100%
-        );
+    background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0.97) 0%,
+        rgba(250, 246, 240, 0.95) 58%,
+        rgba(228, 206, 182, 0.94) 100%
+    );
 }
 
 .screen-content {
@@ -1697,14 +1690,13 @@ ul {
     bottom: -45px;
     width: 66%;
     height: 73%;
-    background:
-        linear-gradient(
-            140deg,
-            rgba(255, 255, 255, 0.26),
-            rgba(57, 175, 244, 0.38) 35%,
-            rgba(21, 85, 232, 0.26) 60%,
-            rgba(0, 0, 0, 0.75)
-        );
+    background: linear-gradient(
+        140deg,
+        rgba(255, 255, 255, 0.26),
+        rgba(57, 175, 244, 0.38) 35%,
+        rgba(21, 85, 232, 0.26) 60%,
+        rgba(0, 0, 0, 0.75)
+    );
     border-radius: 62% 22% 5% 12%;
     transform: skewX(-8deg);
 }
@@ -1774,12 +1766,11 @@ ul {
     bottom: -35px;
     width: 58%;
     height: 90%;
-    background:
-        linear-gradient(
-            140deg,
-            rgba(57, 175, 244, 0.12),
-            rgba(255, 255, 255, 0.25)
-        );
+    background: linear-gradient(
+        140deg,
+        rgba(57, 175, 244, 0.12),
+        rgba(255, 255, 255, 0.25)
+    );
     border-radius: 50% 20% 0 0;
     content: "";
     transform: skew(-7deg);
@@ -2055,12 +2046,11 @@ ul {
 }
 
 .process-step.active {
-    background:
-        linear-gradient(
-            135deg,
-            rgba(238, 245, 255, 0.72),
-            var(--white)
-        );
+    background: linear-gradient(
+        135deg,
+        rgba(238, 245, 255, 0.72),
+        var(--white)
+    );
 }
 
 .process-step-number {
@@ -2130,32 +2120,39 @@ ul {
 
 
 /* =========================================================
-   13. PRICING SECTION
+   13. UPDATED PRICING SECTION
 ========================================================= */
 
 .pricing {
+    overflow: hidden;
     background:
         radial-gradient(
-            circle at 8% 15%,
-            rgba(57, 175, 244, 0.11),
+            circle at 8% 12%,
+            rgba(57, 175, 244, 0.12),
             transparent 27%
+        ),
+        radial-gradient(
+            circle at 95% 88%,
+            rgba(21, 85, 232, 0.08),
+            transparent 30%
         ),
         var(--white);
 }
 
 .pricing-grid {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     align-items: stretch;
-    gap: 22px;
+    gap: 26px;
 }
 
 .pricing-card {
     position: relative;
     display: flex;
-    min-height: 680px;
-    padding: 38px 33px;
+    min-height: 690px;
+    padding: 39px 35px;
     flex-direction: column;
+    overflow: hidden;
     background: var(--white);
     border: 1px solid var(--border-color);
     border-radius: var(--border-radius-large);
@@ -2166,8 +2163,24 @@ ul {
         border-color var(--transition-normal);
 }
 
+.pricing-card::before {
+    position: absolute;
+    top: -90px;
+    right: -90px;
+    width: 230px;
+    height: 230px;
+    background: radial-gradient(
+        circle,
+        rgba(57, 175, 244, 0.12),
+        transparent 68%
+    );
+    border-radius: 50%;
+    content: "";
+    pointer-events: none;
+}
+
 .pricing-card:hover {
-    border-color: rgba(21, 85, 232, 0.22);
+    border-color: rgba(21, 85, 232, 0.27);
     box-shadow: var(--shadow-medium);
     transform: translateY(-8px);
 }
@@ -2177,24 +2190,50 @@ ul {
     background:
         radial-gradient(
             circle at 100% 0%,
-            rgba(57, 175, 244, 0.28),
-            transparent 30%
+            rgba(57, 175, 244, 0.3),
+            transparent 31%
         ),
         linear-gradient(155deg, var(--navy), var(--navy-light));
-    border-color: rgba(57, 175, 244, 0.3);
-    box-shadow: 0 28px 70px rgba(7, 21, 47, 0.23);
-    transform: translateY(-14px);
+    border-color: rgba(57, 175, 244, 0.31);
+    box-shadow: 0 28px 70px rgba(7, 21, 47, 0.22);
 }
 
-.pricing-card-popular:hover {
-    transform: translateY(-22px);
+.pricing-card-popular::before {
+    background: radial-gradient(
+        circle,
+        rgba(57, 175, 244, 0.25),
+        transparent 68%
+    );
+}
+
+.pricing-card-commerce {
+    background:
+        radial-gradient(
+            circle at 100% 0%,
+            rgba(57, 175, 244, 0.17),
+            transparent 32%
+        ),
+        linear-gradient(145deg, var(--white), var(--soft-cyan));
+    border-color: rgba(57, 175, 244, 0.24);
+}
+
+.pricing-card-custom {
+    background:
+        radial-gradient(
+            circle at 90% 10%,
+            rgba(21, 85, 232, 0.12),
+            transparent 32%
+        ),
+        linear-gradient(145deg, #f8faff, #edf3ff);
+    border-color: rgba(21, 85, 232, 0.19);
 }
 
 .popular-label {
     position: absolute;
-    top: 18px;
-    right: 18px;
-    padding: 7px 11px;
+    top: 20px;
+    right: 20px;
+    z-index: 3;
+    padding: 8px 13px;
     color: var(--white);
     background: linear-gradient(
         135deg,
@@ -2202,64 +2241,134 @@ ul {
         var(--accent-blue)
     );
     border-radius: 999px;
-    font-size: 0.6rem;
+    box-shadow: 0 10px 24px rgba(21, 85, 232, 0.25);
+    font-size: 0.59rem;
     font-weight: 800;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.09em;
     text-transform: uppercase;
+}
+
+.pricing-card-header {
+    position: relative;
+    z-index: 2;
+}
+
+.pricing-title-row {
+    display: flex;
+    margin-bottom: 29px;
+    align-items: center;
+    gap: 15px;
+}
+
+.pricing-icon {
+    display: grid;
+    width: 55px;
+    height: 55px;
+    flex-shrink: 0;
+    place-items: center;
+    background: var(--soft-blue);
+    border: 1px solid rgba(21, 85, 232, 0.1);
+    border-radius: 17px;
+    font-size: 1.45rem;
+}
+
+.pricing-card-popular .pricing-icon {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.14);
 }
 
 .pricing-name {
     display: block;
-    margin-bottom: 24px;
+    margin-bottom: 4px;
     color: var(--primary-blue);
-    font-size: 0.72rem;
-    font-weight: 800;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
+    font-family: var(--heading-font);
+    font-size: 1.15rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
 }
 
 .pricing-card-popular .pricing-name {
     color: var(--accent-blue-light);
 }
 
-.pricing-card-header h3 {
-    display: flex;
-    margin-bottom: 20px;
-    flex-direction: column;
-    color: var(--navy);
-    font-size: 2.2rem;
-}
-
-.pricing-card-popular .pricing-card-header h3 {
-    color: var(--white);
-}
-
-.pricing-card-header h3 span {
-    margin-bottom: 6px;
+.pricing-package-type {
+    display: block;
     color: var(--medium-gray);
-    font-family: var(--body-font);
-    font-size: 0.67rem;
+    font-size: 0.65rem;
     font-weight: 700;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.04em;
     text-transform: uppercase;
 }
 
-.pricing-card-popular .pricing-card-header h3 span {
-    color: rgba(255, 255, 255, 0.51);
+.pricing-card-popular .pricing-package-type {
+    color: rgba(255, 255, 255, 0.49);
 }
 
-.pricing-card-header p {
+.pricing-price {
+    display: flex;
+    min-height: 74px;
+    margin-bottom: 21px;
+    align-items: flex-start;
+    color: var(--navy);
+    font-family: var(--heading-font);
+}
+
+.pricing-price strong {
+    font-size: clamp(3.1rem, 5vw, 4.5rem);
+    font-weight: 700;
+    line-height: 0.95;
+    letter-spacing: -0.065em;
+}
+
+.pricing-price-prefix {
+    margin-top: 7px;
+    margin-right: 4px;
+    color: var(--primary-blue);
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.pricing-price-suffix {
+    margin-top: 6px;
+    margin-left: 5px;
+    color: var(--primary-blue);
+    font-size: 1.45rem;
+    font-weight: 700;
+}
+
+.pricing-card-popular .pricing-price {
+    color: var(--white);
+}
+
+.pricing-card-popular .pricing-price-prefix,
+.pricing-card-popular .pricing-price-suffix {
+    color: var(--accent-blue);
+}
+
+.pricing-price-custom {
+    min-height: 74px;
+    align-items: center;
+}
+
+.pricing-price-custom strong {
+    font-size: clamp(2.25rem, 4vw, 3.5rem);
+    letter-spacing: -0.05em;
+}
+
+.pricing-card-header > p {
     min-height: 86px;
-    margin-bottom: 27px;
+    margin-bottom: 29px;
     color: var(--medium-gray);
-    font-size: 0.85rem;
+    font-size: 0.86rem;
 }
 
-.pricing-card-popular .pricing-card-header p {
-    color: rgba(255, 255, 255, 0.62);
+.pricing-card-popular .pricing-card-header > p {
+    color: rgba(255, 255, 255, 0.63);
 }
 
 .pricing-features {
+    position: relative;
+    z-index: 2;
     display: flex;
     margin-bottom: 35px;
     flex-direction: column;
@@ -2268,21 +2377,25 @@ ul {
 
 .pricing-features li {
     position: relative;
-    padding-left: 28px;
+    padding-left: 29px;
     color: var(--dark-gray);
     font-size: 0.81rem;
 }
 
 .pricing-features li::before {
     position: absolute;
-    top: 3px;
+    top: 2px;
     left: 0;
     display: grid;
-    width: 18px;
-    height: 18px;
+    width: 19px;
+    height: 19px;
     place-items: center;
     color: var(--white);
-    background: var(--primary-blue);
+    background: linear-gradient(
+        135deg,
+        var(--primary-blue),
+        var(--accent-blue)
+    );
     border-radius: 50%;
     content: "✓";
     font-size: 0.56rem;
@@ -2290,16 +2403,35 @@ ul {
 }
 
 .pricing-card-popular .pricing-features li {
-    color: rgba(255, 255, 255, 0.72);
+    color: rgba(255, 255, 255, 0.74);
 }
 
 .pricing-card-popular .pricing-features li::before {
     background: var(--accent-blue);
 }
 
+.pricing-card-footer {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    margin-top: auto;
+    flex-direction: column;
+}
+
+.pricing-delivery {
+    min-height: 22px;
+    margin-bottom: 17px;
+    color: var(--medium-gray);
+    font-size: 0.67rem;
+    font-weight: 700;
+}
+
+.pricing-card-popular .pricing-delivery {
+    color: rgba(255, 255, 255, 0.5);
+}
+
 .pricing-card .button {
     width: 100%;
-    margin-top: auto;
 }
 
 .pricing-card-popular .button-primary {
@@ -2313,12 +2445,28 @@ ul {
     background: var(--primary-blue);
 }
 
-.pricing-disclaimer {
-    max-width: 720px;
-    margin: 42px auto 0;
+.pricing-card-commerce .button-outline:hover,
+.pricing-card-custom .button-outline:hover {
+    color: var(--white);
+    background: var(--primary-blue);
+    border-color: var(--primary-blue);
+}
+
+.pricing-information {
+    display: flex;
+    margin-top: 42px;
+    padding-top: 29px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    border-top: 1px solid var(--border-color);
+}
+
+.pricing-information p {
+    max-width: 730px;
+    margin: 0;
     color: var(--medium-gray);
-    font-size: 0.8rem;
-    text-align: center;
+    font-size: 0.77rem;
 }
 
 
@@ -2844,8 +2992,16 @@ ul {
     padding-right: 42px;
     appearance: none;
     background-image:
-        linear-gradient(45deg, transparent 50%, var(--medium-gray) 50%),
-        linear-gradient(135deg, var(--medium-gray) 50%, transparent 50%);
+        linear-gradient(
+            45deg,
+            transparent 50%,
+            var(--medium-gray) 50%
+        ),
+        linear-gradient(
+            135deg,
+            var(--medium-gray) 50%,
+            transparent 50%
+        );
     background-position:
         calc(100% - 18px) 22px,
         calc(100% - 13px) 22px;
@@ -3020,7 +3176,6 @@ ul {
 
 /* =========================================================
    19. SCROLL REVEAL STATES
-   JavaScript will add .reveal-ready to the body.
 ========================================================= */
 
 [data-reveal] {
@@ -3055,7 +3210,6 @@ ul {
 
 /* =========================================================
    20. CUSTOM CURSOR
-   JavaScript will enable this on supported desktop devices.
 ========================================================= */
 
 .custom-cursor,

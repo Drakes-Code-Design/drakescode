@@ -181,26 +181,8 @@
         min-height: 385px;
     }
 
-    .pricing-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
     .pricing-card {
-        min-height: 640px;
-    }
-
-    .pricing-card-popular {
-        transform: none;
-    }
-
-    .pricing-card-popular:hover {
-        transform: translateY(-8px);
-    }
-
-    .pricing-card:last-child {
-        grid-column: 1 / -1;
-        width: calc(50% - 11px);
-        justify-self: center;
+        min-height: 670px;
     }
 
     .about-container {
@@ -241,12 +223,53 @@
         scroll-padding-top: calc(var(--header-height) + 15px);
     }
 
+    body,
+    main,
+    section,
+    .container {
+        min-width: 0;
+    }
+
     .site-header {
         height: var(--header-height);
     }
 
     .site-header.scrolled {
         height: 70px;
+    }
+
+    /*
+       Mobile header uses its own full-width sizing instead of
+       inheriting the normal container width. This prevents the
+       menu button from being pushed outside the viewport.
+    */
+    .site-header .header-container {
+        width: min(100%, var(--container-width));
+        padding-left: max(18px, env(safe-area-inset-left));
+        padding-right: max(18px, env(safe-area-inset-right));
+    }
+
+    .header-container {
+        min-width: 0;
+        gap: 12px;
+    }
+
+    .brand {
+        min-width: 0;
+        max-width: calc(100% - 62px);
+        overflow: hidden;
+    }
+
+    .brand-text {
+        min-width: 0;
+        overflow: hidden;
+    }
+
+    .brand-text strong,
+    .brand-text span {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
     }
 
     .desktop-navigation,
@@ -256,9 +279,14 @@
 
     .mobile-menu-button {
         position: relative;
+        right: auto;
         display: flex;
         width: 46px;
         height: 46px;
+        min-width: 46px;
+        max-width: 46px;
+        flex: 0 0 46px;
+        margin-left: auto;
         padding: 0;
         align-items: center;
         justify-content: center;
@@ -269,12 +297,14 @@
         border: 1px solid rgba(7, 21, 47, 0.1);
         border-radius: 13px;
         box-shadow: 0 8px 20px rgba(7, 21, 47, 0.06);
+        transform: none;
     }
 
     .mobile-menu-button span {
         display: block;
         width: 21px;
         height: 2px;
+        flex-shrink: 0;
         background: currentColor;
         border-radius: 999px;
         transition:
@@ -303,8 +333,12 @@
         right: 0;
         left: 0;
         display: flex;
+        width: 100%;
         max-height: 0;
-        padding: 0 20px;
+        padding-top: 0;
+        padding-right: max(18px, env(safe-area-inset-right));
+        padding-bottom: 0;
+        padding-left: max(18px, env(safe-area-inset-left));
         flex-direction: column;
         overflow: hidden;
         visibility: hidden;
@@ -316,22 +350,25 @@
         backdrop-filter: blur(20px);
         transition:
             max-height 450ms ease,
-            padding 300ms ease,
+            padding-top 300ms ease,
+            padding-bottom 300ms ease,
             opacity 250ms ease,
             visibility 250ms ease;
     }
 
     .mobile-navigation.open,
     body.menu-open .mobile-navigation {
-        max-height: 540px;
+        max-height: calc(100dvh - 70px);
         padding-top: 18px;
-        padding-bottom: 24px;
+        padding-bottom: max(24px, env(safe-area-inset-bottom));
+        overflow-y: auto;
         visibility: visible;
         opacity: 1;
     }
 
     .mobile-navigation a {
         display: flex;
+        width: 100%;
         min-height: 52px;
         padding-inline: 12px;
         align-items: center;
@@ -468,6 +505,14 @@
         margin-bottom: 22px;
     }
 
+    .pricing-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .pricing-card {
+        min-width: 0;
+    }
+
     .about-container {
         grid-template-columns: 1fr;
         gap: 65px;
@@ -513,6 +558,7 @@
     }
 
     .contact-benefits > div {
+        min-width: 0;
         padding: 18px;
         background: rgba(255, 255, 255, 0.05);
         border: 1px solid rgba(255, 255, 255, 0.08);
@@ -547,6 +593,12 @@
 
     .container {
         width: min(calc(100% - 32px), var(--container-width));
+    }
+
+    .site-header .header-container {
+        width: 100%;
+        padding-left: max(16px, env(safe-area-inset-left));
+        padding-right: max(16px, env(safe-area-inset-right));
     }
 
     .brand-mark {
@@ -736,9 +788,7 @@
         grid-template-columns: 1fr;
     }
 
-    .pricing-card,
-    .pricing-card:last-child {
-        grid-column: auto;
+    .pricing-card {
         width: 100%;
         min-height: auto;
     }
@@ -747,8 +797,14 @@
         order: -1;
     }
 
-    .pricing-card-header p {
+    .pricing-card-header > p {
         min-height: auto;
+    }
+
+    .pricing-information {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 17px;
     }
 
     .about-visual {
@@ -793,7 +849,10 @@
 
     .footer-bottom {
         min-height: auto;
-        padding-block: 30px 105px;
+        padding-top: 30px;
+        padding-right: 0;
+        padding-bottom: calc(105px + env(safe-area-inset-bottom));
+        padding-left: 0;
         align-items: flex-start;
         flex-direction: column;
         gap: 10px;
@@ -801,9 +860,9 @@
 
     .mobile-fixed-cta {
         position: fixed;
-        right: 14px;
-        bottom: 14px;
-        left: 14px;
+        right: max(14px, env(safe-area-inset-right));
+        bottom: max(14px, env(safe-area-inset-bottom));
+        left: max(14px, env(safe-area-inset-left));
         z-index: 900;
         display: flex;
         min-height: 55px;
@@ -1143,22 +1202,31 @@
     }
 
     .pricing-card {
-        padding: 34px 25px;
+        padding: 33px 25px;
         border-radius: 22px;
     }
 
     .popular-label {
         position: static;
         align-self: flex-start;
-        margin-bottom: 19px;
+        width: fit-content;
+        margin-bottom: 22px;
     }
 
-    .pricing-name {
-        margin-bottom: 18px;
+    .pricing-title-row {
+        margin-bottom: 24px;
     }
 
-    .pricing-card-header h3 {
-        font-size: 2rem;
+    .pricing-price {
+        min-height: 63px;
+    }
+
+    .pricing-price strong {
+        font-size: 3.3rem;
+    }
+
+    .pricing-price-custom strong {
+        font-size: 2.45rem;
     }
 
     .about-visual {
@@ -1246,13 +1314,25 @@
         width: min(calc(100% - 26px), var(--container-width));
     }
 
+    .site-header .header-container {
+        width: 100%;
+        padding-left: max(13px, env(safe-area-inset-left));
+        padding-right: max(13px, env(safe-area-inset-right));
+    }
+
+    .header-container {
+        gap: 8px;
+    }
+
     .brand {
+        max-width: calc(100% - 55px);
         gap: 9px;
     }
 
     .brand-mark {
         width: 42px;
         height: 33px;
+        flex: 0 0 42px;
     }
 
     .brand-mark-left,
@@ -1269,11 +1349,21 @@
     .brand-text span {
         margin-top: 5px;
         font-size: 0.48rem;
+        letter-spacing: 0.14em;
     }
 
     .mobile-menu-button {
         width: 43px;
         height: 43px;
+        min-width: 43px;
+        max-width: 43px;
+        flex-basis: 43px;
+        border-radius: 12px;
+    }
+
+    .mobile-navigation {
+        padding-right: max(13px, env(safe-area-inset-right));
+        padding-left: max(13px, env(safe-area-inset-left));
     }
 
     .eyebrow {
@@ -1499,6 +1589,38 @@
         flex-direction: column;
     }
 
+    .pricing-title-row {
+        align-items: flex-start;
+    }
+
+    .pricing-icon {
+        width: 49px;
+        height: 49px;
+        border-radius: 14px;
+        font-size: 1.25rem;
+    }
+
+    .pricing-name {
+        font-size: 1.02rem;
+    }
+
+    .pricing-package-type {
+        font-size: 0.57rem;
+        line-height: 1.5;
+    }
+
+    .pricing-price strong {
+        font-size: 2.9rem;
+    }
+
+    .pricing-price-custom strong {
+        font-size: 2.15rem;
+    }
+
+    .pricing-features li {
+        font-size: 0.77rem;
+    }
+
     .about-visual {
         min-height: 410px;
     }
@@ -1573,52 +1695,74 @@
     }
 
     .mobile-fixed-cta {
-        right: 10px;
-        bottom: 10px;
-        left: 10px;
+        right: max(10px, env(safe-area-inset-right));
+        bottom: max(10px, env(safe-area-inset-bottom));
+        left: max(10px, env(safe-area-inset-left));
         min-height: 53px;
     }
 }
 
 
 /* =========================================================
-   7. EXTRA-SMALL MOBILE DEVICES
-   380px and below
+   7. NARROW MOBILE DEVICES
+   400px and below
 ========================================================= */
 
-@media (max-width: 380px) {
+@media (max-width: 400px) {
+    .site-header .header-container {
+        padding-left: max(11px, env(safe-area-inset-left));
+        padding-right: max(11px, env(safe-area-inset-right));
+    }
+
+    .brand {
+        max-width: calc(100% - 51px);
+        gap: 7px;
+    }
+
+    .brand-mark {
+        width: 39px;
+        height: 31px;
+        flex-basis: 39px;
+    }
+
+    .brand-mark-left,
+    .brand-mark-right {
+        width: 26px;
+        height: 26px;
+        font-size: 0.8rem;
+    }
+
+    .brand-text strong {
+        font-size: 0.76rem;
+        letter-spacing: 0.06em;
+    }
+
+    /*
+       Hiding the smaller tagline gives the header additional
+       space on narrow Android phones and prevents clipping.
+    */
     .brand-text span {
-        letter-spacing: 0.13em;
+        display: none;
+    }
+
+    .mobile-menu-button {
+        width: 41px;
+        height: 41px;
+        min-width: 41px;
+        max-width: 41px;
+        flex-basis: 41px;
+    }
+
+    .mobile-menu-button span {
+        width: 19px;
     }
 
     .hero h1 {
-        font-size: 2.5rem;
-    }
-
-    .hero-visual {
-        min-height: 355px;
+        font-size: clamp(2.5rem, 13vw, 3.35rem);
     }
 
     .floating-card div span {
         display: none;
-    }
-
-    .mock-feature-row {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .mock-feature:last-child {
-        display: none;
-    }
-
-    .value-strip i {
-        display: none;
-    }
-
-    .value-strip-container {
-        align-items: flex-start;
-        flex-direction: column;
-        gap: 10px;
     }
 
     .project-meta {
@@ -1666,17 +1810,83 @@
 
 
 /* =========================================================
-   8. LANDSCAPE MOBILE DEVICES
+   8. EXTRA-SMALL MOBILE DEVICES
+   360px and below
+========================================================= */
+
+@media (max-width: 360px) {
+    .site-header .header-container {
+        padding-left: max(9px, env(safe-area-inset-left));
+        padding-right: max(9px, env(safe-area-inset-right));
+    }
+
+    .brand-text strong {
+        font-size: 0.7rem;
+        letter-spacing: 0.04em;
+    }
+
+    .mobile-menu-button {
+        width: 39px;
+        height: 39px;
+        min-width: 39px;
+        max-width: 39px;
+        flex-basis: 39px;
+        border-radius: 11px;
+    }
+
+    .mobile-menu-button span {
+        width: 18px;
+    }
+
+    .hero h1 {
+        font-size: 2.35rem;
+    }
+
+    .hero-visual {
+        min-height: 350px;
+    }
+
+    .mock-feature-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .mock-feature:last-child {
+        display: none;
+    }
+
+    .value-strip i {
+        display: none;
+    }
+
+    .value-strip-container {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .pricing-card {
+        padding-inline: 20px;
+    }
+
+    .pricing-price strong {
+        font-size: 2.65rem;
+    }
+
+    .pricing-price-custom strong {
+        font-size: 1.95rem;
+    }
+}
+
+
+/* =========================================================
+   9. MOBILE LANDSCAPE
 ========================================================= */
 
 @media (max-height: 540px) and (orientation: landscape) {
-    .mobile-navigation {
-        overflow-y: auto;
-    }
-
     .mobile-navigation.open,
     body.menu-open .mobile-navigation {
-        max-height: calc(100vh - 70px);
+        max-height: calc(100dvh - 70px);
+        overflow-y: auto;
     }
 
     .mobile-navigation a {
@@ -1684,17 +1894,41 @@
     }
 
     .mobile-fixed-cta {
-        right: 12px;
-        bottom: 10px;
+        right: max(12px, env(safe-area-inset-right));
+        bottom: max(10px, env(safe-area-inset-bottom));
         left: auto;
         width: 220px;
         min-height: 48px;
+    }
+
+    .hero {
+        padding-top: calc(var(--header-height) + 45px);
     }
 }
 
 
 /* =========================================================
-   9. HOVER-SAFE DEVICES
+   10. SHORT TABLET AND FOLDABLE SCREENS
+========================================================= */
+
+@media (min-width: 600px) and (max-width: 960px) and (max-height: 700px) {
+    .hero {
+        padding-top: calc(var(--header-height) + 55px);
+    }
+
+    .hero-visual {
+        min-height: 500px;
+    }
+
+    .mobile-navigation.open,
+    body.menu-open .mobile-navigation {
+        max-height: calc(100dvh - 70px);
+    }
+}
+
+
+/* =========================================================
+   11. HOVER-SAFE DEVICES
 ========================================================= */
 
 @media (hover: none) {
@@ -1702,7 +1936,6 @@
     .service-card:hover,
     .project-card:hover,
     .pricing-card:hover,
-    .pricing-card-popular:hover,
     .process-step:hover {
         transform: none;
     }
@@ -1712,5 +1945,387 @@
     .pricing-card:hover,
     .process-step:hover {
         box-shadow: inherit;
+    }
+}
+
+
+/* =========================================================
+   12. DEVICES WITHOUT BACKDROP FILTER SUPPORT
+========================================================= */
+
+@supports not (backdrop-filter: blur(10px)) {
+    .site-header {
+        background: rgba(255, 255, 255, 0.98);
+    }
+
+    .mobile-navigation {
+        background: var(--white);
+    }
+
+    .floating-card,
+    .contact-form-wrapper,
+    .mobile-fixed-cta {
+        backdrop-filter: none;
+    }
+}
+
+
+/* =========================================================
+   FINAL MOBILE CORRECTIONS
+   Fixes clipped menu button, oversized hero, blank space,
+   and fixed CTA overlap on phones.
+========================================================= */
+
+
+/* =========================================================
+   MOBILE HEADER CORRECTIONS
+========================================================= */
+
+@media (max-width: 960px) {
+    .site-header,
+    .site-header.scrolled {
+        width: 100%;
+        max-width: 100%;
+        height: var(--header-height);
+        overflow: visible;
+    }
+
+    .site-header .header-container {
+        width: 100%;
+        max-width: none;
+        height: 100%;
+        margin: 0;
+        padding-left: max(16px, env(safe-area-inset-left));
+        padding-right: max(16px, env(safe-area-inset-right));
+        box-sizing: border-box;
+    }
+
+    .header-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    .brand {
+        min-width: 0;
+        max-width: calc(100% - 60px);
+        flex: 1 1 auto;
+        overflow: hidden;
+    }
+
+    .brand-mark {
+        flex-shrink: 0;
+    }
+
+    .brand-text {
+        min-width: 0;
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    .brand-text strong,
+    .brand-text span {
+        display: block;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    .mobile-menu-button {
+        position: relative;
+        right: auto;
+        left: auto;
+        width: 46px;
+        min-width: 46px;
+        max-width: 46px;
+        height: 46px;
+        min-height: 46px;
+        flex: 0 0 46px;
+        margin: 0;
+        margin-left: auto;
+        padding: 0;
+        overflow: visible;
+        transform: none;
+    }
+
+    /*
+       Fixed positioning keeps the dropdown from being clipped
+       by the header or another parent element.
+    */
+    .mobile-navigation {
+        position: fixed;
+        top: var(--header-height);
+        right: 0;
+        left: 0;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .mobile-navigation.open,
+    body.menu-open .mobile-navigation {
+        max-height: calc(100dvh - var(--header-height));
+        overflow-y: auto;
+        overscroll-behavior: contain;
+    }
+}
+
+
+/* =========================================================
+   PHONE HERO CORRECTIONS
+========================================================= */
+
+@media (max-width: 620px) {
+    .hero {
+        display: block;
+        min-height: auto;
+        padding-top: calc(var(--header-height) + 52px);
+        padding-bottom: 64px;
+    }
+
+    .hero-container {
+        display: block;
+    }
+
+    .hero-content {
+        width: 100%;
+        max-width: none;
+    }
+
+    .eyebrow {
+        max-width: 100%;
+        margin-bottom: 22px;
+        padding: 8px 12px;
+        font-size: 0.61rem;
+        line-height: 1.35;
+        white-space: normal;
+    }
+
+    .hero h1 {
+        max-width: 100%;
+        margin-bottom: 23px;
+        font-size: clamp(2.55rem, 11vw, 3.25rem);
+        line-height: 1.02;
+        letter-spacing: -0.045em;
+        overflow-wrap: normal;
+        word-break: normal;
+    }
+
+    .hero-description {
+        margin-bottom: 29px;
+        font-size: 0.91rem;
+        line-height: 1.72;
+    }
+
+    .hero-actions {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-bottom: 30px;
+        gap: 12px;
+    }
+
+    .hero-actions .button {
+        width: 100%;
+        min-height: 52px;
+    }
+
+    /*
+       Three compact proof cards prevent this section from
+       becoming excessively tall on phones.
+    */
+    .hero-proof {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 8px;
+    }
+
+    .hero-proof-item {
+        min-width: 0;
+        min-height: 88px;
+        padding: 12px 10px;
+        justify-content: center;
+        background: rgba(255, 255, 255, 0.72);
+        border: 1px solid rgba(7, 21, 47, 0.08);
+        border-radius: 13px;
+    }
+
+    .hero-proof-item strong {
+        font-size: 0.74rem;
+        line-height: 1.25;
+    }
+
+    .hero-proof-item span {
+        margin-top: 5px;
+        font-size: 0.56rem;
+        line-height: 1.4;
+    }
+
+    .hero-proof-divider {
+        display: none;
+    }
+
+    /*
+       The desktop browser mockup is too large for phone screens.
+       Hiding it removes the blank area and partially visible
+       floating cards shown in the screenshot.
+    */
+    .hero-visual {
+        display: none;
+    }
+
+    /*
+       The hero already contains a primary CTA. Removing the
+       fixed duplicate prevents it from covering page content.
+    */
+    .mobile-fixed-cta {
+        display: none;
+    }
+
+    .value-strip {
+        margin-top: 0;
+    }
+}
+
+
+/* =========================================================
+   STANDARD PHONE HEADER
+========================================================= */
+
+@media (max-width: 480px) {
+    .site-header .header-container {
+        padding-left: max(13px, env(safe-area-inset-left));
+        padding-right: max(13px, env(safe-area-inset-right));
+    }
+
+    .brand {
+        max-width: calc(100% - 54px);
+        gap: 8px;
+    }
+
+    .brand-mark {
+        width: 40px;
+        height: 32px;
+        flex: 0 0 40px;
+    }
+
+    .brand-mark-left,
+    .brand-mark-right {
+        width: 27px;
+        height: 27px;
+        font-size: 0.82rem;
+    }
+
+    .brand-text strong {
+        font-size: 0.78rem;
+        letter-spacing: 0.06em;
+    }
+
+    .brand-text span {
+        margin-top: 4px;
+        font-size: 0.45rem;
+        letter-spacing: 0.12em;
+    }
+
+    .mobile-menu-button {
+        width: 43px;
+        min-width: 43px;
+        max-width: 43px;
+        height: 43px;
+        min-height: 43px;
+        flex-basis: 43px;
+    }
+
+    .hero h1 {
+        font-size: clamp(2.45rem, 10.8vw, 2.95rem);
+    }
+}
+
+
+/* =========================================================
+   NARROW PHONES
+========================================================= */
+
+@media (max-width: 380px) {
+    .site-header .header-container {
+        padding-left: max(10px, env(safe-area-inset-left));
+        padding-right: max(10px, env(safe-area-inset-right));
+    }
+
+    .brand {
+        max-width: calc(100% - 49px);
+        gap: 7px;
+    }
+
+    .brand-mark {
+        width: 37px;
+        height: 30px;
+        flex-basis: 37px;
+    }
+
+    .brand-mark-left,
+    .brand-mark-right {
+        width: 25px;
+        height: 25px;
+        font-size: 0.75rem;
+    }
+
+    .brand-text strong {
+        font-size: 0.72rem;
+    }
+
+    /*
+       Removing the small tagline guarantees enough room for
+       the menu button on narrow Android phones.
+    */
+    .brand-text span {
+        display: none;
+    }
+
+    .mobile-menu-button {
+        width: 40px;
+        min-width: 40px;
+        max-width: 40px;
+        height: 40px;
+        min-height: 40px;
+        flex-basis: 40px;
+    }
+
+    .mobile-menu-button span {
+        width: 18px;
+    }
+
+    .hero h1 {
+        font-size: 2.35rem;
+    }
+
+    .hero-proof {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-proof-item {
+        min-height: auto;
+        padding: 13px 15px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE LANDSCAPE
+========================================================= */
+
+@media (max-height: 540px) and (orientation: landscape) {
+    .mobile-navigation.open,
+    body.menu-open .mobile-navigation {
+        max-height: calc(100dvh - var(--header-height));
+        overflow-y: auto;
+    }
+
+    .hero {
+        padding-top: calc(var(--header-height) + 35px);
+    }
+
+    .hero h1 {
+        font-size: clamp(2.4rem, 7vw, 3.25rem);
     }
 }
