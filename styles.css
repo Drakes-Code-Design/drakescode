@@ -3321,3 +3321,324 @@ body.custom-cursor-enabled .custom-cursor-dot {
         transform: none;
     }
 }
+
+
+/* =========================================================
+   229 SUPPLY CO. PROJECT PREVIEW
+   Matches the visual direction of the live project
+========================================================= */
+
+.project-preview-supply {
+    background:
+        linear-gradient(
+            145deg,
+            rgba(186, 35, 32, 0.14),
+            rgba(242, 238, 228, 0.06)
+        );
+}
+
+
+/* =========================================================
+   MAIN PREVIEW WINDOW
+========================================================= */
+
+.supply-screen {
+    position: relative;
+    display: flex;
+    min-height: 500px;
+    flex-direction: column;
+    overflow: hidden;
+    color: #f1ede2;
+    background: #070707;
+}
+
+
+/* Red announcement bar */
+
+.supply-screen::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 8;
+    display: flex;
+    height: 27px;
+    align-items: center;
+    justify-content: center;
+    color: #f1ede2;
+    background: #a41f20;
+    content: "●  FREE U.S. SHIPPING OVER $100   —   NEXT DROP COMING SOON";
+    font-family: var(--body-font);
+    font-size: 0.52rem;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+
+/* Remove the decorative fade from the earlier version */
+
+.supply-screen::after {
+    display: none;
+}
+
+
+/* =========================================================
+   INTERNAL NAVIGATION
+========================================================= */
+
+.supply-screen .screen-navigation {
+    position: relative;
+    z-index: 6;
+    display: flex;
+    height: 78px;
+    margin-top: 27px;
+    padding: 0 42px;
+    align-items: center;
+    gap: 27px;
+    color: #090909;
+    background: #f1ede2;
+    border: 0;
+}
+
+.supply-screen .screen-navigation strong {
+    margin-right: auto;
+    color: #090909;
+    font-family: var(--heading-font);
+    font-size: 1rem;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+}
+
+.supply-screen .screen-navigation > span {
+    width: 42px;
+    height: 4px;
+    background: #090909;
+    border-radius: 999px;
+    opacity: 0.65;
+}
+
+.supply-screen .screen-navigation i {
+    display: block;
+    width: 69px;
+    height: 25px;
+    background: #090909;
+    border-radius: 999px;
+    opacity: 1;
+}
+
+
+/* =========================================================
+   SPLIT HERO LAYOUT
+========================================================= */
+
+.supply-screen-content {
+    position: relative;
+    z-index: 3;
+    display: grid;
+    min-height: 395px;
+    padding: 0;
+    grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
+    align-items: stretch;
+    gap: 0;
+}
+
+
+/* Left editorial content */
+
+.supply-screen-content > div:first-child {
+    position: relative;
+    z-index: 4;
+    display: flex;
+    max-width: none;
+    padding: 62px 52px 54px;
+    justify-content: center;
+    flex-direction: column;
+    background:
+        radial-gradient(
+            circle at 10% 90%,
+            rgba(164, 31, 32, 0.12),
+            transparent 28%
+        ),
+        #070707;
+}
+
+
+/* Small South Georgia label */
+
+.supply-screen-content small {
+    display: flex;
+    margin-bottom: 17px;
+    align-items: center;
+    gap: 12px;
+    color: #e3d3b8;
+    font-size: 0.58rem;
+    font-weight: 800;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+
+.supply-screen-content > div:first-child > small::before {
+    display: block;
+    width: 35px;
+    height: 2px;
+    flex-shrink: 0;
+    background: #b72424;
+    content: "";
+}
+
+
+/* Main editorial heading */
+
+.supply-screen-content h4 {
+    max-width: 510px;
+    margin: 0 0 26px;
+    color: #f1ede2;
+    font-family: var(--heading-font);
+    font-size: clamp(3.5rem, 6vw, 5.5rem);
+    font-weight: 700;
+    line-height: 0.83;
+    letter-spacing: -0.075em;
+    text-transform: uppercase;
+}
+
+
+/*
+   Gives the lower portion of the heading a red treatment,
+   similar to the live project's SOUTH line.
+*/
+
+.supply-screen-content h4 {
+    background: linear-gradient(
+        to bottom,
+        #f1ede2 0%,
+        #f1ede2 58%,
+        #bd2724 58%,
+        #bd2724 100%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* Mock paragraph lines */
+
+.supply-screen-content p {
+    width: 91%;
+    height: 6px;
+    margin-bottom: 8px;
+    background: rgba(241, 237, 226, 0.3);
+    border-radius: 999px;
+}
+
+.supply-screen-content p.short {
+    width: 67%;
+}
+
+
+/* Shop button */
+
+.supply-screen-content button {
+    width: fit-content;
+    margin-top: 22px;
+    padding: 12px 19px;
+    color: #f1ede2;
+    background: #b72424;
+    border-radius: 2px;
+    box-shadow: 0 15px 32px rgba(183, 36, 36, 0.24);
+    font-size: 0.62rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   RIGHT-SIDE HERO IMAGE
+========================================================= */
+
+.supply-image-shape {
+    position: relative;
+    display: block;
+    width: 100%;
+    min-height: 395px;
+    overflow: hidden;
+    background-image:
+        linear-gradient(
+            to right,
+            rgba(7, 7, 7, 0.08),
+            transparent 24%
+        ),
+        url(
+            "https://drakescode-commits.github.io/229-supply-co/assets/images/hero-streetwear.jpg"
+        );
+    background-position: center 42%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    transform: none;
+}
+
+
+/* Subtle dark overlay */
+
+.supply-image-shape::before {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    width: auto;
+    height: auto;
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.18),
+        transparent 45%
+    );
+    border-radius: 0;
+    box-shadow: none;
+    content: "";
+}
+
+
+/* Remove the old green decorative shape */
+
+.supply-image-shape::after {
+    display: none;
+}
+
+
+/* Hide the old CSS shirt mockup */
+
+.supply-shirt {
+    display: none;
+}
+
+
+/* Limited-drop label */
+
+.supply-drop-badge {
+    position: absolute;
+    right: 22px;
+    bottom: 22px;
+    z-index: 4;
+    padding: 10px 14px;
+    color: #f1ede2;
+    background: #b72424;
+    border: 1px solid rgba(241, 237, 226, 0.2);
+    border-radius: 2px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+    font-size: 0.53rem;
+    font-weight: 800;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+    transform: none;
+}
+
+
+/* Hide the oversized SOUTH decoration from the prior version */
+
+.supply-background-text {
+    display: none;
+}

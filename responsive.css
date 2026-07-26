@@ -2329,3 +2329,277 @@
         font-size: clamp(2.4rem, 7vw, 3.25rem);
     }
 }
+
+
+/* =========================================================
+   229 SUPPLY CO. RESPONSIVE PREVIEW
+========================================================= */
+
+
+/* =========================================================
+   SMALL LAPTOPS
+========================================================= */
+
+@media (max-width: 1080px) {
+    .supply-screen .screen-navigation {
+        padding-inline: 34px;
+    }
+
+    .supply-screen-content {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
+    }
+
+    .supply-screen-content > div:first-child {
+        padding: 54px 42px 48px;
+    }
+
+    .supply-screen-content h4 {
+        font-size: clamp(3.1rem, 6vw, 4.8rem);
+    }
+}
+
+
+/* =========================================================
+   TABLETS
+========================================================= */
+
+@media (max-width: 768px) {
+    .supply-screen {
+        min-height: 420px;
+    }
+
+    .supply-screen::before {
+        height: 23px;
+        font-size: 0.45rem;
+        letter-spacing: 0.1em;
+    }
+
+    .supply-screen .screen-navigation {
+        height: 63px;
+        margin-top: 23px;
+        padding-inline: 26px;
+        gap: 15px;
+    }
+
+    .supply-screen .screen-navigation strong {
+        font-size: 0.8rem;
+    }
+
+    .supply-screen .screen-navigation > span {
+        width: 29px;
+    }
+
+    .supply-screen .screen-navigation i {
+        width: 57px;
+        height: 22px;
+    }
+
+    .supply-screen-content {
+        min-height: 334px;
+        grid-template-columns: minmax(0, 1fr) minmax(220px, 0.84fr);
+    }
+
+    .supply-screen-content > div:first-child {
+        padding: 43px 33px 39px;
+    }
+
+    .supply-screen-content h4 {
+        font-size: clamp(2.7rem, 7vw, 4rem);
+    }
+
+    .supply-image-shape {
+        min-height: 334px;
+    }
+}
+
+
+/* =========================================================
+   LARGE PHONES
+========================================================= */
+
+@media (max-width: 620px) {
+    .supply-screen {
+        min-height: 365px;
+    }
+
+    .supply-screen::before {
+        justify-content: flex-start;
+        padding-inline: 18px;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    .supply-screen .screen-navigation {
+        height: 57px;
+        padding-inline: 20px;
+        gap: 10px;
+    }
+
+    .supply-screen .screen-navigation strong {
+        font-size: 0.72rem;
+    }
+
+    .supply-screen .screen-navigation > span {
+        width: 22px;
+        height: 3px;
+    }
+
+    .supply-screen .screen-navigation i {
+        width: 48px;
+        height: 20px;
+    }
+
+    .supply-screen-content {
+        min-height: 285px;
+        grid-template-columns: minmax(0, 1fr) minmax(145px, 0.78fr);
+    }
+
+    .supply-screen-content > div:first-child {
+        padding: 34px 25px 31px;
+    }
+
+    .supply-screen-content small {
+        margin-bottom: 12px;
+        font-size: 0.46rem;
+        letter-spacing: 0.12em;
+    }
+
+    .supply-screen-content > div:first-child > small::before {
+        width: 25px;
+    }
+
+    .supply-screen-content h4 {
+        margin-bottom: 18px;
+        font-size: clamp(2rem, 8vw, 2.85rem);
+        line-height: 0.86;
+    }
+
+    .supply-screen-content p {
+        height: 4px;
+    }
+
+    .supply-screen-content button {
+        margin-top: 15px;
+        padding: 9px 13px;
+        font-size: 0.51rem;
+    }
+
+    .supply-image-shape {
+        min-height: 285px;
+        background-position: 56% center;
+    }
+
+    .supply-drop-badge {
+        right: 12px;
+        bottom: 12px;
+        padding: 7px 9px;
+        font-size: 0.43rem;
+    }
+}
+
+
+/* =========================================================
+   STANDARD PHONES
+========================================================= */
+
+@media (max-width: 480px) {
+    .supply-screen {
+        min-height: 415px;
+    }
+
+    .supply-screen::before {
+        height: 21px;
+        padding-inline: 14px;
+        font-size: 0.4rem;
+    }
+
+    .supply-screen .screen-navigation {
+        height: 53px;
+        margin-top: 21px;
+        padding-inline: 16px;
+    }
+
+    .supply-screen .screen-navigation strong {
+        font-size: 0.68rem;
+    }
+
+    /*
+       Hide placeholder navigation marks and retain the
+       brand and bag button on narrower screens.
+    */
+
+    .supply-screen .screen-navigation > span {
+        display: none;
+    }
+
+    .supply-screen .screen-navigation i {
+        margin-left: auto;
+        width: 43px;
+        height: 19px;
+    }
+
+    /*
+       Stack the editorial panel above the photograph so the
+       image remains visible without squeezing the headline.
+    */
+
+    .supply-screen-content {
+        min-height: 341px;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 180px;
+    }
+
+    .supply-screen-content > div:first-child {
+        padding: 28px 22px 27px;
+    }
+
+    .supply-screen-content h4 {
+        max-width: 320px;
+        font-size: clamp(2.3rem, 10vw, 3rem);
+    }
+
+    .supply-screen-content p {
+        width: 82%;
+    }
+
+    .supply-screen-content p.short {
+        width: 58%;
+    }
+
+    .supply-image-shape {
+        min-height: 180px;
+        background-position: center 37%;
+    }
+
+    .supply-drop-badge {
+        right: 11px;
+        bottom: 10px;
+    }
+}
+
+
+/* =========================================================
+   NARROW PHONES
+========================================================= */
+
+@media (max-width: 380px) {
+    .supply-screen-content {
+        grid-template-rows: auto 160px;
+    }
+
+    .supply-screen-content > div:first-child {
+        padding: 25px 18px;
+    }
+
+    .supply-screen-content h4 {
+        font-size: 2.25rem;
+    }
+
+    .supply-image-shape {
+        min-height: 160px;
+    }
+
+    .supply-drop-badge {
+        font-size: 0.39rem;
+    }
+}
