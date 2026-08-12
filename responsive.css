@@ -89,14 +89,22 @@
     transform: translateY(-7px) rotate(-45deg);
   }
   .mobile-nav {
-    position: fixed;
+    position: absolute;
     z-index: 99;
-    inset: 82px 0 0;
+    top: 100%;
+    right: 0;
+    left: 0;
     display: flex;
+    min-height: calc(100dvh - 82px);
     flex-direction: column;
     gap: 0;
     padding: 25px 18px;
-    background: white;
+    background-color: #fff;
+  }
+  body.menu-open .site-header {
+    border-color: var(--line);
+    background-color: #fff;
+    backdrop-filter: none;
   }
   .mobile-nav[hidden] {
     display: none;
@@ -227,7 +235,7 @@
     height: 72px;
   }
   .mobile-nav {
-    inset-block-start: 72px;
+    min-height: calc(100dvh - 72px);
   }
   .hero {
     padding: 116px 0 65px;
