@@ -1,2605 +1,407 @@
-/* =========================================================
-   DRAKES CODE & DESIGN
-   RESPONSIVE STYLESHEET
-========================================================= */
-
-
-/* =========================================================
-   1. LARGE LAPTOPS
-   1200px and below
-========================================================= */
-
-@media (max-width: 1200px) {
-    :root {
-        --container-width: 1080px;
-        --section-padding: 105px;
-    }
-
-    .desktop-navigation {
-        gap: 24px;
-    }
-
-    .hero-container {
-        gap: 55px;
-    }
-
-    .hero h1 {
-        font-size: clamp(3.4rem, 5.7vw, 5.3rem);
-    }
-
-    .hero-visual {
-        min-height: 540px;
-    }
-
-    .browser-window {
-        max-width: 520px;
-    }
-
-    .floating-card-mobile {
-        left: -5px;
-    }
-
-    .services-grid {
-        gap: 18px;
-    }
-
-    .service-card {
-        padding: 34px 28px;
-    }
-
-    .process-layout {
-        gap: 55px;
-    }
-
-    .about-container {
-        gap: 70px;
-    }
-
-    .faq-container {
-        gap: 65px;
-    }
-
-    .contact-container {
-        gap: 60px;
-    }
-
-    .footer-main {
-        gap: 70px;
-    }
+@media (max-width: 1100px) {
+  h1 {
+    font-size: 58px;
+  }
+  h2 {
+    font-size: 44px;
+  }
+  .hero-grid {
+    gap: 35px;
+  }
+  .phone {
+    right: -5px;
+    width: 130px;
+    height: 260px;
+  }
+  .project,
+  .project.reverse {
+    grid-template-columns: 1.25fr 0.75fr;
+    gap: 45px;
+  }
+  .project.reverse {
+    grid-template-columns: 0.75fr 1.25fr;
+  }
+  .pricing-grid {
+    grid-template-columns: repeat(2, 1fr);
+    border: 0;
+    gap: 16px;
+    background: transparent;
+  }
+  .price-card,
+  .price-card:last-child {
+    border: 1px solid var(--line);
+    background: white;
+  }
+  .price-card.featured {
+    margin: 0;
+  }
+  .about-grid,
+  .faq-grid,
+  .contact-grid {
+    gap: 65px;
+  }
 }
 
-
-/* =========================================================
-   2. SMALL LAPTOPS
-   1080px and below
-========================================================= */
-
-@media (max-width: 1080px) {
-    :root {
-        --header-height: 82px;
-        --section-padding: 95px;
-    }
-
-    .container {
-        width: min(calc(100% - 40px), var(--container-width));
-    }
-
-    .desktop-navigation {
-        gap: 18px;
-    }
-
-    .desktop-navigation a {
-        font-size: 0.8rem;
-    }
-
-    .button-header {
-        padding-inline: 17px;
-    }
-
-    .brand-text strong {
-        font-size: 1rem;
-    }
-
-    .hero {
-        min-height: 880px;
-        padding-top: calc(var(--header-height) + 70px);
-    }
-
-    .hero-container {
-        grid-template-columns: minmax(0, 1fr) minmax(390px, 0.9fr);
-        gap: 35px;
-    }
-
-    .hero-description {
-        font-size: 1rem;
-    }
-
-    .hero-proof {
-        gap: 17px;
-    }
-
-    .hero-proof-item span {
-        font-size: 0.64rem;
-    }
-
-    .hero-proof-divider {
-        height: 33px;
-    }
-
-    .hero-visual {
-        min-height: 500px;
-    }
-
-    .browser-window {
-        max-width: 480px;
-    }
-
-    .browser-content {
-        min-height: 390px;
-        padding: 21px;
-    }
-
-    .mock-navigation {
-        margin-bottom: 42px;
-    }
-
-    .mock-feature-row {
-        margin-top: 48px;
-    }
-
-    .floating-card {
-        min-width: 170px;
-        padding: 13px 14px;
-    }
-
-    .floating-card-performance {
-        right: 5px;
-    }
-
-    .floating-card-mobile {
-        bottom: 10px;
-    }
-
-    .section-heading {
-        gap: 45px;
-    }
-
-    .services-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .service-card-featured {
-        grid-column: 1 / -1;
-        min-height: 450px;
-    }
-
-    .project-card-large .project-screen {
-        min-height: 450px;
-    }
-
-    .screen-content {
-        min-height: 385px;
-    }
-
-    .pricing-card {
-        min-height: 670px;
-    }
-
-    .about-container {
-        grid-template-columns: minmax(340px, 0.85fr) minmax(0, 1.15fr);
-        gap: 55px;
-    }
-
-    .about-logo-left,
-    .about-logo-right {
-        width: 105px;
-        height: 102px;
-        font-size: 3.8rem;
-    }
-
-    .contact-container {
-        grid-template-columns: minmax(0, 0.8fr) minmax(470px, 1.2fr);
-        gap: 45px;
-    }
-
-    .contact-form {
-        padding: 36px;
-    }
+@media (max-width: 800px) {
+  .container {
+    width: min(calc(100% - 36px), 680px);
+  }
+  .section {
+    padding: 82px 0;
+  }
+  h1 {
+    font-size: 50px;
+  }
+  h2 {
+    font-size: 40px;
+  }
+  .desktop-nav,
+  .nav-cta {
+    display: none;
+  }
+  .menu-button {
+    display: grid;
+    width: 46px;
+    height: 44px;
+    place-content: center;
+    gap: 5px;
+    margin-left: auto;
+    border: 1px solid var(--line);
+    border-radius: 7px;
+    background: white;
+  }
+  .menu-button span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: var(--navy);
+    transition:
+      transform 0.2s,
+      opacity 0.2s;
+  }
+  .menu-button[aria-expanded="true"] span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+  .menu-button[aria-expanded="true"] span:nth-child(2) {
+    opacity: 0;
+  }
+  .menu-button[aria-expanded="true"] span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+  .mobile-nav {
+    position: fixed;
+    z-index: 99;
+    inset: 82px 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    padding: 25px 18px;
+    background: white;
+  }
+  .mobile-nav[hidden] {
+    display: none;
+  }
+  .mobile-nav a {
+    padding: 17px 5px;
+    border-bottom: 1px solid var(--line);
+    color: var(--navy);
+    font: 600 25px var(--font-display);
+  }
+  .hero {
+    padding: 135px 0 75px;
+    background: linear-gradient(#fff 0 52%, #f0f5fd 52%);
+  }
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 65px;
+  }
+  .hero-copy {
+    max-width: 650px;
+  }
+  .hero-studio {
+    max-width: 600px;
+    margin: auto;
+  }
+  .trust .container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .trust span:nth-child(4),
+  .trust span:nth-child(5) {
+    border-top: 1px solid var(--line);
+  }
+  .section-head {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin-bottom: 52px;
+  }
+  .section-head > p {
+    max-width: 600px;
+  }
+  .project-list {
+    gap: 82px;
+  }
+  .project,
+  .project.reverse {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+  .project.reverse .project-media {
+    order: 0;
+  }
+  .project-media {
+    aspect-ratio: 16/10;
+  }
+  .project-copy {
+    max-width: 590px;
+  }
+  .service-list article {
+    grid-template-columns: 45px 1fr 35px;
+    gap: 18px;
+  }
+  .service-list article p {
+    grid-column: 2 / 3;
+  }
+  .service-list article a {
+    grid-column: 3;
+    grid-row: 1;
+  }
+  .benefits-grid,
+  .about-grid,
+  .faq-grid,
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 65px;
+  }
+  .benefit-intro {
+    max-width: 600px;
+  }
+  .timeline {
+    grid-template-columns: 1fr;
+  }
+  .timeline li {
+    display: grid;
+    grid-template-columns: 65px 1fr;
+    border-top: 0;
+    border-left: 1px solid #aeb8c6;
+    padding: 0 0 42px 32px;
+  }
+  .timeline li::before {
+    top: 0;
+    left: -5px;
+  }
+  .timeline small {
+    margin-top: 0;
+  }
+  .timeline h3 {
+    min-height: 0;
+  }
+  .about-mark {
+    max-width: 500px;
+  }
+  .faq-grid > div:first-child {
+    max-width: 590px;
+  }
+  .contact-copy {
+    max-width: 590px;
+  }
+  .footer-top {
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 35px;
+  }
 }
 
-
-/* =========================================================
-   3. TABLETS AND MOBILE NAVIGATION
-   960px and below
-========================================================= */
-
-@media (max-width: 960px) {
-    :root {
-        --header-height: 76px;
-        --section-padding: 88px;
-    }
-
-    html {
-        scroll-padding-top: calc(var(--header-height) + 15px);
-    }
-
-    body,
-    main,
-    section,
-    .container {
-        min-width: 0;
-    }
-
-    .site-header {
-        height: var(--header-height);
-    }
-
-    .site-header.scrolled {
-        height: 70px;
-    }
-
-    /*
-       Mobile header uses its own full-width sizing instead of
-       inheriting the normal container width. This prevents the
-       menu button from being pushed outside the viewport.
-    */
-    .site-header .header-container {
-        width: min(100%, var(--container-width));
-        padding-left: max(18px, env(safe-area-inset-left));
-        padding-right: max(18px, env(safe-area-inset-right));
-    }
-
-    .header-container {
-        min-width: 0;
-        gap: 12px;
-    }
-
-    .brand {
-        min-width: 0;
-        max-width: calc(100% - 62px);
-        overflow: hidden;
-    }
-
-    .brand-text {
-        min-width: 0;
-        overflow: hidden;
-    }
-
-    .brand-text strong,
-    .brand-text span {
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-    }
-
-    .desktop-navigation,
-    .button-header {
-        display: none;
-    }
-
-    .mobile-menu-button {
-        position: relative;
-        right: auto;
-        display: flex;
-        width: 46px;
-        height: 46px;
-        min-width: 46px;
-        max-width: 46px;
-        flex: 0 0 46px;
-        margin-left: auto;
-        padding: 0;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        gap: 6px;
-        color: var(--navy);
-        background: var(--white);
-        border: 1px solid rgba(7, 21, 47, 0.1);
-        border-radius: 13px;
-        box-shadow: 0 8px 20px rgba(7, 21, 47, 0.06);
-        transform: none;
-    }
-
-    .mobile-menu-button span {
-        display: block;
-        width: 21px;
-        height: 2px;
-        flex-shrink: 0;
-        background: currentColor;
-        border-radius: 999px;
-        transition:
-            transform var(--transition-normal),
-            opacity var(--transition-fast);
-    }
-
-    .mobile-menu-button.active span:first-child,
-    body.menu-open .mobile-menu-button span:first-child {
-        transform: translateY(8px) rotate(45deg);
-    }
-
-    .mobile-menu-button.active span:nth-child(2),
-    body.menu-open .mobile-menu-button span:nth-child(2) {
-        opacity: 0;
-    }
-
-    .mobile-menu-button.active span:last-child,
-    body.menu-open .mobile-menu-button span:last-child {
-        transform: translateY(-8px) rotate(-45deg);
-    }
-
-    .mobile-navigation {
-        position: absolute;
-        top: 100%;
-        right: 0;
-        left: 0;
-        display: flex;
-        width: 100%;
-        max-height: 0;
-        padding-top: 0;
-        padding-right: max(18px, env(safe-area-inset-right));
-        padding-bottom: 0;
-        padding-left: max(18px, env(safe-area-inset-left));
-        flex-direction: column;
-        overflow: hidden;
-        visibility: hidden;
-        opacity: 0;
-        background: rgba(255, 255, 255, 0.98);
-        border-top: 1px solid rgba(7, 21, 47, 0.06);
-        border-bottom: 1px solid rgba(7, 21, 47, 0.09);
-        box-shadow: 0 22px 45px rgba(7, 21, 47, 0.1);
-        backdrop-filter: blur(20px);
-        transition:
-            max-height 450ms ease,
-            padding-top 300ms ease,
-            padding-bottom 300ms ease,
-            opacity 250ms ease,
-            visibility 250ms ease;
-    }
-
-    .mobile-navigation.open,
-    body.menu-open .mobile-navigation {
-        max-height: calc(100dvh - 70px);
-        padding-top: 18px;
-        padding-bottom: max(24px, env(safe-area-inset-bottom));
-        overflow-y: auto;
-        visibility: visible;
-        opacity: 1;
-    }
-
-    .mobile-navigation a {
-        display: flex;
-        width: 100%;
-        min-height: 52px;
-        padding-inline: 12px;
-        align-items: center;
-        color: var(--navy);
-        border-bottom: 1px solid rgba(7, 21, 47, 0.07);
-        font-size: 0.9rem;
-        font-weight: 750;
-    }
-
-    .mobile-navigation a:last-child {
-        min-height: 50px;
-        margin-top: 14px;
-        justify-content: center;
-        color: var(--white);
-        background: linear-gradient(
-            135deg,
-            var(--primary-blue),
-            var(--accent-blue)
-        );
-        border: 0;
-        border-radius: 999px;
-    }
-
-    .hero {
-        min-height: auto;
-        padding-top: calc(var(--header-height) + 75px);
-        padding-bottom: 105px;
-    }
-
-    .hero-container {
-        grid-template-columns: 1fr;
-        gap: 60px;
-    }
-
-    .hero-content {
-        max-width: 760px;
-    }
-
-    .hero h1 {
-        max-width: 800px;
-        font-size: clamp(3.6rem, 9vw, 5.8rem);
-    }
-
-    .hero-description {
-        max-width: 700px;
-    }
-
-    .hero-visual {
-        width: min(100%, 650px);
-        min-height: 570px;
-        margin-inline: auto;
-    }
-
-    .browser-window {
-        top: 35px;
-        left: 50%;
-        width: calc(100% - 35px);
-        max-width: 590px;
-        transform: translateX(-50%);
-    }
-
-    .floating-card-performance {
-        top: 0;
-        right: 0;
-    }
-
-    .floating-card-mobile {
-        bottom: 5px;
-        left: 0;
-    }
-
-    .hero-scroll {
-        display: none;
-    }
-
-    .value-strip-container {
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-
-    .section-heading {
-        grid-template-columns: 1fr;
-        gap: 22px;
-    }
-
-    .section-heading > p {
-        max-width: 680px;
-        margin-bottom: 0;
-    }
-
-    .projects-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .project-card-large {
-        grid-column: auto;
-    }
-
-    .project-card-large .project-preview {
-        padding: 20px 20px 0;
-    }
-
-    .project-card-large .project-information {
-        padding: 30px;
-    }
-
-    .project-card-large .project-screen {
-        min-height: 430px;
-    }
-
-    .project-card-large .project-information h3 {
-        font-size: 1.8rem;
-    }
-
-    .process-layout {
-        grid-template-columns: 1fr;
-        gap: 50px;
-    }
-
-    .process-introduction {
-        position: static;
-        display: grid;
-        grid-template-columns: minmax(280px, 0.8fr) minmax(0, 1.2fr);
-        align-items: center;
-        gap: 40px;
-    }
-
-    .process-logo-card {
-        min-height: 280px;
-        margin-bottom: 0;
-    }
-
-    .process-introduction blockquote {
-        margin-bottom: 22px;
-    }
-
-    .pricing-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .pricing-card {
-        min-width: 0;
-    }
-
-    .about-container {
-        grid-template-columns: 1fr;
-        gap: 65px;
-    }
-
-    .about-visual {
-        width: min(100%, 650px);
-        min-height: 560px;
-        margin-inline: auto;
-    }
-
-    .about-content {
-        max-width: 760px;
-    }
-
-    .faq-container {
-        grid-template-columns: 1fr;
-        gap: 45px;
-    }
-
-    .faq-introduction {
-        position: static;
-        max-width: 720px;
-    }
-
-    .contact-container {
-        grid-template-columns: 1fr;
-        gap: 55px;
-    }
-
-    .contact-content {
-        max-width: 760px;
-    }
-
-    .contact-content > p {
-        max-width: 720px;
-    }
-
-    .contact-benefits {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 14px;
-    }
-
-    .contact-benefits > div {
-        min-width: 0;
-        padding: 18px;
-        background: rgba(255, 255, 255, 0.05);
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        border-radius: 16px;
-    }
-
-    .contact-form-wrapper {
-        width: min(100%, 760px);
-    }
-
-    .footer-main {
-        grid-template-columns: 1fr;
-        gap: 55px;
-    }
-
-    .footer-brand-column > p {
-        max-width: 550px;
-    }
+@media (max-width: 560px) {
+  .container {
+    width: min(calc(100% - 30px), 500px);
+  }
+  .section {
+    padding: 68px 0;
+  }
+  h1 {
+    font-size: 42px;
+  }
+  h2 {
+    font-size: 35px;
+  }
+  .nav-wrap {
+    height: 72px;
+  }
+  .mobile-nav {
+    inset-block-start: 72px;
+  }
+  .hero {
+    padding: 116px 0 65px;
+  }
+  .hero-lede {
+    font-size: 16px;
+  }
+  .button-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .hero-points {
+    flex-wrap: wrap;
+    gap: 8px 20px;
+  }
+  .hero-studio {
+    width: 100%;
+    padding: 20px 0 50px;
+  }
+  .demo-page {
+    padding: 10px;
+  }
+  .demo-nav {
+    gap: 8px;
+  }
+  .demo-nav i {
+    width: 15px;
+  }
+  .demo-hero {
+    min-height: 185px;
+    padding: 15px 10px;
+  }
+  .demo-hero h2 {
+    font-size: 19px;
+  }
+  .demo-art {
+    height: 140px;
+  }
+  .phone {
+    right: -2px;
+    bottom: 0;
+    width: 110px;
+    height: 225px;
+    border-width: 5px;
+    border-radius: 17px;
+    padding-inline: 9px;
+  }
+  .phone-art {
+    height: 65px;
+  }
+  .phone strong {
+    font-size: 12px;
+  }
+  .code-note {
+    right: 116px;
+    bottom: 8px;
+  }
+  .trust .container {
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+  }
+  .trust span,
+  .trust span + span {
+    border: 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .trust span:nth-child(even) {
+    border-left: 1px solid var(--line);
+  }
+  .trust span:last-child {
+    grid-column: 1 / -1;
+  }
+  .project-list {
+    gap: 68px;
+  }
+  .project-copy h3 {
+    font-size: 31px;
+  }
+  .service-list article {
+    grid-template-columns: 36px 1fr 26px;
+    padding-block: 25px;
+  }
+  .service-list h3 {
+    font-size: 22px;
+  }
+  .benefits {
+    padding: 75px 0;
+  }
+  .benefit-list article {
+    grid-template-columns: 40px 1fr;
+  }
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+  .price-card > div > span {
+    min-height: 0;
+  }
+  .payment-note {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .payment-note span {
+    text-align: left;
+  }
+  .about-mark {
+    height: 340px;
+  }
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .contact-form {
+    padding: 27px 20px;
+  }
+  .form-top {
+    display: block;
+  }
+  .form-top span {
+    display: block;
+    margin-top: 5px;
+  }
+  .footer-top {
+    grid-template-columns: 1fr 1fr;
+  }
+  .footer-top > div {
+    grid-column: 1 / -1;
+  }
 }
 
-
-/* =========================================================
-   4. TABLETS
-   768px and below
-========================================================= */
-
-@media (max-width: 768px) {
-    :root {
-        --section-padding: 78px;
-        --section-padding-small: 62px;
-    }
-
-    .container {
-        width: min(calc(100% - 32px), var(--container-width));
-    }
-
-    .site-header .header-container {
-        width: 100%;
-        padding-left: max(16px, env(safe-area-inset-left));
-        padding-right: max(16px, env(safe-area-inset-right));
-    }
-
-    .brand-mark {
-        width: 47px;
-        height: 36px;
-    }
-
-    .brand-mark-left,
-    .brand-mark-right {
-        width: 31px;
-        height: 31px;
-        font-size: 1rem;
-    }
-
-    .brand-text strong {
-        font-size: 0.94rem;
-    }
-
-    .brand-text span {
-        font-size: 0.56rem;
-    }
-
-    .section-heading,
-    .section-heading.centered {
-        margin-bottom: 48px;
-    }
-
-    .section-heading h2,
-    .about-content h2,
-    .faq-introduction h2,
-    .contact-content h2 {
-        font-size: clamp(2.55rem, 9vw, 4rem);
-    }
-
-    .section-heading.centered {
-        text-align: left;
-        align-items: flex-start;
-    }
-
-    .section-heading.centered p {
-        margin-left: 0;
-    }
-
-    .section-heading.centered .section-label::before {
-        display: block;
-    }
-
-    .hero {
-        padding-top: calc(var(--header-height) + 60px);
-        padding-bottom: 85px;
-    }
-
-    .hero h1 {
-        font-size: clamp(3.15rem, 12vw, 5rem);
-    }
-
-    .hero-description {
-        font-size: 0.98rem;
-    }
-
-    .hero-actions {
-        margin-bottom: 36px;
-    }
-
-    .hero-proof {
-        align-items: flex-start;
-        flex-wrap: wrap;
-    }
-
-    .hero-proof-divider {
-        display: none;
-    }
-
-    .hero-proof-item {
-        min-width: calc(50% - 12px);
-        padding: 14px 16px;
-        background: rgba(255, 255, 255, 0.64);
-        border: 1px solid rgba(7, 21, 47, 0.07);
-        border-radius: 13px;
-    }
-
-    .hero-visual {
-        min-height: 500px;
-    }
-
-    .browser-window {
-        width: calc(100% - 10px);
-    }
-
-    .browser-content {
-        min-height: 360px;
-    }
-
-    .mock-navigation {
-        margin-bottom: 35px;
-    }
-
-    .mock-feature-row {
-        margin-top: 40px;
-    }
-
-    .floating-card {
-        min-width: 155px;
-    }
-
-    .floating-card-performance {
-        right: -3px;
-    }
-
-    .floating-card-mobile {
-        bottom: -8px;
-    }
-
-    .value-strip {
-        padding-block: 19px;
-    }
-
-    .value-strip-container {
-        gap: 13px 18px;
-    }
-
-    .value-strip span {
-        font-size: 0.64rem;
-    }
-
-    .services-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .service-card-featured {
-        grid-column: auto;
-    }
-
-    .service-card {
-        min-height: auto;
-    }
-
-    .project-screen,
-    .project-card-large .project-screen {
-        min-height: 380px;
-    }
-
-    .screen-content {
-        min-height: 315px;
-        padding: 38px;
-        gap: 25px;
-    }
-
-    .screen-content h4 {
-        font-size: clamp(1.9rem, 6.5vw, 3rem);
-    }
-
-    .coaching-image-shape {
-        height: 240px;
-    }
-
-    .detailing-screen,
-    .fitness-screen {
-        min-height: 380px;
-    }
-
-    .projects-footer {
-        align-items: flex-start;
-        flex-direction: column;
-    }
-
-    .process-introduction {
-        display: block;
-    }
-
-    .process-logo-card {
-        margin-bottom: 30px;
-    }
-
-    .process-step {
-        grid-template-columns: 68px 1fr;
-        padding: 28px;
-        gap: 22px;
-    }
-
-    .process-step-number {
-        width: 58px;
-        height: 58px;
-    }
-
-    .pricing-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .pricing-card {
-        width: 100%;
-        min-height: auto;
-    }
-
-    .pricing-card-popular {
-        order: -1;
-    }
-
-    .pricing-card-header > p {
-        min-height: auto;
-    }
-
-    .pricing-information {
-        align-items: flex-start;
-        flex-direction: column;
-        gap: 17px;
-    }
-
-    .about-visual {
-        min-height: 520px;
-    }
-
-    .about-card {
-        right: 20px;
-        min-height: 455px;
-    }
-
-    .about-logo-left,
-    .about-logo-right {
-        width: 95px;
-        height: 92px;
-        font-size: 3.4rem;
-    }
-
-    .about-stat-card {
-        width: 170px;
-        min-height: 115px;
-    }
-
-    .contact-benefits {
-        grid-template-columns: 1fr;
-    }
-
-    .contact-benefits > div {
-        padding: 0;
-        background: transparent;
-        border: 0;
-    }
-
-    .form-row {
-        grid-template-columns: 1fr;
-        gap: 0;
-    }
-
-    .footer-navigation {
-        gap: 25px;
-    }
-
-    .footer-bottom {
-        min-height: auto;
-        padding-top: 30px;
-        padding-right: 0;
-        padding-bottom: calc(105px + env(safe-area-inset-bottom));
-        padding-left: 0;
-        align-items: flex-start;
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .mobile-fixed-cta {
-        position: fixed;
-        right: max(14px, env(safe-area-inset-right));
-        bottom: max(14px, env(safe-area-inset-bottom));
-        left: max(14px, env(safe-area-inset-left));
-        z-index: 900;
-        display: flex;
-        min-height: 55px;
-        padding: 14px 20px;
-        align-items: center;
-        justify-content: center;
-        gap: 11px;
-        color: var(--white);
-        background: linear-gradient(
-            135deg,
-            var(--primary-blue),
-            var(--accent-blue)
-        );
-        border: 1px solid rgba(255, 255, 255, 0.16);
-        border-radius: 999px;
-        box-shadow: 0 20px 45px rgba(7, 21, 47, 0.28);
-        font-size: 0.88rem;
-        font-weight: 800;
-        backdrop-filter: blur(14px);
-    }
-
-    body.custom-cursor-enabled {
-        cursor: auto;
-    }
-
-    body.custom-cursor-enabled a,
-    body.custom-cursor-enabled button,
-    body.custom-cursor-enabled input,
-    body.custom-cursor-enabled textarea,
-    body.custom-cursor-enabled select {
-        cursor: pointer;
-    }
-
-    body.custom-cursor-enabled input,
-    body.custom-cursor-enabled textarea {
-        cursor: text;
-    }
-
-    .custom-cursor,
-    .custom-cursor-dot,
-    body.custom-cursor-enabled .custom-cursor,
-    body.custom-cursor-enabled .custom-cursor-dot {
-        display: none;
-    }
-}
-
-
-/* =========================================================
-   5. LARGE MOBILE DEVICES
-   620px and below
-========================================================= */
-
-@media (max-width: 620px) {
-    :root {
-        --section-padding: 70px;
-    }
-
-    .section-label {
-        font-size: 0.7rem;
-    }
-
-    .hero h1 {
-        font-size: clamp(2.9rem, 13.5vw, 4.3rem);
-    }
-
-    .hero-actions {
-        align-items: stretch;
-        flex-direction: column;
-    }
-
-    .hero-actions .button {
-        width: 100%;
-    }
-
-    .hero-proof {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 10px;
-    }
-
-    .hero-proof-item {
-        min-width: 0;
-    }
-
-    .hero-visual {
-        min-height: 430px;
-    }
-
-    .browser-window {
-        top: 28px;
-        border-radius: 18px;
-    }
-
-    .browser-toolbar {
-        min-height: 46px;
-        padding-inline: 11px;
-        grid-template-columns: 48px 1fr 18px;
-        gap: 7px;
-    }
-
-    .browser-dots {
-        gap: 4px;
-    }
-
-    .browser-dots span {
-        width: 7px;
-        height: 7px;
-    }
-
-    .browser-address {
-        height: 25px;
-        padding-inline: 8px;
-        font-size: 0.53rem;
-    }
-
-    .browser-content {
-        min-height: 315px;
-        padding: 17px;
-    }
-
-    .mock-navigation {
-        margin-bottom: 28px;
-    }
-
-    .mock-nav-links {
-        display: none;
-    }
-
-    .mock-hero {
-        grid-template-columns: 1fr 0.8fr;
-        gap: 16px;
-    }
-
-    .mock-image {
-        min-height: 135px;
-    }
-
-    .mock-image-shape {
-        width: 115px;
-        height: 115px;
-    }
-
-    .mock-image-card {
-        width: 88px;
-        padding: 10px;
-    }
-
-    .mock-feature-row {
-        margin-top: 31px;
-        gap: 7px;
-    }
-
-    .mock-feature {
-        min-height: 55px;
-        padding: 8px;
-    }
-
-    .mock-feature span {
-        width: 18px;
-        height: 18px;
-        margin-bottom: 7px;
-    }
-
-    .floating-card {
-        min-width: auto;
-        padding: 10px 12px;
-        gap: 8px;
-        border-radius: 12px;
-    }
-
-    .floating-card-icon {
-        width: 31px;
-        height: 31px;
-        border-radius: 9px;
-        font-size: 0.75rem;
-    }
-
-    .floating-card strong {
-        font-size: 0.64rem;
-    }
-
-    .floating-card div span {
-        font-size: 0.53rem;
-    }
-
-    .floating-card-performance {
-        top: -5px;
-    }
-
-    .floating-card-mobile {
-        bottom: -3px;
-    }
-
-    .value-strip-container {
-        justify-content: flex-start;
-    }
-
-    .services-grid,
-    .projects-grid,
-    .pricing-grid {
-        gap: 18px;
-    }
-
-    .service-card {
-        padding: 32px 25px;
-        border-radius: 22px;
-    }
-
-    .service-number {
-        top: 24px;
-        right: 24px;
-        font-size: 3rem;
-    }
-
-    .project-preview,
-    .project-card-large .project-preview {
-        padding: 13px 13px 0;
-    }
-
-    .project-browser-bar {
-        height: 37px;
-        grid-template-columns: 47px 1fr 47px;
-    }
-
-    .project-screen,
-    .project-card-large .project-screen {
-        min-height: 330px;
-    }
-
-    .screen-navigation {
-        height: 55px;
-        padding-inline: 20px;
-        gap: 11px;
-    }
-
-    .screen-navigation > span {
-        width: 22px;
-    }
-
-    .screen-navigation i {
-        width: 52px;
-        height: 20px;
-    }
-
-    .screen-content {
-        min-height: 275px;
-        padding: 28px 25px 35px;
-        grid-template-columns: 1fr 0.75fr;
-        gap: 14px;
-    }
-
-    .screen-content h4 {
-        margin-top: 10px;
-        margin-bottom: 15px;
-        font-size: clamp(1.55rem, 7vw, 2.35rem);
-    }
-
-    .coaching-image-shape {
-        height: 190px;
-    }
-
-    .detailing-screen,
-    .fitness-screen {
-        min-height: 330px;
-    }
-
-    .detail-screen-copy,
-    .fitness-screen-content {
-        max-width: 68%;
-        padding: 40px 24px;
-    }
-
-    .detail-screen-copy h4,
-    .fitness-screen-content h4 {
-        font-size: 1.85rem;
-    }
-
-    .detail-car-shape {
-        right: -50px;
-        width: 70%;
-    }
-
-    .detail-car-shape::before,
-    .detail-car-shape::after {
-        width: 52px;
-        height: 52px;
-        border-width: 9px;
-    }
-
-    .fitness-number {
-        font-size: 8rem;
-    }
-
-    .project-information,
-    .project-card-large .project-information {
-        padding: 25px 22px 28px;
-    }
-
-    .project-title-row {
-        align-items: flex-start;
-    }
-
-    .project-title-row > div {
-        align-items: flex-start;
-        flex-direction: column;
-        gap: 4px;
-    }
-
-    .project-information h3,
-    .project-card-large .project-information h3 {
-        font-size: 1.5rem;
-    }
-
-    .process-logo-card {
-        min-height: 245px;
-        padding: 30px;
-    }
-
-    .process-logo-card img {
-        width: 220px;
-    }
-
-    .process-step {
-        grid-template-columns: 1fr;
-        min-height: auto;
-        padding: 26px 23px;
-    }
-
-    .process-step:hover,
-    .process-step.active {
-        transform: translateY(-4px);
-    }
-
-    .process-step-number {
-        width: 52px;
-        height: 52px;
-    }
-
-    .pricing-card {
-        padding: 33px 25px;
-        border-radius: 22px;
-    }
-
-    .popular-label {
-        position: static;
-        align-self: flex-start;
-        width: fit-content;
-        margin-bottom: 22px;
-    }
-
-    .pricing-title-row {
-        margin-bottom: 24px;
-    }
-
-    .pricing-price {
-        min-height: 63px;
-    }
-
-    .pricing-price strong {
-        font-size: 3.3rem;
-    }
-
-    .pricing-price-custom strong {
-        font-size: 2.45rem;
-    }
-
-    .about-visual {
-        min-height: 465px;
-    }
-
-    .about-card {
-        right: 14px;
-        min-height: 405px;
-        padding: 24px;
-        border-radius: 28px;
-    }
-
-    .about-logo-left,
-    .about-logo-right {
-        width: 82px;
-        height: 80px;
-        font-size: 2.9rem;
-    }
-
-    .about-card-bottom {
-        right: 24px;
-        bottom: 24px;
-        left: 24px;
-    }
-
-    .about-stat-card {
-        width: 150px;
-        min-height: 105px;
-        padding: 18px;
-    }
-
-    .about-stat-card strong {
-        font-size: 2.1rem;
-    }
-
-    .faq-question {
-        min-height: 82px;
-    }
-
-    .faq-question span {
-        font-size: 1rem;
-    }
-
-    .faq-answer p {
-        padding-right: 10px;
-    }
-
-    .contact-form-wrapper {
-        padding: 8px;
-        border-radius: 24px;
-    }
-
-    .contact-form {
-        padding: 31px 24px;
-        border-radius: 18px;
-    }
-
-    .form-heading h3 {
-        font-size: 1.55rem;
-    }
-
-    .footer-main {
-        padding-block: 65px 50px;
-    }
-
-    .footer-navigation {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 38px 25px;
-    }
-}
-
-
-/* =========================================================
-   6. STANDARD MOBILE DEVICES
-   480px and below
-========================================================= */
-
-@media (max-width: 480px) {
-    :root {
-        --section-padding: 64px;
-    }
-
-    .container {
-        width: min(calc(100% - 26px), var(--container-width));
-    }
-
-    .site-header .header-container {
-        width: 100%;
-        padding-left: max(13px, env(safe-area-inset-left));
-        padding-right: max(13px, env(safe-area-inset-right));
-    }
-
-    .header-container {
-        gap: 8px;
-    }
-
-    .brand {
-        max-width: calc(100% - 55px);
-        gap: 9px;
-    }
-
-    .brand-mark {
-        width: 42px;
-        height: 33px;
-        flex: 0 0 42px;
-    }
-
-    .brand-mark-left,
-    .brand-mark-right {
-        width: 28px;
-        height: 28px;
-        font-size: 0.88rem;
-    }
-
-    .brand-text strong {
-        font-size: 0.82rem;
-    }
-
-    .brand-text span {
-        margin-top: 5px;
-        font-size: 0.48rem;
-        letter-spacing: 0.14em;
-    }
-
-    .mobile-menu-button {
-        width: 43px;
-        height: 43px;
-        min-width: 43px;
-        max-width: 43px;
-        flex-basis: 43px;
-        border-radius: 12px;
-    }
-
-    .mobile-navigation {
-        padding-right: max(13px, env(safe-area-inset-right));
-        padding-left: max(13px, env(safe-area-inset-left));
-    }
-
-    .eyebrow {
-        padding: 8px 12px;
-        font-size: 0.64rem;
-    }
-
-    .hero {
-        padding-top: calc(var(--header-height) + 48px);
-    }
-
-    .hero h1 {
-        font-size: clamp(2.65rem, 13.7vw, 3.7rem);
-    }
-
-    .hero-description {
-        font-size: 0.91rem;
-        line-height: 1.72;
-    }
-
-    .button {
-        min-height: 52px;
-        padding-inline: 19px;
-        font-size: 0.85rem;
-    }
-
-    .hero-visual {
-        min-height: 385px;
-    }
-
-    .browser-content {
-        min-height: 270px;
-        padding: 14px;
-    }
-
-    .mock-navigation {
-        margin-bottom: 23px;
-    }
-
-    .mock-logo span {
-        width: 23px;
-        height: 23px;
-        font-size: 0.58rem;
-    }
-
-    .mock-nav-button {
-        width: 50px;
-        height: 19px;
-    }
-
-    .mock-hero {
-        grid-template-columns: 1fr 0.72fr;
-        gap: 10px;
-    }
-
-    .mock-heading {
-        height: 10px;
-    }
-
-    .mock-paragraph {
-        height: 4px;
-    }
-
-    .mock-buttons {
-        margin-top: 14px;
-    }
-
-    .mock-buttons span {
-        width: 59px;
-        height: 21px;
-    }
-
-    .mock-buttons span:last-child {
-        width: 46px;
-    }
-
-    .mock-image {
-        min-height: 105px;
-    }
-
-    .mock-image-shape {
-        width: 88px;
-        height: 88px;
-    }
-
-    .mock-image-card {
-        right: -5px;
-        bottom: -6px;
-        width: 69px;
-        padding: 7px;
-    }
-
-    .mock-chart-bars {
-        height: 30px;
-        gap: 3px;
-    }
-
-    .mock-chart-bars i {
-        width: 8px;
-    }
-
-    .mock-feature-row {
-        margin-top: 24px;
-    }
-
-    .mock-feature {
-        min-height: 45px;
-        padding: 6px;
-    }
-
-    .mock-feature span {
-        width: 14px;
-        height: 14px;
-        margin-bottom: 5px;
-        border-radius: 5px;
-    }
-
-    .floating-card {
-        padding: 8px 9px;
-    }
-
-    .floating-card-performance {
-        right: -4px;
-    }
-
-    .floating-card-mobile {
-        left: -2px;
-    }
-
-    .section-heading h2,
-    .about-content h2,
-    .faq-introduction h2,
-    .contact-content h2 {
-        font-size: clamp(2.25rem, 10.7vw, 3.25rem);
-    }
-
-    .section-heading {
-        gap: 17px;
-        margin-bottom: 40px;
-    }
-
-    .service-icon {
-        width: 55px;
-        height: 55px;
-        margin-bottom: 25px;
-    }
-
-    .service-card h3 {
-        font-size: 1.48rem;
-    }
-
-    .project-screen,
-    .project-card-large .project-screen {
-        min-height: 280px;
-    }
-
-    .screen-navigation {
-        height: 48px;
-        padding-inline: 15px;
-    }
-
-    .screen-navigation > span {
-        display: none;
-    }
-
-    .screen-content {
-        min-height: 232px;
-        padding: 22px 18px 28px;
-        grid-template-columns: 1fr 0.62fr;
-    }
-
-    .screen-content h4 {
-        font-size: 1.45rem;
-    }
-
-    .screen-content p {
-        height: 4px;
-    }
-
-    .screen-content button,
-    .detail-screen-copy button,
-    .fitness-screen-content button {
-        margin-top: 14px;
-        padding: 8px 13px;
-        font-size: 0.55rem;
-    }
-
-    .coaching-image-shape {
-        height: 150px;
-    }
-
-    .detailing-screen,
-    .fitness-screen {
-        min-height: 280px;
-    }
-
-    .detail-screen-copy,
-    .fitness-screen-content {
-        max-width: 75%;
-        padding: 32px 18px;
-    }
-
-    .detail-screen-copy h4,
-    .fitness-screen-content h4 {
-        font-size: 1.5rem;
-    }
-
-    .project-link {
-        width: 43px;
-        height: 43px;
-    }
-
-    .project-information > p {
-        font-size: 0.82rem;
-    }
-
-    .process-step-content h3 {
-        font-size: 1.5rem;
-    }
-
-    .process-step-content ul {
-        align-items: flex-start;
-        flex-direction: column;
-    }
-
-    .pricing-title-row {
-        align-items: flex-start;
-    }
-
-    .pricing-icon {
-        width: 49px;
-        height: 49px;
-        border-radius: 14px;
-        font-size: 1.25rem;
-    }
-
-    .pricing-name {
-        font-size: 1.02rem;
-    }
-
-    .pricing-package-type {
-        font-size: 0.57rem;
-        line-height: 1.5;
-    }
-
-    .pricing-price strong {
-        font-size: 2.9rem;
-    }
-
-    .pricing-price-custom strong {
-        font-size: 2.15rem;
-    }
-
-    .pricing-features li {
-        font-size: 0.77rem;
-    }
-
-    .about-visual {
-        min-height: 410px;
-    }
-
-    .about-card {
-        min-height: 355px;
-    }
-
-    .about-logo-left,
-    .about-logo-right {
-        width: 68px;
-        height: 68px;
-        font-size: 2.35rem;
-    }
-
-    .about-card-top,
-    .about-card-bottom {
-        font-size: 0.5rem;
-    }
-
-    .about-card-bottom {
-        flex-wrap: wrap;
-    }
-
-    .about-stat-card {
-        width: 135px;
-        min-height: 95px;
-        padding: 15px;
-    }
-
-    .about-stat-card strong {
-        font-size: 1.8rem;
-    }
-
-    .about-stat-card span {
-        font-size: 0.61rem;
-    }
-
-    .about-skills {
-        margin-block: 26px 30px;
-    }
-
-    .faq-question {
-        min-height: 76px;
-        padding-block: 20px;
-    }
-
-    .faq-question span {
-        font-size: 0.94rem;
-    }
-
-    .faq-question i {
-        width: 32px;
-        height: 32px;
-    }
-
-    .contact-form {
-        padding: 27px 19px;
-    }
-
-    .form-group input,
-    .form-group select {
-        height: 50px;
-    }
-
-    .footer-navigation {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .footer-navigation > div:last-child {
-        grid-column: 1 / -1;
-    }
-
-    .mobile-fixed-cta {
-        right: max(10px, env(safe-area-inset-right));
-        bottom: max(10px, env(safe-area-inset-bottom));
-        left: max(10px, env(safe-area-inset-left));
-        min-height: 53px;
-    }
-}
-
-
-/* =========================================================
-   7. NARROW MOBILE DEVICES
-   400px and below
-========================================================= */
-
-@media (max-width: 400px) {
-    .site-header .header-container {
-        padding-left: max(11px, env(safe-area-inset-left));
-        padding-right: max(11px, env(safe-area-inset-right));
-    }
-
-    .brand {
-        max-width: calc(100% - 51px);
-        gap: 7px;
-    }
-
-    .brand-mark {
-        width: 39px;
-        height: 31px;
-        flex-basis: 39px;
-    }
-
-    .brand-mark-left,
-    .brand-mark-right {
-        width: 26px;
-        height: 26px;
-        font-size: 0.8rem;
-    }
-
-    .brand-text strong {
-        font-size: 0.76rem;
-        letter-spacing: 0.06em;
-    }
-
-    /*
-       Hiding the smaller tagline gives the header additional
-       space on narrow Android phones and prevents clipping.
-    */
-    .brand-text span {
-        display: none;
-    }
-
-    .mobile-menu-button {
-        width: 41px;
-        height: 41px;
-        min-width: 41px;
-        max-width: 41px;
-        flex-basis: 41px;
-    }
-
-    .mobile-menu-button span {
-        width: 19px;
-    }
-
-    .hero h1 {
-        font-size: clamp(2.5rem, 13vw, 3.35rem);
-    }
-
-    .floating-card div span {
-        display: none;
-    }
-
-    .project-meta {
-        gap: 6px;
-    }
-
-    .project-meta span {
-        padding: 6px 8px;
-        font-size: 0.54rem;
-    }
-
-    .project-title-row {
-        gap: 12px;
-    }
-
-    .project-information h3,
-    .project-card-large .project-information h3 {
-        font-size: 1.35rem;
-    }
-
-    .screen-content {
-        grid-template-columns: 1fr;
-    }
-
-    .coaching-image-shape {
-        display: none;
-    }
-
-    .detail-screen-copy,
-    .fitness-screen-content {
-        max-width: 88%;
-    }
-
-    .about-logo-left,
-    .about-logo-right {
-        width: 60px;
-        height: 60px;
-        font-size: 2rem;
-    }
-
-    .contact-form {
-        padding-inline: 16px;
-    }
-}
-
-
-/* =========================================================
-   8. EXTRA-SMALL MOBILE DEVICES
-   360px and below
-========================================================= */
-
-@media (max-width: 360px) {
-    .site-header .header-container {
-        padding-left: max(9px, env(safe-area-inset-left));
-        padding-right: max(9px, env(safe-area-inset-right));
-    }
-
-    .brand-text strong {
-        font-size: 0.7rem;
-        letter-spacing: 0.04em;
-    }
-
-    .mobile-menu-button {
-        width: 39px;
-        height: 39px;
-        min-width: 39px;
-        max-width: 39px;
-        flex-basis: 39px;
-        border-radius: 11px;
-    }
-
-    .mobile-menu-button span {
-        width: 18px;
-    }
-
-    .hero h1 {
-        font-size: 2.35rem;
-    }
-
-    .hero-visual {
-        min-height: 350px;
-    }
-
-    .mock-feature-row {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .mock-feature:last-child {
-        display: none;
-    }
-
-    .value-strip i {
-        display: none;
-    }
-
-    .value-strip-container {
-        align-items: flex-start;
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .pricing-card {
-        padding-inline: 20px;
-    }
-
-    .pricing-price strong {
-        font-size: 2.65rem;
-    }
-
-    .pricing-price-custom strong {
-        font-size: 1.95rem;
-    }
-}
-
-
-/* =========================================================
-   9. MOBILE LANDSCAPE
-========================================================= */
-
-@media (max-height: 540px) and (orientation: landscape) {
-    .mobile-navigation.open,
-    body.menu-open .mobile-navigation {
-        max-height: calc(100dvh - 70px);
-        overflow-y: auto;
-    }
-
-    .mobile-navigation a {
-        min-height: 44px;
-    }
-
-    .mobile-fixed-cta {
-        right: max(12px, env(safe-area-inset-right));
-        bottom: max(10px, env(safe-area-inset-bottom));
-        left: auto;
-        width: 220px;
-        min-height: 48px;
-    }
-
-    .hero {
-        padding-top: calc(var(--header-height) + 45px);
-    }
-}
-
-
-/* =========================================================
-   10. SHORT TABLET AND FOLDABLE SCREENS
-========================================================= */
-
-@media (min-width: 600px) and (max-width: 960px) and (max-height: 700px) {
-    .hero {
-        padding-top: calc(var(--header-height) + 55px);
-    }
-
-    .hero-visual {
-        min-height: 500px;
-    }
-
-    .mobile-navigation.open,
-    body.menu-open .mobile-navigation {
-        max-height: calc(100dvh - 70px);
-    }
-}
-
-
-/* =========================================================
-   11. HOVER-SAFE DEVICES
-========================================================= */
-
-@media (hover: none) {
-    .button:hover,
-    .service-card:hover,
-    .project-card:hover,
-    .pricing-card:hover,
-    .process-step:hover {
-        transform: none;
-    }
-
-    .service-card:hover,
-    .project-card:hover,
-    .pricing-card:hover,
-    .process-step:hover {
-        box-shadow: inherit;
-    }
-}
-
-
-/* =========================================================
-   12. DEVICES WITHOUT BACKDROP FILTER SUPPORT
-========================================================= */
-
-@supports not (backdrop-filter: blur(10px)) {
-    .site-header {
-        background: rgba(255, 255, 255, 0.98);
-    }
-
-    .mobile-navigation {
-        background: var(--white);
-    }
-
-    .floating-card,
-    .contact-form-wrapper,
-    .mobile-fixed-cta {
-        backdrop-filter: none;
-    }
-}
-
-
-/* =========================================================
-   FINAL MOBILE CORRECTIONS
-   Fixes clipped menu button, oversized hero, blank space,
-   and fixed CTA overlap on phones.
-========================================================= */
-
-
-/* =========================================================
-   MOBILE HEADER CORRECTIONS
-========================================================= */
-
-@media (max-width: 960px) {
-    .site-header,
-    .site-header.scrolled {
-        width: 100%;
-        max-width: 100%;
-        height: var(--header-height);
-        overflow: visible;
-    }
-
-    .site-header .header-container {
-        width: 100%;
-        max-width: none;
-        height: 100%;
-        margin: 0;
-        padding-left: max(16px, env(safe-area-inset-left));
-        padding-right: max(16px, env(safe-area-inset-right));
-        box-sizing: border-box;
-    }
-
-    .header-container {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 10px;
-    }
-
-    .brand {
-        min-width: 0;
-        max-width: calc(100% - 60px);
-        flex: 1 1 auto;
-        overflow: hidden;
-    }
-
-    .brand-mark {
-        flex-shrink: 0;
-    }
-
-    .brand-text {
-        min-width: 0;
-        max-width: 100%;
-        overflow: hidden;
-    }
-
-    .brand-text strong,
-    .brand-text span {
-        display: block;
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-    }
-
-    .mobile-menu-button {
-        position: relative;
-        right: auto;
-        left: auto;
-        width: 46px;
-        min-width: 46px;
-        max-width: 46px;
-        height: 46px;
-        min-height: 46px;
-        flex: 0 0 46px;
-        margin: 0;
-        margin-left: auto;
-        padding: 0;
-        overflow: visible;
-        transform: none;
-    }
-
-    /*
-       Fixed positioning keeps the dropdown from being clipped
-       by the header or another parent element.
-    */
-    .mobile-navigation {
-        position: fixed;
-        top: var(--header-height);
-        right: 0;
-        left: 0;
-        width: 100%;
-        max-width: 100%;
-        box-sizing: border-box;
-    }
-
-    .mobile-navigation.open,
-    body.menu-open .mobile-navigation {
-        max-height: calc(100dvh - var(--header-height));
-        overflow-y: auto;
-        overscroll-behavior: contain;
-    }
-}
-
-
-/* =========================================================
-   PHONE HERO CORRECTIONS
-========================================================= */
-
-@media (max-width: 620px) {
-    .hero {
-        display: block;
-        min-height: auto;
-        padding-top: calc(var(--header-height) + 52px);
-        padding-bottom: 64px;
-    }
-
-    .hero-container {
-        display: block;
-    }
-
-    .hero-content {
-        width: 100%;
-        max-width: none;
-    }
-
-    .eyebrow {
-        max-width: 100%;
-        margin-bottom: 22px;
-        padding: 8px 12px;
-        font-size: 0.61rem;
-        line-height: 1.35;
-        white-space: normal;
-    }
-
-    .hero h1 {
-        max-width: 100%;
-        margin-bottom: 23px;
-        font-size: clamp(2.55rem, 11vw, 3.25rem);
-        line-height: 1.02;
-        letter-spacing: -0.045em;
-        overflow-wrap: normal;
-        word-break: normal;
-    }
-
-    .hero-description {
-        margin-bottom: 29px;
-        font-size: 0.91rem;
-        line-height: 1.72;
-    }
-
-    .hero-actions {
-        display: grid;
-        grid-template-columns: 1fr;
-        margin-bottom: 30px;
-        gap: 12px;
-    }
-
-    .hero-actions .button {
-        width: 100%;
-        min-height: 52px;
-    }
-
-    /*
-       Three compact proof cards prevent this section from
-       becoming excessively tall on phones.
-    */
-    .hero-proof {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 8px;
-    }
-
-    .hero-proof-item {
-        min-width: 0;
-        min-height: 88px;
-        padding: 12px 10px;
-        justify-content: center;
-        background: rgba(255, 255, 255, 0.72);
-        border: 1px solid rgba(7, 21, 47, 0.08);
-        border-radius: 13px;
-    }
-
-    .hero-proof-item strong {
-        font-size: 0.74rem;
-        line-height: 1.25;
-    }
-
-    .hero-proof-item span {
-        margin-top: 5px;
-        font-size: 0.56rem;
-        line-height: 1.4;
-    }
-
-    .hero-proof-divider {
-        display: none;
-    }
-
-    /*
-       The desktop browser mockup is too large for phone screens.
-       Hiding it removes the blank area and partially visible
-       floating cards shown in the screenshot.
-    */
-    .hero-visual {
-        display: none;
-    }
-
-    /*
-       The hero already contains a primary CTA. Removing the
-       fixed duplicate prevents it from covering page content.
-    */
-    .mobile-fixed-cta {
-        display: none;
-    }
-
-    .value-strip {
-        margin-top: 0;
-    }
-}
-
-
-/* =========================================================
-   STANDARD PHONE HEADER
-========================================================= */
-
-@media (max-width: 480px) {
-    .site-header .header-container {
-        padding-left: max(13px, env(safe-area-inset-left));
-        padding-right: max(13px, env(safe-area-inset-right));
-    }
-
-    .brand {
-        max-width: calc(100% - 54px);
-        gap: 8px;
-    }
-
-    .brand-mark {
-        width: 40px;
-        height: 32px;
-        flex: 0 0 40px;
-    }
-
-    .brand-mark-left,
-    .brand-mark-right {
-        width: 27px;
-        height: 27px;
-        font-size: 0.82rem;
-    }
-
-    .brand-text strong {
-        font-size: 0.78rem;
-        letter-spacing: 0.06em;
-    }
-
-    .brand-text span {
-        margin-top: 4px;
-        font-size: 0.45rem;
-        letter-spacing: 0.12em;
-    }
-
-    .mobile-menu-button {
-        width: 43px;
-        min-width: 43px;
-        max-width: 43px;
-        height: 43px;
-        min-height: 43px;
-        flex-basis: 43px;
-    }
-
-    .hero h1 {
-        font-size: clamp(2.45rem, 10.8vw, 2.95rem);
-    }
-}
-
-
-/* =========================================================
-   NARROW PHONES
-========================================================= */
-
-@media (max-width: 380px) {
-    .site-header .header-container {
-        padding-left: max(10px, env(safe-area-inset-left));
-        padding-right: max(10px, env(safe-area-inset-right));
-    }
-
-    .brand {
-        max-width: calc(100% - 49px);
-        gap: 7px;
-    }
-
-    .brand-mark {
-        width: 37px;
-        height: 30px;
-        flex-basis: 37px;
-    }
-
-    .brand-mark-left,
-    .brand-mark-right {
-        width: 25px;
-        height: 25px;
-        font-size: 0.75rem;
-    }
-
-    .brand-text strong {
-        font-size: 0.72rem;
-    }
-
-    /*
-       Removing the small tagline guarantees enough room for
-       the menu button on narrow Android phones.
-    */
-    .brand-text span {
-        display: none;
-    }
-
-    .mobile-menu-button {
-        width: 40px;
-        min-width: 40px;
-        max-width: 40px;
-        height: 40px;
-        min-height: 40px;
-        flex-basis: 40px;
-    }
-
-    .mobile-menu-button span {
-        width: 18px;
-    }
-
-    .hero h1 {
-        font-size: 2.35rem;
-    }
-
-    .hero-proof {
-        grid-template-columns: 1fr;
-    }
-
-    .hero-proof-item {
-        min-height: auto;
-        padding: 13px 15px;
-    }
-}
-
-
-/* =========================================================
-   MOBILE LANDSCAPE
-========================================================= */
-
-@media (max-height: 540px) and (orientation: landscape) {
-    .mobile-navigation.open,
-    body.menu-open .mobile-navigation {
-        max-height: calc(100dvh - var(--header-height));
-        overflow-y: auto;
-    }
-
-    .hero {
-        padding-top: calc(var(--header-height) + 35px);
-    }
-
-    .hero h1 {
-        font-size: clamp(2.4rem, 7vw, 3.25rem);
-    }
-}
-
-
-/* =========================================================
-   229 SUPPLY CO. RESPONSIVE PREVIEW
-========================================================= */
-
-
-/* =========================================================
-   SMALL LAPTOPS
-========================================================= */
-
-@media (max-width: 1080px) {
-    .supply-screen .screen-navigation {
-        padding-inline: 34px;
-    }
-
-    .supply-screen-content {
-        grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
-    }
-
-    .supply-screen-content > div:first-child {
-        padding: 54px 42px 48px;
-    }
-
-    .supply-screen-content h4 {
-        font-size: clamp(3.1rem, 6vw, 4.8rem);
-    }
-}
-
-
-/* =========================================================
-   TABLETS
-========================================================= */
-
-@media (max-width: 768px) {
-    .supply-screen {
-        min-height: 420px;
-    }
-
-    .supply-screen::before {
-        height: 23px;
-        font-size: 0.45rem;
-        letter-spacing: 0.1em;
-    }
-
-    .supply-screen .screen-navigation {
-        height: 63px;
-        margin-top: 23px;
-        padding-inline: 26px;
-        gap: 15px;
-    }
-
-    .supply-screen .screen-navigation strong {
-        font-size: 0.8rem;
-    }
-
-    .supply-screen .screen-navigation > span {
-        width: 29px;
-    }
-
-    .supply-screen .screen-navigation i {
-        width: 57px;
-        height: 22px;
-    }
-
-    .supply-screen-content {
-        min-height: 334px;
-        grid-template-columns: minmax(0, 1fr) minmax(220px, 0.84fr);
-    }
-
-    .supply-screen-content > div:first-child {
-        padding: 43px 33px 39px;
-    }
-
-    .supply-screen-content h4 {
-        font-size: clamp(2.7rem, 7vw, 4rem);
-    }
-
-    .supply-image-shape {
-        min-height: 334px;
-    }
-}
-
-
-/* =========================================================
-   LARGE PHONES
-========================================================= */
-
-@media (max-width: 620px) {
-    .supply-screen {
-        min-height: 365px;
-    }
-
-    .supply-screen::before {
-        justify-content: flex-start;
-        padding-inline: 18px;
-        overflow: hidden;
-        white-space: nowrap;
-    }
-
-    .supply-screen .screen-navigation {
-        height: 57px;
-        padding-inline: 20px;
-        gap: 10px;
-    }
-
-    .supply-screen .screen-navigation strong {
-        font-size: 0.72rem;
-    }
-
-    .supply-screen .screen-navigation > span {
-        width: 22px;
-        height: 3px;
-    }
-
-    .supply-screen .screen-navigation i {
-        width: 48px;
-        height: 20px;
-    }
-
-    .supply-screen-content {
-        min-height: 285px;
-        grid-template-columns: minmax(0, 1fr) minmax(145px, 0.78fr);
-    }
-
-    .supply-screen-content > div:first-child {
-        padding: 34px 25px 31px;
-    }
-
-    .supply-screen-content small {
-        margin-bottom: 12px;
-        font-size: 0.46rem;
-        letter-spacing: 0.12em;
-    }
-
-    .supply-screen-content > div:first-child > small::before {
-        width: 25px;
-    }
-
-    .supply-screen-content h4 {
-        margin-bottom: 18px;
-        font-size: clamp(2rem, 8vw, 2.85rem);
-        line-height: 0.86;
-    }
-
-    .supply-screen-content p {
-        height: 4px;
-    }
-
-    .supply-screen-content button {
-        margin-top: 15px;
-        padding: 9px 13px;
-        font-size: 0.51rem;
-    }
-
-    .supply-image-shape {
-        min-height: 285px;
-        background-position: 56% center;
-    }
-
-    .supply-drop-badge {
-        right: 12px;
-        bottom: 12px;
-        padding: 7px 9px;
-        font-size: 0.43rem;
-    }
-}
-
-
-/* =========================================================
-   STANDARD PHONES
-========================================================= */
-
-@media (max-width: 480px) {
-    .supply-screen {
-        min-height: 415px;
-    }
-
-    .supply-screen::before {
-        height: 21px;
-        padding-inline: 14px;
-        font-size: 0.4rem;
-    }
-
-    .supply-screen .screen-navigation {
-        height: 53px;
-        margin-top: 21px;
-        padding-inline: 16px;
-    }
-
-    .supply-screen .screen-navigation strong {
-        font-size: 0.68rem;
-    }
-
-    /*
-       Hide placeholder navigation marks and retain the
-       brand and bag button on narrower screens.
-    */
-
-    .supply-screen .screen-navigation > span {
-        display: none;
-    }
-
-    .supply-screen .screen-navigation i {
-        margin-left: auto;
-        width: 43px;
-        height: 19px;
-    }
-
-    /*
-       Stack the editorial panel above the photograph so the
-       image remains visible without squeezing the headline.
-    */
-
-    .supply-screen-content {
-        min-height: 341px;
-        grid-template-columns: 1fr;
-        grid-template-rows: auto 180px;
-    }
-
-    .supply-screen-content > div:first-child {
-        padding: 28px 22px 27px;
-    }
-
-    .supply-screen-content h4 {
-        max-width: 320px;
-        font-size: clamp(2.3rem, 10vw, 3rem);
-    }
-
-    .supply-screen-content p {
-        width: 82%;
-    }
-
-    .supply-screen-content p.short {
-        width: 58%;
-    }
-
-    .supply-image-shape {
-        min-height: 180px;
-        background-position: center 37%;
-    }
-
-    .supply-drop-badge {
-        right: 11px;
-        bottom: 10px;
-    }
-}
-
-
-/* =========================================================
-   NARROW PHONES
-========================================================= */
-
-@media (max-width: 380px) {
-    .supply-screen-content {
-        grid-template-rows: auto 160px;
-    }
-
-    .supply-screen-content > div:first-child {
-        padding: 25px 18px;
-    }
-
-    .supply-screen-content h4 {
-        font-size: 2.25rem;
-    }
-
-    .supply-image-shape {
-        min-height: 160px;
-    }
-
-    .supply-drop-badge {
-        font-size: 0.39rem;
-    }
+@media (max-width: 390px) {
+  h1 {
+    font-size: 38px;
+  }
+  h2 {
+    font-size: 32px;
+  }
+  .hero-points {
+    display: grid;
+  }
+  .studio-caption {
+    font-size: 8px;
+  }
+  .phone {
+    width: 100px;
+    height: 210px;
+  }
+  .demo-hero h2 {
+    font-size: 17px;
+  }
+  .code-note {
+    display: none;
+  }
+  .project-media {
+    aspect-ratio: 4/3;
+  }
+  .tags {
+    flex-wrap: wrap;
+  }
+  .service-list article {
+    grid-template-columns: 28px 1fr;
+  }
+  .service-list article a {
+    display: none;
+  }
+  .service-list article p {
+    grid-column: 2;
+  }
+  .about-mark {
+    height: 300px;
+  }
+  .footer-bottom {
+    display: block;
+  }
+  .footer-bottom p + p {
+    margin-top: 7px;
+  }
 }

@@ -1,1719 +1,952 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>Drakes Code & Design | Custom Websites for Growing Businesses</title>
-
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Web Design in Southwest Georgia | Drakes Code &amp; Design</title>
     <meta
       name="description"
-      content="Drakes Code & Design creates modern, responsive, conversion-focused websites for small businesses, entrepreneurs, and growing brands."
+      content="Custom web design and front-end development for small businesses in Albany, Southwest Georgia, and beyond. Responsive websites built to earn trust and support growth."
     />
-
-    <meta
-      name="keywords"
-      content="web designer, web developer, custom websites, small business websites, e-commerce websites, responsive web design, Drakes Code and Design"
-    />
-
     <meta name="author" content="Drakes Code & Design" />
-    <meta name="theme-color" content="#1454e8" />
-
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="theme-color" content="#07152f" />
     <link rel="canonical" href="https://www.drakescode.com/" />
-
     <meta
       property="og:title"
-      content="Drakes Code & Design | Custom Websites That Convert"
+      content="Web Design in Southwest Georgia | Drakes Code &amp; Design"
     />
-
     <meta
       property="og:description"
-      content="Modern, responsive websites designed to help businesses attract customers, build trust, and grow online."
+      content="Business-first web design and front-end development for small businesses in Albany, Southwest Georgia, and beyond."
     />
-
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.drakescode.com/" />
-
     <meta
       property="og:image"
       content="https://www.drakescode.com/images/logo.png"
     />
-
     <meta name="twitter:card" content="summary_large_image" />
-
-    <link rel="icon" type="image/png" href="/images/logo.png" />
-
+    <meta
+      name="twitter:title"
+      content="Web Design in Southwest Georgia | Drakes Code &amp; Design"
+    />
+    <meta
+      name="twitter:description"
+      content="Custom, responsive websites for small businesses in Southwest Georgia and beyond."
+    />
+    <link rel="icon" href="assets/favicon.png" type="image/png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
     <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&family=Space+Grotesk:wght@500;600;700&display=swap"
       rel="stylesheet"
     />
-
-    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="responsive.css" />
-
     <script src="script.js" defer></script>
-
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "ProfessionalService",
+        "@id": "https://www.drakescode.com/#business",
         "name": "Drakes Code & Design",
         "url": "https://www.drakescode.com/",
-        "logo": "https://www.drakescode.com/logo%282%29.png",
-        "description": "Custom web design and development for small businesses, entrepreneurs, and growing brands.",
-        "areaServed": "United States",
+        "logo": "https://www.drakescode.com/images/logo.png",
+        "image": "https://www.drakescode.com/images/logo.png",
+        "description": "Custom web design and front-end development for small businesses in Albany, Southwest Georgia, and beyond.",
+        "areaServed": [
+          {
+            "@type": "City",
+            "name": "Albany",
+            "containedInPlace": { "@type": "State", "name": "Georgia" }
+          },
+          { "@type": "AdministrativeArea", "name": "Southwest Georgia" },
+          { "@type": "State", "name": "Georgia" },
+          { "@type": "Country", "name": "United States" }
+        ],
         "serviceType": [
           "Custom Web Design",
-          "Web Development",
+          "Front-End Development",
+          "Small Business Websites",
           "E-Commerce Websites",
           "Website Redesign",
-          "Responsive Web Design",
-          "Small Business Websites"
-        ]
+          "Website Maintenance"
+        ],
+        "sameAs": ["https://github.com/drakescode-commits"]
       }
     </script>
   </head>
-
   <body>
-    <a class="skip-link" href="#main-content"> Skip to main content </a>
-
-    <!-- =====================================================
-         HEADER
-    ====================================================== -->
-    <header class="site-header" id="site-header">
-      <div class="container header-container">
-        <a
-          class="brand"
-          href="#home"
-          aria-label="Drakes Code and Design homepage"
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <header class="site-header" data-header>
+      <div class="container nav-wrap">
+        <a class="brand" href="#home" aria-label="Drakes Code and Design home"
+          ><span class="brand-icon" aria-hidden="true">&lt;/&gt;</span
+          ><span
+            ><strong>Drakes</strong><small>Code &amp; Design</small></span
+          ></a
         >
-          <span class="brand-mark" aria-hidden="true">
-            <span class="brand-mark-left">&lt;</span>
-            <span class="brand-mark-right">&gt;</span>
-          </span>
-
-          <span class="brand-text">
-            <strong>Drakes</strong>
-            <span>Code &amp; Design</span>
-          </span>
-        </a>
-
-        <nav class="desktop-navigation" aria-label="Primary navigation">
-          <a href="#services">Services</a>
-          <a href="#projects">Work</a>
-          <a href="#process">Process</a>
-          <a href="#pricing">Pricing</a>
-          <a href="#about">About</a>
+        <nav class="desktop-nav" aria-label="Primary">
+          <a href="#work">Work</a><a href="#services">Services</a
+          ><a href="#process">Process</a><a href="#pricing">Pricing</a
+          ><a href="#about">About</a>
         </nav>
-
-        <a class="button button-header" href="#contact">
-          Start a Project
-          <span aria-hidden="true">↗</span>
-        </a>
-
-        <button
-          class="mobile-menu-button"
-          id="mobile-menu-button"
-          type="button"
-          aria-label="Open navigation menu"
-          aria-controls="mobile-navigation"
-          aria-expanded="false"
+        <a class="btn btn-primary nav-cta" href="#contact"
+          >Start a Project <span aria-hidden="true">↗</span></a
         >
-          <span></span>
-          <span></span>
-          <span></span>
+        <button
+          class="menu-button"
+          type="button"
+          aria-expanded="false"
+          aria-controls="mobile-nav"
+          aria-label="Open menu"
+        >
+          <span></span><span></span><span></span>
         </button>
       </div>
-
-      <nav
-        class="mobile-navigation"
-        id="mobile-navigation"
-        aria-label="Mobile navigation"
-      >
-        <a href="#services">Services</a>
-        <a href="#projects">Work</a>
-        <a href="#process">Process</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#about">About</a>
-        <a href="#contact">Start a Project</a>
+      <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile" hidden>
+        <a href="#work">Work</a><a href="#services">Services</a
+        ><a href="#process">Process</a><a href="#pricing">Pricing</a
+        ><a href="#about">About</a><a href="#contact">Start a Project</a>
       </nav>
     </header>
 
-    <main id="main-content">
-      <!-- =================================================
-             HERO SECTION
-        ================================================== -->
-      <section class="hero section" id="home">
-        <div class="hero-background" aria-hidden="true">
-          <span class="hero-orb hero-orb-one"></span>
-          <span class="hero-orb hero-orb-two"></span>
-          <span class="hero-grid"></span>
-        </div>
-
-        <div class="container hero-container">
-          <div class="hero-content" data-reveal="left">
-            <div class="eyebrow">
-              <span class="eyebrow-dot"></span>
-              Custom websites for growing businesses
-            </div>
-
-            <h1>
-              Websites that make your business
-              <span class="gradient-text">look established</span>
-              and ready to grow.
-            </h1>
-
-            <p class="hero-description">
-              I design and develop modern, responsive websites that help small
-              businesses build trust, attract customers, and turn online
-              visitors into real opportunities.
+    <main id="main">
+      <section class="hero" id="home">
+        <div class="container hero-grid">
+          <div class="hero-copy reveal">
+            <p class="eyebrow"><span></span> Web design + development</p>
+            <h1>Your business deserves a website that <em>earns trust.</em></h1>
+            <p class="hero-lede">
+              Custom websites for small businesses in Albany, Southwest Georgia,
+              and beyond—thoughtfully designed, cleanly built, and focused on
+              making the next customer feel confident choosing you.
             </p>
-
-            <div class="hero-actions">
-              <a class="button button-primary" href="#contact">
-                Let’s Build Your Website
-                <span aria-hidden="true">↗</span>
-              </a>
-
-              <a class="button button-secondary" href="#projects">
-                View Featured Work
-              </a>
+            <div class="button-row">
+              <a class="btn btn-primary" href="#contact"
+                >Start Your Project <span aria-hidden="true">↗</span></a
+              ><a class="btn btn-secondary" href="#work">View Selected Work</a>
             </div>
-
-            <div class="hero-proof">
-              <div class="hero-proof-item">
-                <strong>3+ Years</strong>
-                <span>Hands-on experience</span>
-              </div>
-
-              <div class="hero-proof-divider"></div>
-
-              <div class="hero-proof-item">
-                <strong>100% Responsive</strong>
-                <span>Built for every screen</span>
-              </div>
-
-              <div class="hero-proof-divider"></div>
-
-              <div class="hero-proof-item">
-                <strong>Conversion Focused</strong>
-                <span>Designed with purpose</span>
-              </div>
-            </div>
+            <ul class="hero-points" aria-label="Project benefits">
+              <li>Responsive design</li>
+              <li>Custom development</li>
+              <li>Post-launch support</li>
+            </ul>
           </div>
-
-          <div class="hero-visual" data-reveal="right">
-            <div class="visual-glow"></div>
-
-            <div class="browser-window">
-              <div class="browser-toolbar">
-                <div class="browser-dots" aria-hidden="true">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </div>
-
-                <div class="browser-address">
-                  <span aria-hidden="true">●</span>
-                  yourbusiness.com
-                </div>
-
-                <div class="browser-toolbar-icon" aria-hidden="true">⋮</div>
-              </div>
-
-              <div class="browser-content">
-                <div class="mock-navigation">
-                  <div class="mock-logo">
-                    <span>&lt;</span>
-                    <span>&gt;</span>
-                  </div>
-
-                  <div class="mock-nav-links" aria-hidden="true">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                  </div>
-
-                  <div class="mock-nav-button"></div>
-                </div>
-
-                <div class="mock-hero">
-                  <div class="mock-copy">
-                    <span class="mock-label"></span>
-                    <span class="mock-heading"></span>
-                    <span class="mock-heading short"></span>
-                    <span class="mock-paragraph"></span>
-                    <span class="mock-paragraph short"></span>
-
-                    <div class="mock-buttons">
-                      <span></span>
-                      <span></span>
-                    </div>
-                  </div>
-
-                  <div class="mock-image">
-                    <div class="mock-image-shape"></div>
-
-                    <div class="mock-image-card">
-                      <span class="mock-chart-line"></span>
-
-                      <span class="mock-chart-line short"></span>
-
-                      <div class="mock-chart-bars">
-                        <i></i>
-                        <i></i>
-                        <i></i>
-                        <i></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="mock-feature-row">
-                  <div class="mock-feature">
-                    <span></span>
-                    <i></i>
-                    <i></i>
-                  </div>
-
-                  <div class="mock-feature">
-                    <span></span>
-                    <i></i>
-                    <i></i>
-                  </div>
-
-                  <div class="mock-feature">
-                    <span></span>
-                    <i></i>
-                    <i></i>
-                  </div>
-                </div>
-              </div>
+          <div
+            class="hero-studio reveal"
+            aria-label="Responsive website design preview"
+          >
+            <div class="studio-caption">
+              <span>Live project preview</span
+              ><span class="status"><i></i> Responsive</span>
             </div>
-
-            <div class="floating-card floating-card-performance">
-              <span class="floating-card-icon">⚡</span>
-
-              <div>
-                <strong>Fast Performance</strong>
-                <span>Built for speed</span>
+            <div class="browser">
+              <div class="browser-bar">
+                <i></i><i></i><i></i><span>yourbusiness.com</span>
               </div>
-            </div>
-
-            <div class="floating-card floating-card-mobile">
-              <span class="floating-card-icon">✓</span>
-
-              <div>
-                <strong>Mobile Ready</strong>
-                <span>Every screen covered</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <a class="hero-scroll" href="#services" aria-label="Scroll to services">
-          <span>Explore</span>
-          <i aria-hidden="true"></i>
-        </a>
-      </section>
-
-      <!-- =================================================
-             VALUE STRIP
-        ================================================== -->
-      <section class="value-strip" aria-label="Website qualities">
-        <div class="container value-strip-container">
-          <span>Modern Design</span>
-          <i aria-hidden="true"></i>
-
-          <span>Responsive Development</span>
-          <i aria-hidden="true"></i>
-
-          <span>SEO-Friendly Structure</span>
-          <i aria-hidden="true"></i>
-
-          <span>Clear Customer Journeys</span>
-          <i aria-hidden="true"></i>
-
-          <span>Reliable Support</span>
-        </div>
-      </section>
-
-      <!-- =================================================
-             SERVICES SECTION
-        ================================================== -->
-      <section class="services section" id="services">
-        <div class="container">
-          <div class="section-heading" data-reveal="up">
-            <div>
-              <span class="section-label">What I Build</span>
-
-              <h2>
-                Your website should do more than
-                <span>just exist.</span>
-              </h2>
-            </div>
-
-            <p>
-              Every website is designed around your business, audience, and
-              goals—not forced into a generic layout that looks like everyone
-              else.
-            </p>
-          </div>
-
-          <div class="services-grid">
-            <article
-              class="service-card service-card-featured"
-              data-reveal="up"
-            >
-              <div class="service-number">01</div>
-
-              <div class="service-icon" aria-hidden="true">
-                <span>&lt;/&gt;</span>
-              </div>
-
-              <h3>Custom-Coded Websites</h3>
-
-              <p>
-                Fully custom websites created with clean code, responsive
-                layouts, and a polished user experience.
-              </p>
-
-              <ul class="service-list">
-                <li>Custom HTML, CSS and JavaScript</li>
-                <li>Responsive mobile-first design</li>
-                <li>Performance-focused development</li>
-                <li>SEO-friendly page structure</li>
-              </ul>
-
-              <a href="#contact">
-                Discuss a custom build
-                <span aria-hidden="true">↗</span>
-              </a>
-            </article>
-
-            <article class="service-card" data-reveal="up">
-              <div class="service-number">02</div>
-
-              <div class="service-icon" aria-hidden="true">
-                <span>◇</span>
-              </div>
-
-              <h3>Small Business Websites</h3>
-
-              <p>
-                Professional websites that clearly explain what you offer and
-                make it easy for customers to contact, call, book, or buy.
-              </p>
-
-              <ul class="service-list">
-                <li>Service-based business websites</li>
-                <li>Lead-generation landing pages</li>
-                <li>Booking and contact integrations</li>
-                <li>Local business optimization</li>
-              </ul>
-
-              <a href="#contact">
-                Build your online presence
-                <span aria-hidden="true">↗</span>
-              </a>
-            </article>
-
-            <article class="service-card" data-reveal="up">
-              <div class="service-number">03</div>
-
-              <div class="service-icon" aria-hidden="true">
-                <span>↻</span>
-              </div>
-
-              <h3>Website Redesigns</h3>
-
-              <p>
-                Refresh an outdated or underperforming website with improved
-                visuals, structure, usability, and mobile responsiveness.
-              </p>
-
-              <ul class="service-list">
-                <li>Modern visual redesign</li>
-                <li>Improved navigation and layout</li>
-                <li>Mobile experience upgrades</li>
-                <li>Stronger calls to action</li>
-              </ul>
-
-              <a href="#contact">
-                Upgrade your current website
-                <span aria-hidden="true">↗</span>
-              </a>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- =================================================
-     FEATURED PROJECTS
-================================================== -->
-      <section class="projects section" id="projects">
-        <div class="projects-background" aria-hidden="true"></div>
-
-        <div class="container">
-          <div class="section-heading light" data-reveal="up">
-            <div>
-              <span class="section-label"> Selected Work </span>
-
-              <h2>
-                Concepts designed to
-                <span>solve real business needs.</span>
-              </h2>
-            </div>
-
-            <p>
-              A collection of responsive website concepts created for apparel
-              brands, service businesses, coaches, and fitness professionals.
-            </p>
-          </div>
-
-          <div class="projects-grid">
-            <!-- =============================================
-                 PROJECT 1: 229 SUPPLY CO.
-                 FULL-WIDTH FEATURED CARD
-            ============================================== -->
-            <article class="project-card project-card-large" data-reveal="up">
-              <div class="project-preview project-preview-supply">
-                <div class="project-browser-bar">
+              <div class="demo-page">
+                <div class="demo-nav">
+                  <b>YOUR<span>BRAND</span></b>
+                  <div><i></i><i></i><i></i></div>
+                  <button tabindex="-1">Get started</button>
+                </div>
+                <div class="demo-hero">
                   <div>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                  </div>
-
-                  <p>229supplyco.com</p>
-                </div>
-
-                <div class="project-screen supply-screen">
-                  <div class="screen-navigation">
-                    <strong>229 SUPPLY CO.</strong>
-
-                    <span></span>
-                    <span></span>
-                    <span></span>
-
-                    <i></i>
-                  </div>
-
-                  <div class="screen-content supply-screen-content">
-                    <div>
-                      <small> South Georgia Streetwear </small>
-
-                      <h4>Built down South. Worn everywhere.</h4>
-
-                      <p></p>
-                      <p class="short"></p>
-
-                      <button type="button" tabindex="-1">Shop the Drop</button>
-                    </div>
-
-                    <div class="supply-image-shape" aria-hidden="true">
-                      <div class="supply-shirt">
-                        <span>229</span>
-
-                        <small> Supply Co. </small>
-                      </div>
-
-                      <div class="supply-drop-badge">Limited Drop</div>
-                    </div>
-                  </div>
-
-                  <div class="supply-background-text" aria-hidden="true">
-                    SOUTH
-                  </div>
-                </div>
-              </div>
-
-              <div class="project-information">
-                <div class="project-meta">
-                  <span>Streetwear Brand</span>
-                  <span>E-Commerce</span>
-                  <span>Interactive Shopping</span>
-                </div>
-
-                <div class="project-title-row">
-                  <div>
-                    <span class="project-index"> 01 </span>
-
-                    <h3>229 Supply Co.</h3>
-                  </div>
-
-                  <a
-                    class="project-link"
-                    href="https://drakescode-commits.github.io/229-supply-co/"
-                    aria-label="View the 229 Supply Co. website"
-                  >
-                    ↗
-                  </a>
-                </div>
-
-                <p>
-                  A bold Southern streetwear e-commerce website featuring
-                  limited product drops, animated product reveals, a drop
-                  countdown, lookbook, product-size selection, shop-the-look
-                  sections, drop alerts, and limited-stock states.
-                </p>
-              </div>
-            </article>
-
-            <!-- =============================================
-                 PROJECT 2: ELEVATEHER COACHING
-                 HALF-WIDTH CARD
-            ============================================== -->
-            <article class="project-card" data-reveal="up">
-              <div class="project-preview project-preview-coaching">
-                <div class="project-browser-bar">
-                  <div>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                  </div>
-
-                  <p>elevateher.co</p>
-                </div>
-
-                <div class="project-screen coaching-screen">
-                  <div class="screen-navigation">
-                    <strong>ElevateHer</strong>
-
-                    <span></span>
-                    <span></span>
-                    <span></span>
-
-                    <i></i>
-                  </div>
-
-                  <div class="screen-content">
-                    <div>
-                      <small> Premium Business Coaching </small>
-
-                      <h4>
-                        Build a business that feels aligned and structured.
-                      </h4>
-
-                      <p></p>
-                      <p class="short"></p>
-
-                      <button type="button" tabindex="-1">Apply Now</button>
-                    </div>
-
-                    <div class="coaching-image-shape" aria-hidden="true"></div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="project-information">
-                <div class="project-meta">
-                  <span>Coaching Website</span>
-                  <span>Lead Generation</span>
-                  <span>Responsive Design</span>
-                </div>
-
-                <div class="project-title-row">
-                  <div>
-                    <span class="project-index"> 02 </span>
-
-                    <h3>ElevateHer Coaching</h3>
-                  </div>
-
-                  <a
-                    class="project-link"
-                    href="https://drakescode-commits.github.io/elevateher.github.io/"
-                    aria-label="View the ElevateHer Coaching website"
-                  >
-                    ↗
-                  </a>
-                </div>
-
-                <p>
-                  A high-ticket coaching website designed to communicate
-                  authority, showcase results, and guide visitors toward
-                  submitting an application.
-                </p>
-              </div>
-            </article>
-
-            <!-- =============================================
-                 PROJECT 3: DRIP MOBILE DETAILING
-                 HALF-WIDTH CARD
-            ============================================== -->
-            <article class="project-card" data-reveal="up">
-              <div class="project-preview project-preview-detailing">
-                <div class="project-browser-bar">
-                  <div>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                  </div>
-
-                  <p>dripdetailing.com</p>
-                </div>
-
-                <div class="project-screen detailing-screen">
-                  <div class="screen-navigation">
-                    <strong>DRIP</strong>
-                    <i></i>
-                  </div>
-
-                  <div class="detail-car-shape" aria-hidden="true">
-                    <span></span>
-                  </div>
-
-                  <div class="detail-screen-copy">
-                    <small> Mobile Auto Detailing </small>
-
-                    <h4>Premium detailing that comes to you.</h4>
-
-                    <button type="button" tabindex="-1">Book Now</button>
-                  </div>
-                </div>
-              </div>
-
-              <div class="project-information">
-                <div class="project-meta">
-                  <span>Local Service</span>
-                  <span>Booking Focused</span>
-                </div>
-
-                <div class="project-title-row">
-                  <div>
-                    <span class="project-index"> 03 </span>
-
-                    <h3>Drip Mobile Detailing</h3>
-                  </div>
-
-                  <a
-                    class="project-link"
-                    href="https://drakescode-commits.github.io/Mobile-Detailing/"
-                    aria-label="View the Drip Mobile Detailing website"
-                  >
-                    ↗
-                  </a>
-                </div>
-
-                <p>
-                  A service-focused mobile detailing website structured to
-                  generate local calls, bookings, and customer trust.
-                </p>
-              </div>
-            </article>
-
-            <!-- =============================================
-                 PROJECT 4: FIT FOR U
-                 FULL-WIDTH CARD
-            ============================================== -->
-            <article class="project-card project-card-large" data-reveal="up">
-              <div class="project-preview project-preview-fitness">
-                <div class="project-browser-bar">
-                  <div>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                  </div>
-
-                  <p>fitforu.com</p>
-                </div>
-
-                <div class="project-screen fitness-screen">
-                  <div class="screen-navigation">
-                    <strong>FIT FOR U</strong>
-
-                    <div>
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                    </div>
-                  </div>
-
-                  <div class="fitness-screen-content">
-                    <small> Transform Your Body </small>
-
-                    <h4>Training built around your lifestyle.</h4>
-
+                    <small>BUILT AROUND YOUR BUSINESS</small>
+                    <h2>A clearer path from visitor to customer.</h2>
                     <p></p>
-
-                    <button type="button" tabindex="-1">Get Started</button>
+                    <p class="short"></p>
+                    <button tabindex="-1">Learn more →</button>
                   </div>
-
-                  <div class="fitness-number" aria-hidden="true">24</div>
+                  <div class="demo-art"><span></span><b>01</b></div>
+                </div>
+                <div class="demo-row">
+                  <span>Strategy</span><span>Design</span
+                  ><span>Development</span>
                 </div>
               </div>
+            </div>
+            <div class="phone">
+              <div class="phone-top"></div>
+              <div class="phone-brand">YOUR<span>BRAND</span></div>
+              <div class="phone-art"></div>
+              <small>BUILT FOR MOBILE</small
+              ><strong>Good design.<br />Every screen.</strong><i></i><i></i
+              ><button tabindex="-1">Get started</button>
+            </div>
+            <p class="code-note" aria-hidden="true">
+              design → develop → launch
+            </p>
+          </div>
+        </div>
+      </section>
 
-              <div class="project-information">
-                <div class="project-meta">
-                  <span>Fitness Brand</span>
-                  <span>Landing Page</span>
-                  <span>Lead Generation</span>
+      <section class="trust" aria-label="Website capabilities">
+        <div class="container">
+          <span>Custom built</span><span>Mobile friendly</span
+          ><span>SEO conscious</span><span>Ongoing support</span
+          ><span>Flexible payments</span>
+        </div>
+      </section>
+
+      <section class="section work" id="work">
+        <div class="container">
+          <header class="section-head reveal">
+            <div>
+              <p class="section-label">01 / Selected work</p>
+              <h2>Websites built around a real business goal.</h2>
+            </div>
+            <p>
+              Each concept starts with the customer journey—not a template—and
+              turns it into a clear, responsive digital experience.
+            </p>
+          </header>
+          <div class="project-list">
+            <article class="project reveal">
+              <a
+                class="project-media"
+                href="https://drakescode-commits.github.io/elevateher.github.io/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="View ElevateHer Coaching website"
+                ><img
+                  src="images/elevateHER.jpg"
+                  alt="ElevateHer coaching website concept shown with a professional portrait"
+                  loading="lazy"
+                /><span class="browser-label">elevateher.co</span></a
+              >
+              <div class="project-copy">
+                <p class="project-number">Project 01</p>
+                <div class="tags">
+                  <span>Coaching</span><span>Lead generation</span>
                 </div>
-
-                <div class="project-title-row">
-                  <div>
-                    <span class="project-index"> 04 </span>
-
-                    <h3>Fit For U</h3>
-                  </div>
-
-                  <a
-                    class="project-link"
-                    href="https://drakescode-commits.github.io/FitForU/"
-                    aria-label="View the Fit For U website"
-                  >
-                    ↗
-                  </a>
-                </div>
-
+                <h3>ElevateHer Coaching</h3>
                 <p>
-                  A bold fitness landing page designed to promote training
-                  programs, highlight results, and drive new client inquiries.
+                  A polished coaching experience built to communicate authority,
+                  explain the offer, and guide qualified visitors toward an
+                  application.
+                </p>
+                <ul>
+                  <li>Conversion-led page flow</li>
+                  <li>Responsive visual system</li>
+                  <li>Focused application journey</li>
+                </ul>
+                <a
+                  class="text-link"
+                  href="https://drakescode-commits.github.io/elevateher.github.io/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Visit project <span>↗</span></a
+                >
+              </div>
+            </article>
+            <article class="project reverse reveal">
+              <a
+                class="project-media detail-media"
+                href="https://drakescode-commits.github.io/Mobile-Detailing/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="View Apex Mobile Detailing website"
+                ><img
+                  src="images/detail.jpg"
+                  alt="Vehicle detail representing the Apex Mobile Detailing website concept"
+                  loading="lazy"
+                /><span class="browser-label">dripdetailing.com</span></a
+              >
+              <div class="project-copy">
+                <p class="project-number">Project 02</p>
+                <div class="tags">
+                  <span>Local service</span><span>Booking</span>
+                </div>
+                <h3>Apex Mobile Detailing</h3>
+                <p>
+                  A sharp service website structured to establish local trust,
+                  make packages easy to understand, and move customers toward
+                  booking.
+                </p>
+                <ul>
+                  <li>Service-first navigation</li>
+                  <li>Mobile booking path</li>
+                  <li>Local business positioning</li>
+                </ul>
+                <a
+                  class="text-link"
+                  href="https://drakescode-commits.github.io/Mobile-Detailing/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Visit project <span>↗</span></a
+                >
+              </div>
+            </article>
+            <article class="project reveal">
+              <a
+                class="project-media fitness-media"
+                href="https://drakescode-commits.github.io/FitForU/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="View Fit For U website"
+                ><img
+                  src="images/fit-for-u-concept.png"
+                  alt="Athlete training in a modern gym for the Fit For U fitness website concept"
+                  loading="lazy"
+                  width="1536"
+                  height="1024"
+                /><span class="browser-label">fitforu.com</span></a
+              >
+              <div class="project-copy">
+                <p class="project-number">Project 03</p>
+                <div class="tags">
+                  <span>Fitness</span><span>Landing page</span>
+                </div>
+                <h3>Fit For U</h3>
+                <p>
+                  A bold landing experience that gives training programs a clear
+                  hierarchy and helps prospective clients take the first step.
+                </p>
+                <ul>
+                  <li>High-energy art direction</li>
+                  <li>Program-led content</li>
+                  <li>Inquiry-focused calls to action</li>
+                </ul>
+                <a
+                  class="text-link"
+                  href="https://drakescode-commits.github.io/FitForU/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Visit project <span>↗</span></a
+                >
+              </div>
+            </article>
+            <article class="project reverse reveal">
+              <div
+                class="project-media crown-media"
+                role="img"
+                aria-label="Well-groomed man and premium scalp-care products in a warm modern bathroom"
+              >
+                <img
+                  src="images/crown-theory-grooming.png"
+                  alt="Crown Theory Grooming concept with a well-groomed man and premium scalp-care products"
+                  loading="lazy"
+                  width="1536"
+                  height="1024"
+                /><span class="browser-label">crown theory / preview</span>
+              </div>
+              <div class="project-copy">
+                <p class="project-number">Project 04</p>
+                <div class="tags">
+                  <span>Men's grooming</span><span>Brand concept</span>
+                </div>
+                <h3>Crown Theory Grooming</h3>
+                <p>
+                  A premium men’s grooming and scalp-care concept with a clean,
+                  masculine visual system built around confidence, quality, and
+                  considered daily care.
+                </p>
+                <ul>
+                  <li>Premium product positioning</li>
+                  <li>Warm, masculine art direction</li>
+                  <li>Product-led customer journey</li>
+                </ul>
+                <span class="project-coming">Repository link coming soon</span>
+              </div>
+            </article>
+            <article class="project reveal">
+              <div
+                class="project-media southern-media"
+                role="img"
+                aria-label="Refined Southern-inspired small-business interior with oak, neutral textiles, and greenery"
+              >
+                <img
+                  src="images/southern-oak.png"
+                  alt="Southern Oak concept featuring natural oak, warm neutral decor, and subtle greenery"
+                  loading="lazy"
+                  width="1536"
+                  height="1024"
+                /><span class="browser-label">southern oak / preview</span>
+              </div>
+              <div class="project-copy">
+                <p class="project-number">Project 05</p>
+                <div class="tags">
+                  <span>Southern lifestyle</span><span>Small business</span>
+                </div>
+                <h3>Southern Oak</h3>
+                <p>
+                  A refined Southern-inspired brand concept combining natural
+                  materials, quiet hospitality, and an upscale rustic
+                  sensibility without leaning into country clichés.
+                </p>
+                <ul>
+                  <li>Warm editorial art direction</li>
+                  <li>Elevated natural palette</li>
+                  <li>Welcoming brand experience</li>
+                </ul>
+                <span class="project-coming">Repository link coming soon</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section services" id="services">
+        <div class="container">
+          <header class="section-head reveal">
+            <div>
+              <p class="section-label">02 / Services</p>
+              <h2>From first idea to polished launch.</h2>
+            </div>
+            <p>
+              The right scope for where your business is now—with room for where
+              it is going next.
+            </p>
+          </header>
+          <div class="service-list">
+            <article class="reveal">
+              <span>01</span>
+              <h3>Custom web design</h3>
+              <p>
+                Strategic layouts and visual systems shaped around your brand,
+                audience, and business goals.
+              </p>
+              <a href="#contact" aria-label="Ask about custom web design">↗</a>
+            </article>
+            <article class="reveal">
+              <span>02</span>
+              <h3>Front-end development</h3>
+              <p>
+                Fast, responsive, accessible builds using straightforward HTML,
+                CSS, and JavaScript.
+              </p>
+              <a href="#contact" aria-label="Ask about front-end development"
+                >↗</a
+              >
+            </article>
+            <article class="reveal">
+              <span>03</span>
+              <h3>E-commerce websites</h3>
+              <p>
+                Clear storefront experiences designed to present products well
+                and support secure online sales.
+              </p>
+              <a href="#contact" aria-label="Ask about e-commerce websites"
+                >↗</a
+              >
+            </article>
+            <article class="reveal">
+              <span>04</span>
+              <h3>Redesigns &amp; support</h3>
+              <p>
+                A thoughtful refresh for an outdated site, plus maintenance and
+                guidance after launch.
+              </p>
+              <a href="#contact" aria-label="Ask about redesigns and support"
+                >↗</a
+              >
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="benefits">
+        <div class="container benefits-grid">
+          <div class="benefit-intro reveal">
+            <p class="section-label light">Why Drakes</p>
+            <h2>A small studio with a business-first approach.</h2>
+            <p>
+              You work directly with the person designing and building your
+              site. That keeps communication clear and every decision connected
+              to your goals.
+            </p>
+            <a class="btn btn-light" href="#about">Meet the developer</a>
+          </div>
+          <div class="benefit-list">
+            <article class="reveal">
+              <span>01</span>
+              <div>
+                <h3>Custom, not cookie-cutter</h3>
+                <p>
+                  Your content and customers shape the layout—not a prebuilt
+                  theme.
+                </p>
+              </div>
+            </article>
+            <article class="reveal">
+              <span>02</span>
+              <div>
+                <h3>Built for every screen</h3>
+                <p>
+                  Every key interaction is considered across phones, tablets,
+                  and desktops.
+                </p>
+              </div>
+            </article>
+            <article class="reveal">
+              <span>03</span>
+              <div>
+                <h3>Clear communication</h3>
+                <p>
+                  A straightforward scope, regular updates, and revision points
+                  you can understand.
+                </p>
+              </div>
+            </article>
+            <article class="reveal">
+              <span>04</span>
+              <div>
+                <h3>Support after launch</h3>
+                <p>
+                  Maintenance options keep your site useful as your business
+                  changes.
                 </p>
               </div>
             </article>
           </div>
-
-          <div class="projects-footer" data-reveal="up">
-            <p>Have a project in mind that does not look like these?</p>
-
-            <a class="text-link light-link" href="#contact">
-              Let’s create something different
-              <span aria-hidden="true">↗</span>
-            </a>
-          </div>
         </div>
       </section>
 
-      <!-- =================================================
-             PROCESS SECTION
-        ================================================== -->
-      <section class="process section" id="process">
+      <section class="section process" id="process">
         <div class="container">
-          <div class="section-heading" data-reveal="up">
+          <header class="section-head reveal">
             <div>
-              <span class="section-label">How It Works</span>
-
-              <h2>
-                A clear process from
-                <span>idea to launch.</span>
-              </h2>
+              <p class="section-label">03 / Process</p>
+              <h2>A clear path from conversation to launch.</h2>
             </div>
-
             <p>
-              You will always know what stage your project is in, what comes
-              next, and what I need from you.
+              No mystery. Just five focused stages, with decisions and feedback
+              built into the process.
             </p>
-          </div>
-
-          <div class="process-layout">
-            <div class="process-introduction" data-reveal="left">
-              <div class="process-logo-card">
-                <img
-                  src="/images/logo.png"
-                  alt="Drakes Code and Design logo"
-                  loading="lazy"
-                />
-              </div>
-
-              <blockquote>
-                “Professional websites do not happen by accident. They are
-                designed with a clear purpose.”
-              </blockquote>
-
-              <a class="text-link" href="#contact">
-                Start your project
-                <span aria-hidden="true">↗</span>
-              </a>
-            </div>
-
-            <div class="process-steps">
-              <article
-                class="process-step active"
-                data-process-step="1"
-                data-reveal="right"
-              >
-                <div class="process-step-number">01</div>
-
-                <div class="process-step-content">
-                  <span>Discover &amp; Design</span>
-                  <h3>Design</h3>
-
-                  <p>
-                    We begin by discussing your business, customers, goals,
-                    preferred style, and the actions visitors should take.
-                  </p>
-
-                  <ul>
-                    <li>Business and audience discovery</li>
-                    <li>Website structure planning</li>
-                    <li>Visual direction and layout</li>
-                  </ul>
-                </div>
-              </article>
-
-              <article
-                class="process-step"
-                data-process-step="2"
-                data-reveal="right"
-              >
-                <div class="process-step-number">02</div>
-
-                <div class="process-step-content">
-                  <span>Build &amp; Optimize</span>
-                  <h3>Develop</h3>
-
-                  <p>
-                    Your approved design is developed into a responsive website
-                    that functions smoothly across desktop, tablet, and mobile
-                    devices.
-                  </p>
-
-                  <ul>
-                    <li>Responsive website development</li>
-                    <li>Performance optimization</li>
-                    <li>Forms and platform integrations</li>
-                  </ul>
-                </div>
-              </article>
-
-              <article
-                class="process-step"
-                data-process-step="3"
-                data-reveal="right"
-              >
-                <div class="process-step-number">03</div>
-
-                <div class="process-step-content">
-                  <span>Test &amp; Launch</span>
-                  <h3>Deliver</h3>
-
-                  <p>
-                    After testing and final approval, your website is connected
-                    to your domain and prepared for launch.
-                  </p>
-
-                  <ul>
-                    <li>Browser and device testing</li>
-                    <li>Final revisions and approval</li>
-                    <li>Domain and hosting launch support</li>
-                  </ul>
-                </div>
-              </article>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- =================================================
-             UPDATED PRICING SECTION
-        ================================================== -->
-      <section class="pricing section" id="pricing">
-        <div class="container">
-          <div class="section-heading centered" data-reveal="up">
-            <span class="section-label">Website Packages</span>
-
-            <h2>
-              Choose the right website
-              <span>for your business.</span>
-            </h2>
-
-            <p>
-              Every package includes responsive design, professional
-              development, and a website structured around your business goals.
-            </p>
-          </div>
-
-          <div class="pricing-grid">
-            <!-- Launch Site -->
-            <article class="pricing-card" data-reveal="up">
-              <div class="pricing-card-header">
-                <div class="pricing-title-row">
-                  <span class="pricing-icon" aria-hidden="true"> 🚀 </span>
-
-                  <div>
-                    <span class="pricing-name"> Launch Site </span>
-
-                    <span class="pricing-package-type">
-                      Professional starter website
-                    </span>
-                  </div>
-                </div>
-
-                <div class="pricing-price">
-                  <span class="pricing-price-prefix">$</span>
-                  <strong>950</strong>
-                </div>
-
+          </header>
+          <ol class="timeline">
+            <li class="reveal">
+              <span>01</span>
+              <div>
+                <small>Discovery</small>
+                <h3>Understand the business</h3>
                 <p>
-                  Designed for new businesses and entrepreneurs who need a
-                  clean, professional website to establish their online
-                  presence.
+                  We clarify your audience, offer, goals, content, and what
+                  success should look like.
                 </p>
               </div>
+            </li>
+            <li class="reveal">
+              <span>02</span>
+              <div>
+                <small>Design</small>
+                <h3>Shape the experience</h3>
+                <p>
+                  Page hierarchy, visual direction, and key customer journeys
+                  come together.
+                </p>
+              </div>
+            </li>
+            <li class="reveal">
+              <span>03</span>
+              <div>
+                <small>Development</small>
+                <h3>Build it properly</h3>
+                <p>
+                  The approved direction becomes a responsive,
+                  performance-conscious website.
+                </p>
+              </div>
+            </li>
+            <li class="reveal">
+              <span>04</span>
+              <div>
+                <small>Review</small>
+                <h3>Refine the details</h3>
+                <p>
+                  We test the site, gather your feedback, and complete the
+                  included revision rounds.
+                </p>
+              </div>
+            </li>
+            <li class="reveal">
+              <span>05</span>
+              <div>
+                <small>Launch</small>
+                <h3>Go live with confidence</h3>
+                <p>
+                  Final checks, domain and hosting support, and a clean handoff
+                  get you online.
+                </p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
 
-              <ul class="pricing-features">
-                <li>Up to 5 professionally designed pages</li>
-
-                <li>Responsive desktop and mobile layout</li>
-
-                <li>Contact or lead-generation form</li>
-
-                <li>Social media and business links</li>
-
-                <li>Basic on-page SEO setup</li>
-
-                <li>Domain and hosting launch assistance</li>
-
+      <section class="section pricing" id="pricing">
+        <div class="container">
+          <header class="section-head centered reveal">
+            <div>
+              <p class="section-label">04 / Pricing</p>
+              <h2>A practical starting point for every stage.</h2>
+            </div>
+            <p>
+              Every package includes professional design, responsive
+              development, and a business-focused structure.
+            </p>
+          </header>
+          <div class="pricing-grid">
+            <article class="price-card reveal">
+              <div>
+                <p>Launch Site</p>
+                <h3><sup>$</sup>950</h3>
+                <span
+                  >For new businesses establishing a professional
+                  presence.</span
+                >
+              </div>
+              <ul>
+                <li>Up to 5 designed pages</li>
+                <li>Responsive desktop and mobile</li>
+                <li>Contact or lead form</li>
+                <li>Basic on-page SEO</li>
+                <li>Launch assistance</li>
                 <li>Two revision rounds</li>
               </ul>
-
-              <div class="pricing-card-footer">
-                <p class="pricing-delivery">
-                  Estimated delivery: 7–10 business days
-                </p>
-
-                <button
-                  class="button button-outline pricing-select-button"
-                  type="button"
-                  data-package="Launch Site"
-                  data-service="launch-site"
-                  data-budget="950"
-                >
-                  Choose Launch Site
-                  <span aria-hidden="true">↗</span>
-                </button>
-              </div>
+              <p class="delivery">7–10 business days</p>
+              <button
+                class="btn btn-secondary package-button"
+                data-service="launch-site"
+                data-budget="950"
+              >
+                Choose Launch Site
+              </button>
             </article>
-
-            <!-- Business Site -->
-            <article class="pricing-card pricing-card-popular" data-reveal="up">
-              <span class="popular-label"> Most Popular </span>
-
-              <div class="pricing-card-header">
-                <div class="pricing-title-row">
-                  <span class="pricing-icon" aria-hidden="true"> 💼 </span>
-
-                  <div>
-                    <span class="pricing-name"> Business Site </span>
-
-                    <span class="pricing-package-type">
-                      Built for growing businesses
-                    </span>
-                  </div>
-                </div>
-
-                <div class="pricing-price">
-                  <span class="pricing-price-prefix">$</span>
-                  <strong>1,450</strong>
-                </div>
-
-                <p>
-                  A more advanced website for established businesses that need
-                  stronger branding, better lead generation, and additional
-                  content.
-                </p>
+            <article class="price-card featured reveal">
+              <p class="popular">Most popular</p>
+              <div>
+                <p>Business Site</p>
+                <h3><sup>$</sup>1,450</h3>
+                <span
+                  >For growing businesses needing more content and lead
+                  generation.</span
+                >
               </div>
-
-              <ul class="pricing-features">
-                <li>Up to 8 professionally designed pages</li>
-
-                <li>Custom business-focused page layouts</li>
-
-                <li>Responsive desktop and mobile design</li>
-
-                <li>Lead-generation and contact forms</li>
-
+              <ul>
+                <li>Up to 8 designed pages</li>
+                <li>Custom business layouts</li>
+                <li>Lead-generation forms</li>
                 <li>Booking or scheduling integration</li>
-
-                <li>Google Maps and analytics integration</li>
-
-                <li>Enhanced on-page SEO setup</li>
-
+                <li>Maps, analytics &amp; enhanced SEO</li>
                 <li>Three revision rounds</li>
               </ul>
-
-              <div class="pricing-card-footer">
-                <p class="pricing-delivery">Estimated delivery: 2–3 weeks</p>
-
-                <button
-                  class="button button-primary pricing-select-button"
-                  type="button"
-                  data-package="Business Site"
-                  data-service="business-site"
-                  data-budget="1450"
-                >
-                  Choose Business Site
-                  <span aria-hidden="true">↗</span>
-                </button>
-              </div>
+              <p class="delivery">2–3 weeks</p>
+              <button
+                class="btn btn-primary package-button"
+                data-service="business-site"
+                data-budget="1450"
+              >
+                Choose Business Site
+              </button>
             </article>
+            <article class="price-card reveal">
+              <div>
+                <p>E-Commerce Site</p>
+                <h3><sup>$</sup>2,250<sup>+</sup></h3>
+                <span
+                  >For businesses ready to display products and sell
+                  online.</span
+                >
+              </div>
+              <ul>
+                <li>Professional storefront design</li>
+                <li>Product and category setup</li>
+                <li>Secure payment integration</li>
+                <li>Responsive shopping experience</li>
+                <li>Order-management setup</li>
+                <li>Launch guidance</li>
+              </ul>
+              <p class="delivery">Based on products and features</p>
+              <button
+                class="btn btn-secondary package-button"
+                data-service="ecommerce-site"
+                data-budget="2250-plus"
+              >
+                Choose E-Commerce
+              </button>
+            </article>
+            <article class="price-card custom reveal">
+              <div>
+                <p>Custom Solution</p>
+                <h3>Custom quote</h3>
+                <span
+                  >For advanced needs, integrations, or a scope outside the
+                  packages.</span
+                >
+              </div>
+              <ul>
+                <li>Project strategy and planning</li>
+                <li>Custom page architecture</li>
+                <li>Advanced integrations</li>
+                <li>Custom forms and interactions</li>
+                <li>Scalable functionality</li>
+                <li>Scope-based timeline</li>
+              </ul>
+              <p class="delivery">Pricing based on scope</p>
+              <button
+                class="btn btn-secondary package-button"
+                data-service="custom-solution"
+                data-budget="custom-quote"
+              >
+                Discuss Your Project
+              </button>
+            </article>
+          </div>
+          <div class="payment-note">
+            <strong>Flexible payment options are available.</strong
+            ><span>A deposit is required before work begins.</span>
+          </div>
+        </div>
+      </section>
 
-            <!-- E-Commerce Site -->
-            <article
-              class="pricing-card pricing-card-commerce"
-              data-reveal="up"
+      <section class="section about" id="about">
+        <div class="container about-grid">
+          <div class="about-mark reveal">
+            <img
+              src="images/owner.jpg"
+              alt="Owner and developer of Drakes Code & Design"
+              loading="lazy"
+              width="683"
+              height="911"
+            />
+            <p>Design<br />Develop<br />Deliver</p>
+          </div>
+          <div class="about-copy reveal">
+            <p class="section-label">05 / About</p>
+            <h2>Web development with a business-first point of view.</h2>
+            <p>
+              Drakes Code &amp; Design was founded in 2022 to help small
+              businesses show up online with more clarity and confidence. The
+              goal is not simply to make a website look attractive—it is to
+              build something useful.
+            </p>
+            <p>
+              Every project balances visual design with usability, responsive
+              behavior, clear messaging, and maintainable code. You get direct
+              communication, thoughtful recommendations, and a site shaped
+              around how your business actually works.
+            </p>
+            <ul class="skills">
+              <li>HTML5</li>
+              <li>CSS3</li>
+              <li>JavaScript</li>
+              <li>Responsive design</li>
+              <li>Accessibility</li>
+              <li>SEO structure</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section faq" id="faq">
+        <div class="container faq-grid">
+          <div class="reveal">
+            <p class="section-label">06 / FAQ</p>
+            <h2>A few things clients usually ask.</h2>
+            <p>
+              Still deciding what your business needs? Start a conversation and
+              we can sort through it together.
+            </p>
+            <a class="text-link" href="#contact"
+              >Ask a question <span>↘</span></a
             >
-              <div class="pricing-card-header">
-                <div class="pricing-title-row">
-                  <span class="pricing-icon" aria-hidden="true"> 🛒 </span>
-
-                  <div>
-                    <span class="pricing-name"> E-Commerce Site </span>
-
-                    <span class="pricing-package-type">
-                      Online selling made simple
-                    </span>
-                  </div>
-                </div>
-
-                <div class="pricing-price">
-                  <span class="pricing-price-prefix">$</span>
-                  <strong>2,250</strong>
-
-                  <span class="pricing-price-suffix"> + </span>
-                </div>
-
-                <p>
-                  Built for businesses that need to display products, accept
-                  secure online payments, and manage customer orders.
-                </p>
-              </div>
-
-              <ul class="pricing-features">
-                <li>Professional online storefront design</li>
-
-                <li>Product catalog and category setup</li>
-
-                <li>Shopping cart and secure checkout</li>
-
-                <li>Payment processor integration</li>
-
-                <li>Shipping and tax configuration</li>
-
-                <li>Customer order notifications</li>
-
-                <li>Responsive product and checkout pages</li>
-
-                <li>Basic store-management walkthrough</li>
-              </ul>
-
-              <div class="pricing-card-footer">
-                <p class="pricing-delivery">
-                  Final price depends on products and features
-                </p>
-
-                <button
-                  class="button button-outline pricing-select-button"
-                  type="button"
-                  data-package="E-Commerce Site"
-                  data-service="ecommerce-site"
-                  data-budget="2250-plus"
-                >
-                  Start an Online Store
-                  <span aria-hidden="true">↗</span>
-                </button>
-              </div>
-            </article>
-
-            <!-- Custom Solution -->
-            <article class="pricing-card pricing-card-custom" data-reveal="up">
-              <div class="pricing-card-header">
-                <div class="pricing-title-row">
-                  <span class="pricing-icon" aria-hidden="true"> ⚙️ </span>
-
-                  <div>
-                    <span class="pricing-name"> Custom Solution </span>
-
-                    <span class="pricing-package-type">
-                      Advanced custom functionality
-                    </span>
-                  </div>
-                </div>
-
-                <div class="pricing-price pricing-price-custom">
-                  <strong>Custom Quote</strong>
-                </div>
-
-                <p>
-                  For projects that require custom development, specialized
-                  integrations, advanced functionality, or a solution outside
-                  the standard packages.
-                </p>
-              </div>
-
-              <ul class="pricing-features">
-                <li>Custom project strategy and planning</li>
-
-                <li>Fully tailored page structure and design</li>
-
-                <li>Advanced booking or ordering integrations</li>
-
-                <li>Third-party platform integrations</li>
-
-                <li>Custom forms and user experiences</li>
-
-                <li>Advanced functionality based on scope</li>
-
-                <li>Testing, optimization, and launch support</li>
-
-                <li>Custom project timeline</li>
-              </ul>
-
-              <div class="pricing-card-footer">
-                <p class="pricing-delivery">
-                  Pricing and timeline based on project scope
-                </p>
-
-                <button
-                  class="button button-outline pricing-select-button"
-                  type="button"
-                  data-package="Custom Solution"
-                  data-service="custom-solution"
-                  data-budget="custom-quote"
-                >
-                  Request a Custom Quote
-                  <span aria-hidden="true">↗</span>
-                </button>
-              </div>
-            </article>
           </div>
-
-          <div class="pricing-information" data-reveal="up">
-            <p>
-              A deposit is required before work begins. Flexible payment plans
-              are available for the remaining balance.
-            </p>
-
-            <a href="#contact" class="text-link">
-              Have questions about a package?
-              <span aria-hidden="true">↗</span>
-            </a>
+          <div class="faq-list reveal">
+            <details>
+              <summary>How long does a website usually take?</summary>
+              <p>
+                Most small business websites take approximately one to three
+                weeks. Larger custom projects may need more time depending on
+                pages, content, and integrations.
+              </p>
+            </details>
+            <details>
+              <summary>Do I need a domain and hosting first?</summary>
+              <p>
+                No. I can explain what you need and guide you through choosing a
+                domain and the right hosting option before launch.
+              </p>
+            </details>
+            <details>
+              <summary>Will my website work on mobile phones?</summary>
+              <p>
+                Yes. Every website is built and tested for desktop computers,
+                tablets, and modern mobile devices.
+              </p>
+            </details>
+            <details>
+              <summary>Can you update my website after launch?</summary>
+              <p>
+                Yes. Ongoing maintenance can cover content updates, technical
+                support, minor design changes, backups, and general website
+                care.
+              </p>
+            </details>
+            <details>
+              <summary>Can you connect booking or payments?</summary>
+              <p>
+                Yes. Third-party booking, ordering, scheduling, and payment
+                platforms can often be integrated directly into your website.
+              </p>
+            </details>
           </div>
         </div>
       </section>
 
-      <!-- =================================================
-             ABOUT SECTION
-        ================================================== -->
-      <section class="about section" id="about">
-        <div class="container about-container">
-          <div class="about-visual" data-reveal="left">
-            <div class="about-card">
-              <div class="about-card-top">
-                <span>Drakes Code &amp; Design</span>
-                <span>Since 2022</span>
-              </div>
-
-              <div class="about-logo">
-                <span class="about-logo-left">&lt;</span>
-                <span class="about-logo-right">&gt;</span>
-              </div>
-
-              <div class="about-card-bottom">
-                <span>Design</span>
-                <span>Develop</span>
-                <span>Deliver</span>
-              </div>
-            </div>
-
-            <div class="about-stat-card">
-              <strong>3+</strong>
-
-              <span> Years building digital experiences </span>
-            </div>
-          </div>
-
-          <div class="about-content" data-reveal="right">
-            <span class="section-label">Behind the Brand</span>
-
-            <h2>
-              Building professional websites with
-              <span>strategy and attention to detail.</span>
-            </h2>
-
+      <section class="contact" id="contact">
+        <div class="container contact-grid">
+          <div class="contact-copy reveal">
+            <p class="section-label light">07 / Project inquiry</p>
+            <h2>Let’s build something your business can grow with.</h2>
             <p>
-              I’m Earl Drakes, the developer behind Drakes Code &amp; Design. I
-              started this business to help small businesses receive the same
-              level of professional web design often associated with larger
-              companies.
-            </p>
-
-            <p>
-              My approach combines clean design, responsive development, clear
-              messaging, and practical business strategy. The goal is not simply
-              to build something attractive—it is to build something useful.
-            </p>
-
-            <div class="about-skills">
-              <span>HTML5</span>
-              <span>CSS3</span>
-              <span>JavaScript</span>
-              <span>Responsive Design</span>
-              <span>Wix</span>
-              <span>UI/UX</span>
-              <span>SEO Structure</span>
-              <span>Website Strategy</span>
-            </div>
-
-            <a class="button button-primary" href="#contact">
-              Work With Me
-              <span aria-hidden="true">↗</span>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <!-- =================================================
-             FAQ SECTION
-        ================================================== -->
-      <section class="faq section" id="faq">
-        <div class="container faq-container">
-          <div class="faq-introduction" data-reveal="left">
-            <span class="section-label">Common Questions</span>
-
-            <h2>
-              Before we start
-              <span>your project.</span>
-            </h2>
-
-            <p>
-              Here are answers to a few questions business owners commonly have
-              before investing in a new website.
-            </p>
-
-            <a class="text-link" href="#contact">
-              Ask another question
-              <span aria-hidden="true">↗</span>
-            </a>
-          </div>
-
-          <div class="faq-list" data-reveal="right">
-            <article class="faq-item">
-              <button class="faq-question" type="button" aria-expanded="false">
-                <span> How long does a website usually take? </span>
-
-                <i aria-hidden="true"></i>
-              </button>
-
-              <div class="faq-answer">
-                <p>
-                  Most small business websites take approximately one to three
-                  weeks. Larger custom-coded projects may require additional
-                  time depending on the number of pages, content, and
-                  integrations.
-                </p>
-              </div>
-            </article>
-
-            <article class="faq-item">
-              <button class="faq-question" type="button" aria-expanded="false">
-                <span> Do I need a domain and hosting first? </span>
-
-                <i aria-hidden="true"></i>
-              </button>
-
-              <div class="faq-answer">
-                <p>
-                  No. I can help you understand what you need and guide you
-                  through purchasing a domain and selecting the right hosting
-                  option before launch.
-                </p>
-              </div>
-            </article>
-
-            <article class="faq-item">
-              <button class="faq-question" type="button" aria-expanded="false">
-                <span> Will my website work on mobile phones? </span>
-
-                <i aria-hidden="true"></i>
-              </button>
-
-              <div class="faq-answer">
-                <p>
-                  Yes. Every website is built and tested to work across desktop
-                  computers, tablets, and modern mobile devices.
-                </p>
-              </div>
-            </article>
-
-            <article class="faq-item">
-              <button class="faq-question" type="button" aria-expanded="false">
-                <span> Can you update my website after it launches? </span>
-
-                <i aria-hidden="true"></i>
-              </button>
-
-              <div class="faq-answer">
-                <p>
-                  Yes. Ongoing maintenance options can cover content updates,
-                  technical support, minor design changes, backups, and general
-                  website care.
-                </p>
-              </div>
-            </article>
-
-            <article class="faq-item">
-              <button class="faq-question" type="button" aria-expanded="false">
-                <span> Can you connect online booking or payments? </span>
-
-                <i aria-hidden="true"></i>
-              </button>
-
-              <div class="faq-answer">
-                <p>
-                  Yes. Existing third-party booking, ordering, scheduling, and
-                  payment platforms can often be integrated directly into your
-                  website.
-                </p>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- =================================================
-             CONTACT SECTION
-        ================================================== -->
-      <section class="contact section" id="contact">
-        <div class="contact-background" aria-hidden="true">
-          <span></span>
-          <span></span>
-        </div>
-
-        <div class="container contact-container">
-          <div class="contact-content" data-reveal="left">
-            <span class="section-label light-label">
-              Start a Conversation
-            </span>
-
-            <h2>
-              Ready for a website that
-              <span>represents your business?</span>
-            </h2>
-
-            <p>
-              Tell me about your business, what you need, and where you want to
-              grow. I’ll review your project and respond with the best next
+              Tell me where you are now and what you want the website to
+              accomplish. I’ll review the details and recommend the best next
               step.
             </p>
-
-            <div class="contact-benefits">
-              <div>
-                <span aria-hidden="true">✓</span>
-
-                <p>
-                  <strong>No-pressure consultation</strong>
-                  Clear recommendations based on your goals.
-                </p>
+            <ol>
+              <li><span>01</span>Share your goals and project needs.</li>
+              <li><span>02</span>Receive a no-pressure recommendation.</li>
+              <li><span>03</span>Get a clear scope before work begins.</li>
+            </ol>
+          </div>
+          <form
+            class="contact-form reveal"
+            id="contact-form"
+            action="https://formspree.io/f/xgogzdab"
+            method="POST"
+            novalidate
+          >
+            <div class="form-top">
+              <p>Start your project</p>
+              <span>Typically responds in 24–48 hours</span>
+            </div>
+            <div class="form-row">
+              <div class="field">
+                <label for="name">Your name *</label
+                ><input
+                  id="name"
+                  name="name"
+                  autocomplete="name"
+                  required
+                /><small></small>
               </div>
-
-              <div>
-                <span aria-hidden="true">✓</span>
-
-                <p>
-                  <strong>Transparent project scope</strong>
-                  You will know what is included before we begin.
-                </p>
-              </div>
-
-              <div>
-                <span aria-hidden="true">✓</span>
-
-                <p>
-                  <strong>Professional communication</strong>
-                  Consistent updates throughout your project.
-                </p>
+              <div class="field">
+                <label for="email">Email address *</label
+                ><input
+                  type="email"
+                  id="email"
+                  name="email"
+                  autocomplete="email"
+                  required
+                /><small></small>
               </div>
             </div>
-          </div>
-
-          <div class="contact-form-wrapper" data-reveal="right">
-            <!--
-                        Replace YOUR-FORM-ID with your real Formspree ID.
-                    -->
-            <form
-              class="contact-form"
-              id="contact-form"
-              action="https://formspree.io/f/xgogzdab"
-              method="POST"
-              novalidate
-            >
-              <div class="form-heading">
-                <span>Project Inquiry</span>
-
-                <h3>Tell me what you are working on.</h3>
-              </div>
-
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="name"> Your name </label>
-
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    placeholder="John Smith"
-                    autocomplete="name"
-                    required
-                  />
-
-                  <small class="form-error"></small>
-                </div>
-
-                <div class="form-group">
-                  <label for="email"> Email address </label>
-
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    placeholder="john@example.com"
-                    autocomplete="email"
-                    required
-                  />
-
-                  <small class="form-error"></small>
-                </div>
-              </div>
-
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="business"> Business name </label>
-
-                  <input
-                    type="text"
-                    id="business"
-                    name="business"
-                    placeholder="Your Business"
-                    autocomplete="organization"
-                  />
-                </div>
-
-                <div class="form-group">
-                  <label for="phone"> Phone number </label>
-
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    placeholder="(555) 555-5555"
-                    autocomplete="tel"
-                  />
-                </div>
-              </div>
-
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="project-type"> What do you need? </label>
-
-                  <select id="project-type" name="project-type" required>
-                    <option value="" selected disabled>
-                      Select a website package
-                    </option>
-
-                    <option value="launch-site">Launch Site — $950</option>
-
-                    <option value="business-site">
-                      Business Site — $1,450
-                    </option>
-
-                    <option value="ecommerce-site">
-                      E-Commerce Site — $2,250+
-                    </option>
-
-                    <option value="custom-solution">
-                      Custom Solution — Custom Quote
-                    </option>
-
-                    <option value="website-redesign">Website Redesign</option>
-
-                    <option value="maintenance">Website Maintenance</option>
-
-                    <option value="other">Something Else</option>
-                  </select>
-
-                  <small class="form-error"></small>
-                </div>
-
-                <div class="form-group">
-                  <label for="budget"> Estimated budget </label>
-
-                  <select id="budget" name="budget">
-                    <option value="" selected disabled>Select a budget</option>
-
-                    <option value="950">$950 — Launch Site</option>
-
-                    <option value="1450">$1,450 — Business Site</option>
-
-                    <option value="2250-plus">$2,250+ — E-Commerce Site</option>
-
-                    <option value="custom-quote">Custom Quote</option>
-
-                    <option value="unsure">I’m not sure yet</option>
-                  </select>
-                </div>
-              </div>
-
-              <div class="form-group">
-                <label for="website">
-                  Current website
-                  <span>Optional</span>
-                </label>
-
-                <input
-                  type="url"
-                  id="website"
-                  name="website"
-                  placeholder="https://yourwebsite.com"
-                  autocomplete="url"
+            <div class="form-row">
+              <div class="field">
+                <label for="business">Business name</label
+                ><input
+                  id="business"
+                  name="business"
+                  autocomplete="organization"
                 />
               </div>
-
-              <div class="form-group">
-                <label for="message"> Tell me about your project </label>
-
-                <textarea
-                  id="message"
-                  name="message"
-                  rows="6"
-                  placeholder="Tell me about your business, your goals, and what you would like your website to accomplish."
-                  required
-                ></textarea>
-
-                <small class="form-error"></small>
+              <div class="field">
+                <label for="phone">Phone number</label
+                ><input type="tel" id="phone" name="phone" autocomplete="tel" />
               </div>
-
-              <div class="honeypot-field" aria-hidden="true">
-                <label for="company-website"> Leave this field empty </label>
-
-                <input
-                  type="text"
-                  id="company-website"
-                  name="company-website"
-                  tabindex="-1"
-                  autocomplete="off"
-                />
+            </div>
+            <div class="form-row">
+              <div class="field">
+                <label for="project-type">What do you need? *</label
+                ><select id="project-type" name="project-type" required>
+                  <option value="">Select a package</option>
+                  <option value="launch-site">Launch Site — $950</option>
+                  <option value="business-site">Business Site — $1,450</option>
+                  <option value="ecommerce-site">E-Commerce — $2,250+</option>
+                  <option value="custom-solution">Custom Solution</option>
+                  <option value="website-redesign">Website Redesign</option>
+                  <option value="maintenance">Maintenance</option></select
+                ><small></small>
               </div>
-
-              <button class="button button-primary form-submit" type="submit">
-                <span>Send Project Inquiry</span>
-                <i aria-hidden="true">↗</i>
-              </button>
-
-              <p
-                class="form-status"
-                id="form-status"
-                role="status"
-                aria-live="polite"
-              ></p>
-            </form>
-          </div>
+              <div class="field">
+                <label for="budget">Estimated budget</label
+                ><select id="budget" name="budget">
+                  <option value="">Select a budget</option>
+                  <option value="950">$950</option>
+                  <option value="1450">$1,450</option>
+                  <option value="2250-plus">$2,250+</option>
+                  <option value="custom-quote">Custom quote</option>
+                  <option value="unsure">Not sure yet</option>
+                </select>
+              </div>
+            </div>
+            <div class="field">
+              <label for="message">Tell me about your project *</label
+              ><textarea
+                id="message"
+                name="message"
+                rows="5"
+                required
+              ></textarea
+              ><small></small>
+            </div>
+            <div class="honeypot" aria-hidden="true">
+              <label for="company-website">Leave empty</label
+              ><input
+                id="company-website"
+                name="company-website"
+                tabindex="-1"
+                autocomplete="off"
+              />
+            </div>
+            <button class="btn btn-primary submit-button" type="submit">
+              Send Project Inquiry <span>↗</span>
+            </button>
+            <p class="form-status" role="status" aria-live="polite"></p>
+          </form>
         </div>
       </section>
     </main>
 
-    <!-- =====================================================
-         FOOTER
-    ====================================================== -->
     <footer class="site-footer">
       <div class="container">
-        <div class="footer-main">
-          <div class="footer-brand-column">
-            <a
-              class="brand footer-brand"
-              href="#home"
-              aria-label="Drakes Code and Design homepage"
+        <div class="footer-top">
+          <div>
+            <a class="brand footer-brand" href="#home"
+              ><span class="brand-icon">&lt;/&gt;</span
+              ><span
+                ><strong>Drakes</strong><small>Code &amp; Design</small></span
+              ></a
             >
-              <span class="brand-mark" aria-hidden="true">
-                <span class="brand-mark-left">&lt;</span>
-                <span class="brand-mark-right">&gt;</span>
-              </span>
-
-              <span class="brand-text">
-                <strong>Drakes</strong>
-                <span>Code &amp; Design</span>
-              </span>
-            </a>
-
             <p>
-              Modern, responsive websites built to help businesses attract
-              customers, build trust, and grow online.
+              Custom websites built for small businesses in Albany, Southwest
+              Georgia, and beyond.
             </p>
-
-            <a class="footer-email" href="#contact">
-              Send a project inquiry
-              <span aria-hidden="true">↗</span>
-            </a>
           </div>
-
-          <div class="footer-navigation">
-            <div>
-              <h3>Explore</h3>
-
-              <a href="#services">Services</a>
-              <a href="#projects">Featured Work</a>
-              <a href="#process">Process</a>
-              <a href="#pricing">Pricing</a>
-            </div>
-
-            <div>
-              <h3>Company</h3>
-
-              <a href="#about">About</a>
-
-              <a href="#faq"> Frequently Asked Questions </a>
-
-              <a href="#contact">Contact</a>
-            </div>
-
-            <div>
-              <h3>Connect</h3>
-
-              <a
-                href="https://github.com/drakescode-commits"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                GitHub
-                <span aria-hidden="true">↗</span>
-              </a>
-
-              <a href="#" aria-label="Drakes Code and Design Facebook">
-                Facebook
-                <span aria-hidden="true">↗</span>
-              </a>
-            </div>
-          </div>
+          <nav aria-label="Footer">
+            <strong>Explore</strong><a href="#work">Work</a
+            ><a href="#services">Services</a><a href="#pricing">Pricing</a
+            ><a href="#about">About</a>
+          </nav>
+          <nav aria-label="Social">
+            <strong>Connect</strong
+            ><a
+              href="https://github.com/drakescode-commits"
+              target="_blank"
+              rel="noopener noreferrer"
+              >GitHub ↗</a
+            ><a href="#contact">Project inquiry ↗</a>
+          </nav>
         </div>
-
         <div class="footer-bottom">
-          <p>
-            © <span id="current-year">2026</span>
-            Drakes Code &amp; Design. All rights reserved.
-          </p>
-
-          <p>Designed. Developed. Delivered.</p>
-
-          <a href="#home" class="back-to-top">
-            Back to top
-            <span aria-hidden="true">↑</span>
-          </a>
+          <p>© <span data-year></span> Drakes Code &amp; Design</p>
+          <p>Design. Develop. Deliver.</p>
         </div>
       </div>
     </footer>
-
-    <a class="mobile-fixed-cta" href="#contact">
-      Start a Project
-      <span aria-hidden="true">↗</span>
-    </a>
-
-    <div class="custom-cursor" aria-hidden="true"></div>
-    <div class="custom-cursor-dot" aria-hidden="true"></div>
   </body>
 </html>

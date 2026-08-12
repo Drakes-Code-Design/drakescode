@@ -1,27 +1,61 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Message Sent | Drakes Code & Design</title>
-
-  <link rel="stylesheet" href="styles.css">
-</head>
-
-<body>
-
-  <div class="success-wrapper">
-
-    <h1>Message Sent ✔</h1>
-
-    <p>
-      Thanks for reaching out. I’ve received your inquiry and will get back to you within 24–48 hours.
-    </p>
-
-    <a href="index.html" class="btn-primary">Back to Home</a>
-
-  </div>
-
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Message Sent | Drakes Code &amp; Design</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Space+Grotesk:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .success-page {
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        padding: 24px;
+        background: #f4f7fb;
+      }
+      .success-card {
+        width: min(100%, 620px);
+        border: 1px solid #dce2eb;
+        padding: 64px 48px;
+        text-align: center;
+        background: white;
+        box-shadow: 0 24px 70px rgba(7, 21, 47, 0.12);
+      }
+      .success-card span {
+        display: grid;
+        width: 56px;
+        height: 56px;
+        place-items: center;
+        margin: 0 auto 25px;
+        border-radius: 50%;
+        color: white;
+        background: #1555e8;
+        font-size: 24px;
+      }
+      .success-card h1 {
+        font-size: 46px;
+      }
+      .success-card p {
+        margin: 0 auto 30px;
+        color: #657084;
+      }
+    </style>
+  </head>
+  <body class="success-page">
+    <main class="success-card">
+      <span aria-hidden="true">✓</span>
+      <h1>Message sent.</h1>
+      <p>
+        Thanks for reaching out. I’ve received your inquiry and will get back to
+        you within 24–48 hours.
+      </p>
+      <a class="btn btn-primary" href="index.html">Back to home</a>
+    </main>
+  </body>
 </html>
