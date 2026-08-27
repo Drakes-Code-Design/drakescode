@@ -35,6 +35,9 @@
   .price-card.featured {
     margin: 0;
   }
+  .custom-project {
+    align-items: flex-start;
+  }
   .about-grid,
   .faq-grid,
   .contact-grid {
@@ -106,6 +109,7 @@
   body.menu-open .site-header {
     border-color: var(--line);
     background-color: #fff;
+    -webkit-backdrop-filter: none;
     backdrop-filter: none;
   }
   body.menu-open .mobile-nav {
@@ -338,6 +342,15 @@
   }
   .price-card > div > span {
     min-height: 0;
+  }
+  .custom-project {
+    flex-direction: column;
+    gap: 20px;
+    padding: 25px 22px;
+  }
+  .custom-project > div:last-child,
+  .custom-project .btn {
+    width: 100%;
   }
   .payment-note {
     flex-direction: column;

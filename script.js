@@ -58,10 +58,43 @@ document.addEventListener("DOMContentLoaded", () => {
   const form = document.querySelector("#contact-form");
   const project = document.querySelector("#project-type");
   const budget = document.querySelector("#budget");
-  document.querySelectorAll(".package-button").forEach((button) =>
+  const packageButtons = document.querySelectorAll(".package-button");
+
+  const selectPackage = (service, selectedBudget) => {
+    const serviceExists = [...project.options].some(
+      (option) => option.value === service,
+    );
+    const budgetExists = [...budget.options].some(
+      (option) => option.value === selectedBudget,
+    );
+
+    if (!serviceExists) return false;
+    project.value = service;
+    budget.value = budgetExists ? selectedBudget : "";
+    return true;
+  };
+
+  const savedPackage = new URLSearchParams(window.location.search).get(
+    "package",
+  );
+  if (savedPackage) {
+    const matchingButton = [...packageButtons].find(
+      (button) => button.dataset.service === savedPackage,
+    );
+    if (matchingButton)
+      selectPackage(
+        matchingButton.dataset.service,
+        matchingButton.dataset.budget,
+      );
+  }
+
+  packageButtons.forEach((button) =>
     button.addEventListener("click", () => {
-      project.value = button.dataset.service;
-      budget.value = button.dataset.budget;
+      selectPackage(button.dataset.service, button.dataset.budget);
+      const url = new URL(window.location.href);
+      url.searchParams.set("package", button.dataset.service);
+      url.hash = "contact";
+      window.history.replaceState(null, "", url);
       document
         .querySelector("#contact")
         .scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth" });
@@ -71,6 +104,13 @@ document.addEventListener("DOMContentLoaded", () => {
       );
     }),
   );
+
+  project.addEventListener("change", () => {
+    const url = new URL(window.location.href);
+    if (!url.searchParams.has("package")) return;
+    url.searchParams.delete("package");
+    window.history.replaceState(null, "", url);
+  });
 
   const validate = (field) => {
     const error = field.parentElement.querySelector("small");

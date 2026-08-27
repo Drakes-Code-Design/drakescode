@@ -594,6 +594,35 @@
           <div class="pricing-grid">
             <article class="price-card reveal">
               <div>
+                <p>Booking Site</p>
+                <h3><sup>$</sup>500</h3>
+                <span
+                  >For service-based businesses that need a polished place for
+                  customers to learn more and book.</span
+                >
+              </div>
+              <ul>
+                <li>Custom one-page design</li>
+                <li>Responsive desktop and mobile</li>
+                <li>Services, pricing &amp; business policies</li>
+                <li>Photo or gallery capability</li>
+                <li>Third-party booking integration</li>
+                <li>Social and contact links</li>
+                <li>Launch and setup assistance</li>
+                <li>Two revision rounds</li>
+              </ul>
+              <p class="delivery">$250 deposit to start</p>
+              <button
+                type="button"
+                class="btn btn-secondary package-button"
+                data-service="booking-site"
+                data-budget="500"
+              >
+                Choose Booking Site
+              </button>
+            </article>
+            <article class="price-card reveal">
+              <div>
                 <p>Launch Site</p>
                 <h3><sup>$</sup>950</h3>
                 <span
@@ -611,6 +640,7 @@
               </ul>
               <p class="delivery">7–10 business days</p>
               <button
+                type="button"
                 class="btn btn-secondary package-button"
                 data-service="launch-site"
                 data-budget="950"
@@ -619,7 +649,7 @@
               </button>
             </article>
             <article class="price-card featured reveal">
-              <p class="popular">Most popular</p>
+              <p class="popular">Recommended</p>
               <div>
                 <p>Business Site</p>
                 <h3><sup>$</sup>1,450</h3>
@@ -638,6 +668,7 @@
               </ul>
               <p class="delivery">2–3 weeks</p>
               <button
+                type="button"
                 class="btn btn-primary package-button"
                 data-service="business-site"
                 data-budget="1450"
@@ -664,6 +695,7 @@
               </ul>
               <p class="delivery">Based on products and features</p>
               <button
+                type="button"
                 class="btn btn-secondary package-button"
                 data-service="ecommerce-site"
                 data-budget="2250-plus"
@@ -671,33 +703,26 @@
                 Choose E-Commerce
               </button>
             </article>
-            <article class="price-card custom reveal">
-              <div>
-                <p>Custom Solution</p>
-                <h3>Custom quote</h3>
-                <span
-                  >For advanced needs, integrations, or a scope outside the
-                  packages.</span
-                >
-              </div>
-              <ul>
-                <li>Project strategy and planning</li>
-                <li>Custom page architecture</li>
-                <li>Advanced integrations</li>
-                <li>Custom forms and interactions</li>
-                <li>Scalable functionality</li>
-                <li>Scope-based timeline</li>
-              </ul>
-              <p class="delivery">Pricing based on scope</p>
+          </div>
+          <aside class="custom-project reveal">
+            <div>
+              <h3>Need something outside these packages?</h3>
+              <p>
+                Advanced functionality, custom integrations, or a unique
+                project scope can be quoted separately.
+              </p>
+            </div>
+            <div>
               <button
+                type="button"
                 class="btn btn-secondary package-button"
                 data-service="custom-solution"
                 data-budget="custom-quote"
               >
-                Discuss Your Project
+                Discuss a Custom Project
               </button>
-            </article>
-          </div>
+            </div>
+          </aside>
           <div class="payment-note">
             <strong>Flexible payment options are available.</strong
             ><span>A deposit is required before work begins.</span>
@@ -866,6 +891,7 @@
                 <label for="project-type">What do you need? *</label
                 ><select id="project-type" name="project-type" required>
                   <option value="">Select a package</option>
+                  <option value="booking-site">Booking Site — $500</option>
                   <option value="launch-site">Launch Site — $950</option>
                   <option value="business-site">Business Site — $1,450</option>
                   <option value="ecommerce-site">E-Commerce — $2,250+</option>
@@ -878,6 +904,7 @@
                 <label for="budget">Estimated budget</label
                 ><select id="budget" name="budget">
                   <option value="">Select a budget</option>
+                  <option value="500">$500</option>
                   <option value="950">$950</option>
                   <option value="1450">$1,450</option>
                   <option value="2250-plus">$2,250+</option>

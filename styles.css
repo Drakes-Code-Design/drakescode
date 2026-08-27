@@ -132,6 +132,7 @@ h3 {
   border-color: rgba(220, 226, 235, 0.9);
   background: rgba(255, 255, 255, 0.95);
   box-shadow: 0 8px 30px rgba(7, 21, 47, 0.05);
+  -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);
 }
 .nav-wrap {
@@ -970,6 +971,29 @@ h3 {
 }
 .price-card .btn {
   width: 100%;
+}
+.custom-project {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  margin-top: 28px;
+  padding: 28px 30px;
+  border: 1px solid var(--line);
+  background: white;
+}
+.custom-project h3 {
+  margin: 0 0 7px;
+  font-size: 22px;
+}
+.custom-project p {
+  max-width: 690px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+.custom-project .btn {
+  white-space: nowrap;
 }
 .payment-note {
   display: flex;
