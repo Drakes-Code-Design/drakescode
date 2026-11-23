@@ -16,36 +16,12 @@
     flex-direction: row;
     flex-wrap: wrap;
   }
-  .price-card,
-  .price-card:last-child {
-    border: 1px solid var(--line);
-    background: white;
-  }
-  .price-card.featured {
-    margin: 0;
-  }
-  .about-grid,
-  .faq-grid,
-  .contact-grid {
-    gap: 65px;
-  }
 }
 
-@media (max-width: 800px) {
-  .container {
-    width: min(calc(100% - 36px), 680px);
-  }
-  .section {
-    padding: 82px 0;
-  }
-  h1 {
-    font-size: 50px;
-  }
-  h2 {
-    font-size: 40px;
-  }
-  .desktop-nav,
-  .nav-cta {
+/* ---------- Tablets — mobile menu & stacked layouts — (max-width: 900px) ---------- */
+@media (max-width: 900px) {
+  .top nav,
+  .top .wrap > .pill {
     display: none;
   }
   .burger {
@@ -65,10 +41,8 @@
     gap: 8px 16px;
     padding: 26px 8px;
   }
-  body.menu-open .site-header {
-    border-color: var(--line);
-    background-color: #fff;
-    backdrop-filter: none;
+  .rows p {
+    grid-column: 2;
   }
   .rows .ar {
     display: none;
@@ -122,7 +96,7 @@
   form {
     padding: 24px;
   }
-  .payment-note {
+  .custom {
     flex-direction: column;
     align-items: flex-start;
   }

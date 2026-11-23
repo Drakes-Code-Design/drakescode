@@ -500,65 +500,49 @@ function initCommon(root) {
     els.forEach((e) => io.observe(e));
     cleanup.push(() => io.disconnect());
   }
-
-  const form = document.querySelector("#contact-form");
-  const project = document.querySelector("#project-type");
-  const budget = document.querySelector("#budget");
-  document.querySelectorAll(".package-button").forEach((button) =>
-    button.addEventListener("click", () => {
-      project.value = button.dataset.service;
-      budget.value = button.dataset.budget;
-      document
-        .querySelector("#contact")
-        .scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth" });
-      setTimeout(
-        () => project.focus({ preventScroll: true }),
-        reduceMotion ? 0 : 550,
-      );
-    }),
-  );
-
-  const validate = (field) => {
-    const error = field.parentElement.querySelector("small");
-    let message = "";
-    if (field.required && !field.value.trim())
-      message = "This field is required.";
-    else if (
-      field.type === "email" &&
-      !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(field.value)
-    )
-      message = "Enter a valid email address.";
-    else if (field.id === "message" && field.value.trim().length < 10)
-      message = "Please share a little more about your project.";
-    field.classList.toggle("invalid", Boolean(message));
-    field.setAttribute("aria-invalid", String(Boolean(message)));
-    if (error) error.textContent = message;
-    return !message;
-  };
-
-  const fields = [...form.querySelectorAll("input, select, textarea")].filter(
-    (el) => el.name !== "company-website",
-  );
-  fields.forEach((field) => {
-    field.addEventListener("blur", () => validate(field));
-    field.addEventListener("input", () => {
-      if (field.classList.contains("invalid")) validate(field);
-    });
-  });
-  form.addEventListener("submit", async (event) => {
-    event.preventDefault();
-    const status = form.querySelector(".form-status");
-    const valid = fields.map(validate).every(Boolean);
-    if (!valid) {
-      status.textContent = "Please correct the highlighted fields.";
-      status.className = "form-status error";
-      form.querySelector(".invalid").focus();
+  const form = root.querySelector("#contact-form"),
+    project = form.querySelector("#project-type"),
+    status = form.querySelector(".form-status");
+  on(root, "click", (e) => {
+    const b = e.target.closest(".package-button");
+    if (!b) return;
+    if (![...project.options].some((o) => o.value === b.dataset.service))
       return;
-    }
-    if (form.elements["company-website"].value) return;
-    const button = form.querySelector("button[type='submit']");
-    button.disabled = true;
-    button.textContent = "Sending...";
+    project.value = b.dataset.service;
+    document
+      .getElementById("contact")
+      .scrollIntoView({ behavior: reduce ? "auto" : "smooth" });
+    setTimeout(
+      () => form.querySelector("#name").focus({ preventScroll: true }),
+      reduce ? 0 : 800,
+    );
+  });
+  const req = [
+    ["name", "Please enter your name."],
+    ["email", "Please enter a valid email address."],
+    ["project-type", "Please choose a package, or pick “Not sure yet.”"],
+    ["message", "Please tell me about your project."],
+  ];
+  const check = () => {
+    let ok = true;
+    req.forEach(([id, msg]) => {
+      const f = form.querySelector("#" + id),
+        s = f.parentElement.querySelector("small");
+      const bad =
+        !f.value.trim() ||
+        (id === "email" && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(f.value));
+      s.textContent = bad ? msg : "";
+      f.setAttribute("aria-invalid", bad);
+      if (bad && ok) {
+        ok = false;
+        f.focus();
+      }
+    });
+    return ok;
+  };
+  on(form, "submit", async (e) => {
+    e.preventDefault();
+    status.className = "form-status";
     status.textContent = "";
     if (form.querySelector("#company-website").value) return;
     if (!check()) return;
