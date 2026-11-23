@@ -1,421 +1,153 @@
-@media (max-width: 1100px) {
-  h1 {
-    font-size: 58px;
-  }
-  h2 {
-    font-size: 44px;
-  }
-  .hero-grid {
-    gap: 35px;
-  }
-  .phone {
-    right: -5px;
-    width: 130px;
-    height: 260px;
-  }
-  .project,
-  .project.reverse {
-    grid-template-columns: 1.25fr 0.75fr;
-    gap: 45px;
-  }
-  .project.reverse {
-    grid-template-columns: 0.75fr 1.25fr;
-  }
-  .pricing-grid {
-    grid-template-columns: repeat(2, 1fr);
-    border: 0;
-    gap: 16px;
-    background: transparent;
-  }
-  .price-card,
-  .price-card:last-child {
-    border: 1px solid var(--line);
-    background: white;
-  }
-  .price-card.featured {
-    margin: 0;
-  }
-  .about-grid,
-  .faq-grid,
-  .contact-grid {
-    gap: 65px;
-  }
-}
+/* ==========================================================
+   Drakes Code & Design — Responsive Styles
+   Load after styles.css. Breakpoints run from widest to narrowest.
+   ========================================================== */
 
-@media (max-width: 800px) {
-  .container {
-    width: min(calc(100% - 36px), 680px);
-  }
-  .section {
-    padding: 82px 0;
-  }
-  h1 {
-    font-size: 50px;
-  }
-  h2 {
-    font-size: 40px;
-  }
-  .desktop-nav,
-  .nav-cta {
-    display: none;
-  }
-  .menu-button {
-    display: grid;
-    width: 46px;
-    height: 44px;
-    place-content: center;
-    gap: 5px;
-    margin-left: auto;
-    border: 1px solid var(--line);
-    border-radius: 7px;
-    background: white;
-  }
-  .menu-button span {
-    display: block;
-    width: 20px;
-    height: 2px;
-    background: var(--navy);
-    transition:
-      transform 0.2s,
-      opacity 0.2s;
-  }
-  .menu-button[aria-expanded="true"] span:nth-child(1) {
-    transform: translateY(7px) rotate(45deg);
-  }
-  .menu-button[aria-expanded="true"] span:nth-child(2) {
-    opacity: 0;
-  }
-  .menu-button[aria-expanded="true"] span:nth-child(3) {
-    transform: translateY(-7px) rotate(-45deg);
-  }
-  .mobile-nav {
-    position: absolute;
-    z-index: 99;
-    top: 100%;
-    right: 0;
-    left: 0;
-    display: flex;
-    min-height: calc(100dvh - 82px);
-    flex-direction: column;
-    gap: 0;
-    padding: 25px 18px;
-    background-color: #fff;
-    box-shadow: 0 18px 30px rgba(7, 21, 47, 0.12);
-    opacity: 1;
-  }
-  body.menu-open .site-header {
-    border-color: var(--line);
-    background-color: #fff;
-    backdrop-filter: none;
-  }
-  body.menu-open .mobile-nav {
-    background: #fff;
-    opacity: 1;
-  }
-  .mobile-nav[hidden] {
-    display: none;
-  }
-  .mobile-nav a {
-    padding: 17px 5px;
-    border-bottom: 1px solid var(--line);
-    color: var(--navy);
-    font: 600 25px var(--font-display);
-  }
-  .hero {
-    padding: 135px 0 75px;
-    background: linear-gradient(#fff 0 52%, #f0f5fd 52%);
-  }
-  .hero-grid {
-    grid-template-columns: 1fr;
-    gap: 65px;
-  }
-  .hero-copy {
-    max-width: 650px;
-  }
-  .hero-studio {
-    max-width: 600px;
-    margin: auto;
-  }
-  .trust .container {
-    grid-template-columns: repeat(3, 1fr);
-  }
-  .trust span:nth-child(4),
-  .trust span:nth-child(5) {
-    border-top: 1px solid var(--line);
-  }
-  .section-head {
-    grid-template-columns: 1fr;
-    gap: 15px;
-    margin-bottom: 52px;
-  }
-  .section-head > p {
-    max-width: 600px;
-  }
-  .project-list {
-    gap: 82px;
-  }
-  .project,
-  .project.reverse {
-    grid-template-columns: 1fr;
-    gap: 35px;
-  }
-  .project.reverse .project-media {
-    order: 0;
-  }
-  .project-media {
-    aspect-ratio: 16/10;
-  }
-  .project-copy {
-    max-width: 590px;
-  }
-  .service-list article {
-    grid-template-columns: 45px 1fr 35px;
-    gap: 18px;
-  }
-  .service-list article p {
-    grid-column: 2 / 3;
-  }
-  .service-list article a {
-    grid-column: 3;
-    grid-row: 1;
-  }
-  .benefits-grid,
-  .about-grid,
-  .faq-grid,
-  .contact-grid {
-    grid-template-columns: 1fr;
-    gap: 65px;
-  }
-  .benefit-intro {
-    max-width: 600px;
-  }
-  .timeline {
-    grid-template-columns: 1fr;
-  }
-  .timeline li {
-    display: grid;
-    grid-template-columns: 65px 1fr;
-    border-top: 0;
-    border-left: 1px solid #aeb8c6;
-    padding: 0 0 42px 32px;
-  }
-  .timeline li::before {
-    top: 0;
-    left: -5px;
-  }
-  .timeline small {
-    margin-top: 0;
-  }
-  .timeline h3 {
-    min-height: 0;
-  }
-  .about-mark {
-    max-width: 500px;
-  }
-  .faq-grid > div:first-child {
-    max-width: 590px;
-  }
-  .contact-copy {
-    max-width: 590px;
-  }
-  .footer-top {
-    grid-template-columns: 2fr 1fr 1fr;
-    gap: 35px;
-  }
-}
-
-@media (max-width: 560px) {
-  .container {
-    width: min(calc(100% - 30px), 500px);
-  }
-  .section {
-    padding: 68px 0;
-  }
-  h1 {
-    font-size: 42px;
-  }
-  h2 {
-    font-size: 35px;
-  }
-  .nav-wrap {
-    height: 72px;
-  }
-  .mobile-nav {
-    min-height: calc(100dvh - 72px);
-  }
-  .hero {
-    padding: 116px 0 65px;
-  }
-  .hero-lede {
-    font-size: 16px;
-  }
-  .button-row {
-    flex-direction: column;
-    align-items: stretch;
-  }
-  .hero-points {
-    flex-wrap: wrap;
-    gap: 8px 20px;
-  }
-  .hero-studio {
-    width: 100%;
-    padding: 20px 0 50px;
-  }
-  .demo-page {
-    padding: 10px;
-  }
-  .demo-nav {
-    gap: 8px;
-  }
-  .demo-nav i {
-    width: 15px;
-  }
-  .demo-hero {
-    min-height: 185px;
-    padding: 15px 10px;
-  }
-  .demo-hero h2 {
-    font-size: 19px;
-  }
-  .demo-art {
-    height: 140px;
-  }
-  .phone {
-    right: -2px;
-    bottom: 0;
-    width: 110px;
-    height: 225px;
-    border-width: 5px;
-    border-radius: 17px;
-    padding-inline: 9px;
-  }
-  .phone-art {
-    height: 65px;
-  }
-  .phone strong {
-    font-size: 12px;
-  }
-  .code-note {
-    right: 116px;
-    bottom: 8px;
-  }
-  .trust .container {
-    grid-template-columns: 1fr 1fr;
-    width: 100%;
-  }
-  .trust span,
-  .trust span + span {
-    border: 0;
-    border-bottom: 1px solid var(--line);
-  }
-  .trust span:nth-child(even) {
-    border-left: 1px solid var(--line);
-  }
-  .trust span:last-child {
-    grid-column: 1 / -1;
-  }
-  .project-list {
-    gap: 68px;
-  }
-  .project-copy h3 {
-    font-size: 31px;
-  }
-  .service-list article {
-    grid-template-columns: 36px 1fr 26px;
-    padding-block: 25px;
-  }
-  .service-list h3 {
-    font-size: 22px;
-  }
-  .benefits {
-    padding: 75px 0;
-  }
-  .benefit-list article {
-    grid-template-columns: 40px 1fr;
-  }
-  .pricing-grid {
-    grid-template-columns: 1fr;
-  }
-  .price-card > div > span {
-    min-height: 0;
-  }
-  .payment-note {
-    flex-direction: column;
-    gap: 8px;
-  }
-  .payment-note span {
-    text-align: left;
-  }
-  .about-mark {
-    height: 340px;
-  }
-  .form-row {
-    grid-template-columns: 1fr;
-    gap: 0;
-  }
-  .contact-form {
-    padding: 27px 20px;
-  }
-  .form-top {
-    display: block;
-  }
-  .form-top span {
-    display: block;
-    margin-top: 5px;
-  }
-  .footer-top {
+/* ---------- Small laptops & tablets (landscape) — (max-width: 1080px) ---------- */
+@media (max-width: 1080px) {
+  .ben {
     grid-template-columns: 1fr 1fr;
   }
-  .footer-top > div {
-    grid-column: 1 / -1;
+  .hrow {
+    grid-template-columns: 1fr 1fr;
+  }
+  .hrow .btns {
+    grid-column: 1/-1;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 }
 
-@media (max-width: 390px) {
-  h1 {
-    font-size: 38px;
-  }
-  h2 {
-    font-size: 32px;
-  }
-  .hero-points {
-    display: grid;
-  }
-  .studio-caption {
-    font-size: 8px;
-  }
-  .phone {
-    width: 100px;
-    height: 210px;
-  }
-  .demo-hero h2 {
-    font-size: 17px;
-  }
-  .code-note {
+/* ---------- Tablets — mobile menu & stacked layouts — (max-width: 900px) ---------- */
+@media (max-width: 900px) {
+  .top nav,
+  .top .wrap > .pill {
     display: none;
   }
-  .project-media {
-    aspect-ratio: 4/3;
+  .burger {
+    display: block;
+    position: relative;
+    z-index: 60;
   }
-  .tags {
-    flex-wrap: wrap;
+  .sh,
+  .about,
+  .faq .g,
+  .contact .g,
+  .plan {
+    grid-template-columns: 1fr;
   }
-  .service-list article {
-    grid-template-columns: 28px 1fr;
+  .rows a {
+    grid-template-columns: 50px 1fr;
+    gap: 8px 16px;
+    padding: 26px 8px;
   }
-  .service-list article a {
-    display: none;
-  }
-  .service-list article p {
+  .rows p {
     grid-column: 2;
   }
-  .about-mark {
-    height: 300px;
+  .rows .ar {
+    display: none;
   }
-  .footer-bottom {
-    display: block;
+  .proc {
+    grid-template-columns: 1fr;
+    gap: 0;
   }
-  .footer-bottom p + p {
-    margin-top: 7px;
+  .proc .big {
+    position: sticky;
+    top: 78px;
+    z-index: 5;
+    background: var(--primary);
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+  }
+  .proc .big .num {
+    font-size: 90px;
+  }
+  .proc .big .bar {
+    flex: 1;
+    margin: 0;
+  }
+  .proc ol li {
+    min-height: 0;
+    padding: 34px 0;
+    opacity: 1;
+  }
+  .about .duo {
+    max-width: 460px;
+  }
+}
+
+/* ---------- Phones — (max-width: 600px) ---------- */
+@media (max-width: 600px) {
+  .s {
+    padding: 84px 0;
+  }
+  .hero {
+    padding-top: 120px;
+  }
+  .hrow,
+  .ben,
+  .row,
+  .ft {
+    grid-template-columns: 1fr;
+  }
+  .plan,
+  form {
+    padding: 24px;
+  }
+  .custom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .plan h3 {
+    font-size: 34px;
+  }
+}
+
+/* ---------- Wide screens — room for the side index — (min-width: 1181px) ---------- */
+@media (min-width: 1181px) {
+  .wrap {
+    width: min(1240px, calc(100% - 220px));
+  }
+}
+
+/* ---------- Hide side index on smaller screens — (max-width: 1180px) ---------- */
+@media (max-width: 1180px) {
+  .sidx {
+    display: none;
+  }
+}
+
+/* ---------- Tablets — section pill, project rows & package tabs — (max-width: 900px) ---------- */
+@media (max-width: 900px) {
+  .pr .inner {
+    grid-template-columns: 1fr;
+    padding-left: 0;
+    gap: 20px;
+  }
+  .pr .tg {
+    display: none;
+  }
+  .pr > button {
+    grid-template-columns: 44px 1fr 48px;
+    gap: 12px;
+  }
+  .pr .pl {
+    width: 44px;
+    height: 44px;
+  }
+  .seg {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ---------- Small phones — (max-width: 520px) ---------- */
+@media (max-width: 520px) {
+  .where {
+    display: none;
+  }
+  .top .wrap {
+    justify-content: space-between;
   }
 }
