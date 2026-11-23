@@ -273,10 +273,11 @@ h3 {
     background 0.3s,
     box-shadow 0.3s;
 }
-.top.sc {
-  background: color-mix(in srgb, var(--primary) 92%, transparent);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 1px 0 color-mix(in srgb, #fff 20%, transparent);
+.site-header.scrolled {
+  border-color: rgba(220, 226, 235, 0.9);
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 8px 30px rgba(7, 21, 47, 0.05);
+  backdrop-filter: blur(12px);
 }
 .top .wrap {
   display: flex;
@@ -1313,7 +1314,7 @@ footer {
 .pr > button:hover .t {
   transform: translateX(12px);
 }
-.pr .tg {
+.payment-note {
   display: flex;
   gap: 6px;
 }
